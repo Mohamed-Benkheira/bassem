@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=stealth,
+    state/.style={draw=blue!80!black, fill=blue!10, rounded corners=4pt, line width=0.8pt, minimum width=2.5cm, minimum height=0.7cm, align=center, font=\scriptsize\bfseries},
+    startnode/.style={circle, fill=black, minimum size=0.4cm},
+    endnode/.style={circle, draw=black, double, fill=black, minimum size=0.4cm},
+    arr/.style={->, thick, >=stealth, color=darkgray}
+]
+\node[startnode] (init) at (0,0) {};
+\node[state, right=0.8cm of init] (draft) {DRAFT};
+\node[state, right=1.2cm of draft] (sub) {SUBMITTED};
+\node[state, right=1.2cm of sub] (comm) {IN\_REVIEW};
+\node[state, below=1.2cm of comm] (sched) {SCHEDULED};
+\node[state, left=1.2cm of sched] (prog) {IN\_PROGRESS};
+\node[state, left=1.2cm of prog] (done) {COMPLETED};
+\node[endnode, left=0.8cm of done] (fin) {};
+
+\node[state, fill=red!15, below=1.2cm of sub] (cancel) {CANCELLED};
+
+\draw[arr] (init) -- (draft);
+\draw[arr] (draft) -- node[above, font=\tiny] {Soumission} (sub);
+\draw[arr] (sub) -- node[above, font=\tiny] {Prise en charge} (comm);
+\draw[arr] (comm) -- node[right, font=\tiny] {Accord Date} (sched);
+\draw[arr] (sched) -- node[above, font=\tiny] {D\'ebut Op\'eration} (prog);
+\draw[arr] (prog) -- node[above, font=\tiny] {Certificat Valid\'e} (done);
+\draw[arr] (done) -- (fin);
+\draw[arr] (sub) -- node[right, font=\tiny] {Annulation} (cancel);
+\draw[arr] (sched) -- (cancel);
+\end{tikzpicture}

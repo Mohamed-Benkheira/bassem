@@ -1,0 +1,11 @@
+\begin{tikzpicture}[>=stealth,
+    layer1/.style={draw=blue!80!black, fill=blue!20, minimum width=2.4cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries},
+    layer2/.style={draw=green!80!black, fill=green!20, minimum width=4.8cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries},
+    layer3/.style={draw=orange!80!black, fill=orange!20, minimum width=7.2cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries}
+]
+\node[layer1] (e2e) at (0, 2) {Tests d'Acceptation \& E2E\\Authentification, Isolation Tenant};
+\node[layer2] (integ) at (0, 1) {Tests d'Int\'egration \& Workflow (Feature)\\67 tests pass\'es / 273 assertions};
+\node[layer3] (unit) at (0, 0) {Tests Unitaires (Models, Policies, Helpers)\\Validation Immutabilit\'e \& Piste d'Audit};
+
+\draw[thick, color=gray!80] (-4,-0.5) -- (0, 2.7) -- (4,-0.5) -- cycle;
+\end{tikzpicture}

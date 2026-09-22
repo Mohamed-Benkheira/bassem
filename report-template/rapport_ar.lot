@@ -1,0 +1,22 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces بطاقة وصف حالة الاستخدام - تسجيل الدخول وإدارة الجلسة (\LR {UC01})\relax }}{19}{table.caption.28}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces بطاقة وصف حالة الاستخدام - إرسال طلب معايرة (\LR {UC02})\relax }}{19}{table.caption.29}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces بطاقة وصف حالة الاستخدام - معاينة وإحالة الطلب للمدير (\LR {UC03})\relax }}{20}{table.caption.30}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces بطاقة وصف حالة الاستخدام - استلام وتعيين العمل للمترولوجي (\LR {UC04})\relax }}{20}{table.caption.31}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces بطاقة وصف حالة الاستخدام - اقتراح واختيار تاريخ التدخل (\LR {UC05})\relax }}{21}{table.caption.32}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces بطاقة وصف حالة الاستخدام - إنجاز القياس وإرسال تقرير المترولوجيا (\LR {UC06})\relax }}{21}{table.caption.33}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces بطاقة وصف حالة الاستخدام - استلام ومراجعة تقرير المترولوجيا (\LR {UC07})\relax }}{22}{table.caption.34}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces بطاقة وصف حالة الاستخدام - إدارة العقد وإنشاء الشهادة (\LR {UC08})\relax }}{22}{table.caption.35}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces بطاقة وصف حالة الاستخدام - اعتماد والمصادقة على الشهادة (\LR {UC09})\relax }}{23}{table.caption.36}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces بطاقة وصف حالة الاستخدام - مسح وأرشفة الشهادة (\LR {UC10})\relax }}{23}{table.caption.37}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces بطاقة وصف حالة الاستخدام - استلام الشهادة والاطلاع على الأرشيف والسجل (\LR {UC11})\relax }}{24}{table.caption.38}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces بطاقة وصف حالة الاستخدام - تحميل العقد والاطلاع على ورقة الوقت (\LR {UC12})\relax }}{24}{table.caption.39}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces بطاقة وصف حالة الاستخدام - إدارة الحسابات، الصلاحيات والعتاد المرجعي (\LR {UC13})\relax }}{25}{table.caption.40}%
+\contentsline {table}{\numberline {3.14}{\ignorespaces قاموس معطيات جدول المستخدمين (\LR {users})\relax }}{29}{table.caption.47}%
+\contentsline {table}{\numberline {3.15}{\ignorespaces قاموس معطيات جدول المؤسسات والزبائن (\LR {clients})\relax }}{29}{table.caption.48}%
+\contentsline {table}{\numberline {3.16}{\ignorespaces قاموس معطيات جدول طلبات المعايرة (calibration\_requests)\relax }}{29}{table.caption.49}%
+\contentsline {table}{\numberline {3.17}{\ignorespaces قاموس معطيات جدول الشهادات الرسمية (calibration\_certificates)\relax }}{30}{table.caption.50}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces نتائج حزمة الاختبارات الآلية المؤتمتة (\LR {Pest PHP / PHPUnit})\relax }}{35}{table.caption.57}%

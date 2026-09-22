@@ -1,0 +1,341 @@
+{
+  "title_metadata": {
+    "theme_fr": "Conception et Réalisation d'une Application Web de Gestion de la Calibration des Équipements de Mesure et de Métrologie Industrielle",
+    "theme_ar": "تصميم وإنجاز تطبيق ويب لتسيير ومعايرة معدات القياس والمترولوجيا الصناعية",
+    "theme_en": "Design and Implementation of a Web Application for Equipment Calibration and Industrial Metrology Lifecycle Management",
+    "host_organization": "Laboratoire National d'Étalonnage et de Métrologie Industrielle (LNEMI)",
+    "host_organization_ar": "المخبر الوطني للمعايرة والمترولوجيا الصناعية",
+    "supervisor": "__SUPERVISOR_NAME__",
+    "students": ["Bassem __STUDENT_NAME__", "__STUDENT_2__"],
+    "promoter": "__PROMOTER_NAME__",
+    "promotion": "2024/2026",
+    "diploma": "Diplôme de Technicien Supérieur (BTS)",
+    "option": "Développeur Web et Mobile",
+    "institute": "Institut National Spécialisé de Formation Professionnelle (INSFP) Rahmania - Sidi Abdellah"
+  },
+  "abstracts": {
+    "ar": "تعتبر المترولوجيا الصناعية ومعايرة معدات القياس من الركائز الأساسية لضمان جودة الإنتاج ومطابقة المعايير الدولية في المؤسسات الصناعية. يهدف هذا المشروع إلى تصميم وإنجاز تطبيق ويب متكامل لتسيير دورة حياة عمليات معايرة وتدقيق أدوات القياس (الضغط، الحرارة، الكهرباء، الأبعاد، الكتلة، والعزم). يوفر النظام منصة موحدة تربط بين الزبائن، المصلحة التجارية، والمسؤول التقني، والتقنيين المترولوجيين. تم تطوير النظام بالاعتماد على إطار العمل Laravel مع Inertia.js وReact وTypeScript، وقاعدة بيانات MySQL، مع توفير نظام صلاحيات دقيق (RBAC)، وسجل تدقيق شامل (Audit Trail)، وضمان عدم قابلية تعديل شهادات المعايرة النهائية، وتنبيهات آلية للمواد المرجعية منتهية الصلاحية.",
+    "ar_keywords": "معايرة المعدات، مترولوجيا صناعية، Laravel، React، Inertia.js، شهادات إلكترونية، تدقيق العمليات",
+    "fr": "La métrologie industrielle et l'étalonnage des équipements de mesure constituent un pilier essentiel pour garantir la conformité aux normes de qualité (ISO/IEC 17025). Ce projet présente la conception et la réalisation d'une application web d'entreprise dédiée à la gestion intégrale du cycle de vie des opérations de calibration (pression, température, électricité, dimensionnel, pesage et couple). La solution interconnecte les clients externes, le service commercial, le responsable métrologie et les techniciens qualifiés. Développée avec Laravel, Inertia.js, React 19, TypeScript et Tailwind CSS, la plateforme intègre un contrôle d'accès basé sur les rôles (RBAC), une isolation stricte des données clients, l'immutabilité des certificats finaux, le suivi des étalons de référence et une traçabilité d'audit complète.",
+    "fr_keywords": "Calibration d'équipements, Métrologie industrielle, Laravel, Inertia.js, React, Certificats de calibration, Piste d'audit",
+    "en": "Industrial metrology and equipment calibration are fundamental to ensuring regulatory compliance and manufacturing precision according to ISO standards. This project details the design and implementation of a full-lifecycle calibration equipment management web application covering multiple measurement domains (pressure, temperature, electrical, dimensional, mass, and torque). Built with Laravel, Inertia.js, React 19, TypeScript, and MySQL, the platform provides automated workflow routing across clients, commercial staff, metrology managers, and calibration technicians, featuring strict multi-tenant customer isolation, immutable calibration certificates, reference standards tracking, and tamper-proof audit logging.",
+    "en_keywords": "Equipment Calibration, Industrial Metrology, Laravel, Inertia.js, React, Digital Certificates, Audit Trail"
+  },
+  "actors": [
+    {
+      "name": "Client",
+      "name_ar": "الزبون / العميل",
+      "description": "Utilisateur externe représentant une entreprise cliente. Crée des demandes multi-équipements, accepte ou refuse les propositions de planification d'intervention, consulte l'avancement et télécharge les certificats définitifs."
+    },
+    {
+      "name": "Commercial",
+      "name_ar": "المكلف التجاري",
+      "description": "Responsable de l'examen préliminaire des demandes entrantes, de l'association aux prestations du catalogue métrologique, de l'émission des devis et du suivi contractuel."
+    },
+    {
+      "name": "Responsable Métrologie (Metrology Manager)",
+      "name_ar": "مسؤول المترولوجيا",
+      "description": "Supervise les interventions, propose les dates et lieux (sur site ou en laboratoire), affecte les techniciens habilités, révise les rapports de calibration (approbation ou demande de rework), génère les certificats et les valide officiellement."
+    },
+    {
+      "name": "Technicien Métrologue",
+      "name_ar": "التقني المترولوجي",
+      "description": "Prend en charge les opérations qui lui sont affectées, effectue les étalonnages conformément aux procédures, et téléverse les rapports d'essai au format sécurisé."
+    },
+    {
+      "name": "Délégué (Metrology Delegate)",
+      "name_ar": "التقني المترولوجي المفوض",
+      "description": "Technicien supérieur disposant temporairement des droits de validation et d'émission de certificats en cas d'absence du responsable de laboratoire avec traçabilité intégrale."
+    },
+    {
+      "name": "Administrateur Système",
+      "name_ar": "مسؤول النظام",
+      "description": "Gère les comptes utilisateurs, les rôles, les permissions, les étalons de référence, le paramétrage du catalogue et consulte les journaux d'audit de sécurité."
+    }
+  ],
+  "calibration_domains": [
+    {"code": "PRES", "name": "Pression", "name_ar": "الضغط", "unit": "bar / Pa", "desc": "Manomètres, capteurs de pression différentielle"},
+    {"code": "TEMP", "name": "Température", "name_ar": "الحرارة", "unit": "°C / K", "desc": "Thermomètres numériques, sondes PT100, thermocouples"},
+    {"code": "ELEC", "name": "Électricité", "name_ar": "الكهرباء", "unit": "V / A / Ω", "desc": "Multimètres numériques, oscilloscopes, pinces ampèremétriques"},
+    {"code": "DIM", "name": "Dimensionnel", "name_ar": "الأبعاد", "unit": "mm / µm", "desc": "Pieds à coulisse, micromètres, cales étalons"},
+    {"code": "MASS", "name": "Pesage / Masse", "name_ar": "الكتلة والوزن", "unit": "kg / g / mg", "desc": "Balances de précision, masses étalons"},
+    {"code": "TORQ", "name": "Couple", "name_ar": "العزم", "unit": "N.m", "desc": "Clés dynamométriques, capteurs de couple"}
+  ],
+  "use_cases": [
+    {
+      "id": "UC01",
+      "title": "Authentification et gestion de session",
+      "title_ar": "تسجيل الدخول وإدارة الجلسة",
+      "actor": "Tous les acteurs",
+      "desc": "Connexion sécurisée par email/mot de passe avec contrôle de rôle et isolation des espaces de travail."
+    },
+    {
+      "id": "UC02",
+      "title": "Consultation du catalogue de prestations métrologiques",
+      "title_ar": "تصفح دليل خدمات المعايرة",
+      "actor": "Client, Visiteur",
+      "desc": "Exploration des domaines de mesure, plages d'étalonnage et tolérances admissibles."
+    },
+    {
+      "id": "UC03",
+      "title": "Création et soumission d'une demande multi-équipements",
+      "title_ar": "إنشاء وتقديم طلب معايرة متعدد المعدات",
+      "actor": "Client",
+      "desc": "Enregistrement d'une demande contenant une liste d'équipements avec numéros de série, marques, modèles, tolérances requises."
+    },
+    {
+      "id": "UC04",
+      "title": "Examen et qualification commerciale de la demande",
+      "title_ar": "دراسة وتأهيل الطلب من الناحية التجارية",
+      "actor": "Commercial",
+      "desc": "Vérification de la faisabilité, association aux services métrologiques et émission du devis chiffré."
+    },
+    {
+      "id": "UC05",
+      "title": "Planification et négociation de la date d'intervention",
+      "title_ar": "جدولة وتحديد موعد ومكان المعايرة",
+      "actor": "Responsable Métrologie, Client",
+      "desc": "Proposition d'une date et du lieu (laboratoire ou sur site), acceptation ou demande d'ajustement par le client."
+    },
+    {
+      "id": "UC06",
+      "title": "Affectation de l'opération au technicien métrologue",
+      "title_ar": "تعيين العملية للتقني المترولوجي المختص",
+      "actor": "Responsable Métrologie",
+      "desc": "Attribution de la tâche en fonction de la charge de travail et des qualifications techniques du technicien."
+    },
+    {
+      "id": "UC07",
+      "title": "Prise en charge et exécution de l'étalonnage",
+      "title_ar": "التكفل بالعملية وتنفيذ المعايرة المخبرية",
+      "actor": "Technicien Métrologue",
+      "desc": "Réalisation des mesures comparatives avec les étalons de référence conformément aux procédures."
+    },
+    {
+      "id": "UC08",
+      "title": "Téléversement du rapport de calibration",
+      "title_ar": "رفع تقرير نتائج المعايرة",
+      "actor": "Technicien Métrologue",
+      "desc": "Dépôt du rapport technique d'étalonnage (PDF/DOCX) pour contrôle qualité."
+    },
+    {
+      "id": "UC09",
+      "title": "Revue qualité, approbation ou rejet avec motif de correction",
+      "title_ar": "المراجعة النوعية للتقرير وقبوله أو طلب تصحيحه",
+      "actor": "Responsable Métrologie",
+      "desc": "Validation des résultats de mesure ou renvoi en reprise (rework) au technicien avec motif obligatoire."
+    },
+    {
+      "id": "UC10",
+      "title": "Génération et validation du certificat officiel de calibration",
+      "title_ar": "إنشاء واعتماد شهادة المعايرة الرسمية",
+      "actor": "Responsable Métrologie / Délégué",
+      "desc": "Création du certificat en mode brouillon puis validation officielle avec horodatage et verrouillage immuable."
+    },
+    {
+      "id": "UC11",
+      "title": "Consultation et téléchargement sécurisé du certificat",
+      "title_ar": "الاطلاع على شهادة المعايرة وتحميلها",
+      "actor": "Client",
+      "desc": "Accès instantané aux certificats finaux validés pour chaque équipement de la demande."
+    },
+    {
+      "id": "UC12",
+      "title": "Gestion du parc des étalons de référence et alertes de validité",
+      "title_ar": "إدارة العتاد المرجعي ومتابعة صلاحية أدوات القياس",
+      "actor": "Responsable Métrologie, Admin",
+      "desc": "Suivi des dates d'étalonnage des étalons du laboratoire et blocage automatique des étalons périmés."
+    },
+    {
+      "id": "UC13",
+      "title": "Piste d'audit et historique des états",
+      "title_ar": "تتبع العمليات وسجل التدقيق الأمني",
+      "actor": "Administrateur, Responsable",
+      "desc": "Historisation inaltérable de chaque transition d'état avec auteur, horodatage, adresse IP et modifications."
+    }
+  ],
+  "database_tables": [
+    {
+      "name": "users",
+      "desc": "Comptes utilisateurs (clients et personnel interne)",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant unique"},
+        {"name": "name", "type": "varchar(255)", "desc": "Nom complet"},
+        {"name": "email", "type": "varchar(255)", "desc": "Adresse email unique"},
+        {"name": "password", "type": "varchar(255)", "desc": "Mot de passe haché (bcrypt)"},
+        {"name": "role", "type": "varchar(50)", "desc": "Rôle principal"},
+        {"name": "is_delegated_manager", "type": "boolean", "desc": "Indicateur de délégation de signature"},
+        {"name": "client_id", "type": "bigint unsigned nullable", "key": "FK", "desc": "Référence client (si rôle client)"}
+      ]
+    },
+    {
+      "name": "clients",
+      "desc": "Entreprises et clients externes demandeurs de calibration",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant unique"},
+        {"name": "company_name", "type": "varchar(255)", "desc": "Raison sociale"},
+        {"name": "contact_name", "type": "varchar(255)", "desc": "Nom du contact principal"},
+        {"name": "email", "type": "varchar(255)", "desc": "Email professionnel"},
+        {"name": "phone", "type": "varchar(50)", "desc": "Numéro de téléphone"},
+        {"name": "address", "type": "text", "desc": "Adresse postale"},
+        {"name": "tax_id", "type": "varchar(100) nullable", "desc": "Numéro d'identification fiscale (NIF)"}
+      ]
+    },
+    {
+      "name": "calibration_services",
+      "desc": "Prestations du catalogue de métrologie",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant"},
+        {"name": "code", "type": "varchar(50)", "desc": "Code de la prestation (ex: PRES-01)"},
+        {"name": "name", "type": "varchar(255)", "desc": "Intitulé du service"},
+        {"name": "domain", "type": "varchar(50)", "desc": "Domaine physique (Pression, Température...)"},
+        {"name": "unit_price", "type": "decimal(10,2)", "desc": "Tarif unitaire HT"},
+        {"name": "description", "type": "text nullable", "desc": "Description détaillée"}
+      ]
+    },
+    {
+      "name": "calibration_requests",
+      "desc": "Dossiers de demandes d'étalonnage multi-équipements",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant unique"},
+        {"name": "reference", "type": "varchar(50)", "desc": "Numéro de référence unique (ex: REQ-2026-0001)"},
+        {"name": "client_id", "type": "bigint unsigned", "key": "FK", "desc": "Client demandeur"},
+        {"name": "status", "type": "varchar(50)", "desc": "État de la demande"},
+        {"name": "scheduled_date", "type": "date nullable", "desc": "Date convenue de l'intervention"},
+        {"name": "location", "type": "varchar(20)", "desc": "Lieu (LABORATOIRE ou SUR_SITE)"},
+        {"name": "notes", "type": "text nullable", "desc": "Instructions et observations"}
+      ]
+    },
+    {
+      "name": "calibration_request_items",
+      "desc": "Équipements et instruments de mesure individuels d'une demande",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant de l'équipement"},
+        {"name": "calibration_request_id", "type": "bigint unsigned", "key": "FK", "desc": "Demande parente"},
+        {"name": "calibration_service_id", "type": "bigint unsigned nullable", "key": "FK", "desc": "Prestation associée"},
+        {"name": "equipment_name", "type": "varchar(255)", "desc": "Désignation de l'appareil (ex: Manomètre WIKA)"},
+        {"name": "serial_number", "type": "varchar(100)", "desc": "Numéro de série fabricant"},
+        {"name": "brand", "type": "varchar(100) nullable", "desc": "Marque"},
+        {"name": "model", "type": "varchar(100) nullable", "desc": "Modèle"},
+        {"name": "measurement_range", "type": "varchar(100) nullable", "desc": "Étendue de mesure (ex: 0 - 250 bar)"},
+        {"name": "tolerance", "type": "varchar(100) nullable", "desc": "Tolérance admissible (ex: ±0.5%)"},
+        {"name": "quantity", "type": "int", "desc": "Quantité (défaut 1)"}
+      ]
+    },
+    {
+      "name": "quotations",
+      "desc": "Devis financiers associés aux demandes",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant"},
+        {"name": "reference", "type": "varchar(50)", "desc": "Référence devis (DEV-2026-XXXX)"},
+        {"name": "calibration_request_id", "type": "bigint unsigned", "key": "FK", "desc": "Demande liée"},
+        {"name": "total_ht", "type": "decimal(12,2)", "desc": "Montant total Hors Taxes"},
+        {"name": "tva_rate", "type": "decimal(5,2)", "desc": "Taux de TVA (19%)"},
+        {"name": "total_ttc", "type": "decimal(12,2)", "desc": "Montant TTC"},
+        {"name": "status", "type": "varchar(30)", "desc": "Statut (BROUILLON, ENVOYE, ACCEPTE)"}
+      ]
+    },
+    {
+      "name": "contracts",
+      "desc": "Contrats cadres d'étalonnage",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant"},
+        {"name": "contract_number", "type": "varchar(50)", "desc": "Numéro de contrat"},
+        {"name": "client_id", "type": "bigint unsigned", "key": "FK", "desc": "Client contractant"},
+        {"name": "start_date", "type": "date", "desc": "Date d'effet"},
+        {"name": "end_date", "type": "date", "desc": "Date d'échéance"},
+        {"name": "status", "type": "varchar(30)", "desc": "Statut du contrat"}
+      ]
+    },
+    {
+      "name": "calibration_operations",
+      "desc": "Tâches techniques d'étalonnage affectées aux techniciens",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant de l'opération"},
+        {"name": "calibration_request_id", "type": "bigint unsigned", "key": "FK", "desc": "Demande parente"},
+        {"name": "technician_id", "type": "bigint unsigned nullable", "key": "FK", "desc": "Technicien métrologue affecté"},
+        {"name": "assigned_by", "type": "bigint unsigned nullable", "key": "FK", "desc": "Responsable ayant affecté"},
+        {"name": "status", "type": "varchar(50)", "desc": "Statut (AFFECTE, EN_COURS, TERMINE)"},
+        {"name": "started_at", "type": "timestamp nullable", "desc": "Date de début des mesures"},
+        {"name": "completed_at", "type": "timestamp nullable", "desc": "Date de fin des mesures"}
+      ]
+    },
+    {
+      "name": "calibration_reports",
+      "desc": "Rapports techniques d'essai téléversés par les techniciens",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant"},
+        {"name": "calibration_operation_id", "type": "bigint unsigned", "key": "FK", "desc": "Opération associée"},
+        {"name": "file_path", "type": "varchar(500)", "desc": "Chemin de stockage sécurisé du fichier"},
+        {"name": "file_name", "type": "varchar(255)", "desc": "Nom original du fichier"},
+        {"name": "status", "type": "varchar(30)", "desc": "Statut (SOUMIS, APPROUVE, REJETE)"},
+        {"name": "rejection_reason", "type": "text nullable", "desc": "Motif obligatoire en cas de demande de correction"},
+        {"name": "reviewed_by", "type": "bigint unsigned nullable", "key": "FK", "desc": "Responsable ayant vérifié"},
+        {"name": "reviewed_at", "type": "timestamp nullable", "desc": "Date de la revue qualité"}
+      ]
+    },
+    {
+      "name": "calibration_certificates",
+      "desc": "Certificats officiels de calibration conformes aux exigences métrologiques",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant du certificat"},
+        {"name": "certificate_number", "type": "varchar(50)", "desc": "Numéro d'enregistrement officiel"},
+        {"name": "calibration_operation_id", "type": "bigint unsigned", "key": "FK", "desc": "Opération d'origine"},
+        {"name": "calibration_request_item_id", "type": "bigint unsigned nullable", "key": "FK", "desc": "Équipement certifié"},
+        {"name": "issue_date", "type": "date", "desc": "Date de délivrance"},
+        {"name": "expiry_date", "type": "date nullable", "desc": "Date de prochaine calibration recommandée"},
+        {"name": "is_draft", "type": "boolean", "desc": "Mode brouillon"},
+        {"name": "is_final", "type": "boolean", "desc": "Verrou d'immutabilité définitive"},
+        {"name": "validated_by", "type": "bigint unsigned nullable", "key": "FK", "desc": "Signataire officiel"},
+        {"name": "validated_at", "type": "timestamp nullable", "desc": "Horodatage de validation légale"}
+      ]
+    },
+    {
+      "name": "metrology_materials",
+      "desc": "Parc des étalons de référence et instruments étalons du laboratoire",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant étalon"},
+        {"name": "code", "type": "varchar(50)", "desc": "Code interne de l'étalon"},
+        {"name": "name", "type": "varchar(255)", "desc": "Désignation de l'étalon de référence"},
+        {"name": "serial_number", "type": "varchar(100)", "desc": "Numéro de série"},
+        {"name": "calibration_date", "type": "date", "desc": "Date du dernier raccordement métrologique"},
+        {"name": "expiration_date", "type": "date", "desc": "Date de fin de validité de l'étalon"},
+        {"name": "status", "type": "varchar(30)", "desc": "Statut (VALIDE, PERIME, HORS_SERVICE)"}
+      ]
+    },
+    {
+      "name": "audit_logs",
+      "desc": "Piste d'audit inaltérable de sécurité et de conformité",
+      "columns": [
+        {"name": "id", "type": "bigint unsigned", "key": "PK", "desc": "Identifiant d'audit"},
+        {"name": "user_id", "type": "bigint unsigned nullable", "key": "FK", "desc": "Auteur de l'action"},
+        {"name": "action", "type": "varchar(100)", "desc": "Type d'action (CREATE, UPDATE, APPROVE, REJECT, VALIDATE)"},
+        {"name": "entity_type", "type": "varchar(100)", "desc": "Entité concernée (Request, Report, Certificate)"},
+        {"name": "entity_id", "type": "bigint unsigned", "desc": "Identifiant de l'entité modifiée"},
+        {"name": "old_values", "type": "json nullable", "desc": "Valeurs précédentes"},
+        {"name": "new_values", "type": "json nullable", "desc": "Nouvelles valeurs"},
+        {"name": "ip_address", "type": "varchar(45) nullable", "desc": "Adresse IP de provenance"}
+      ]
+    }
+  ],
+  "test_suite_metrics": {
+    "framework": "Pest PHP / PHPUnit",
+    "total_tests": 67,
+    "passed_tests": 67,
+    "total_assertions": 273,
+    "key_test_cases": [
+      "Client creates multi-item calibration request successfully",
+      "Commercial staff reviews and assigns service catalog item",
+      "Metrology manager proposes scheduled date and location",
+      "Client accepts or rejects intervention date with valid reason",
+      "Technician takes ownership and uploads calibration report",
+      "Manager requests rework with mandatory rejection justification",
+      "Manager approves report and generates draft certificate",
+      "Delegated technician successfully signs certificate under delegation mode",
+      "Certificate becomes strictly immutable once marked final (rejects any update)",
+      "Customer tenant isolation prevents accessing other clients data",
+      "Expired metrology standard raises automated alert and blocks usage",
+      "Full audit trail logs user ID, IP address, and changed attributes"
+    ]
+  }
+}

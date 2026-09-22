@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=stealth,
+    line/.style={dashed, color=gray},
+    actor/.style={draw=blue!80!black, fill=blue!10, rounded corners=3pt, minimum width=2.2cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    sys/.style={draw=orange!80!black, fill=orange!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    db/.style={draw=teal!80!black, fill=teal!10, rounded corners=3pt, minimum width=2.2cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    msg/.style={->, thick, >=stealth, font=\scriptsize},
+    reply/.style={<-, dashed, thick, >=stealth, font=\scriptsize}
+]
+\node[actor] (u) at (0,0) {Utilisateur};
+\node[sys] (c) at (4.5,0) {Syst\`eme / Auth Controller};
+\node[db] (d) at (9,0) {Base MySQL};
+
+\draw[line] (u) -- (0,-5);
+\draw[line] (c) -- (4.5,-5);
+\draw[line] (d) -- (9,-5);
+
+\draw[msg] (0,-1) -- node[above] {1. POST /login (email, password)} (4.5,-1);
+\draw[msg] (4.5,-1.8) -- node[above] {2. SELECT user by email} (9,-1.8);
+\draw[reply] (4.5,-2.6) -- node[above] {3. User record \& hash} (9,-2.6);
+\draw[msg] (4.5,-3.4) -- node[above] {4. V\'erification Hash \& R\^ole} (4.5,-3.4);
+\draw[reply] (0,-4.2) -- node[above] {5. Redirection Dashboard selon R\^ole} (4.5,-4.2);
+\end{tikzpicture}

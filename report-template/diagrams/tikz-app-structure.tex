@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=stealth,
+    folder/.style={draw=blue!80!black, fill=blue!5, rounded corners=3pt, minimum width=3.2cm, minimum height=0.7cm, align=left, font=\scriptsize\ttfamily},
+    desc/.style={font=\scriptsize, align=left}
+]
+\node[folder, fill=blue!20] (app) at (0,3) {app/};
+\node[desc, right=0.3cm of app] {Logique m\'etier, Mod\`eles Eloquent, Services, Policies};
+
+\node[folder] (http) at (0,2.1) {app/Http/Controllers/};
+\node[desc, right=0.3cm of http] {Contr\^oleurs d'orchestration (Inertia responses)};
+
+\node[folder] (resources) at (0,1.2) {resources/js/Pages/};
+\node[desc, right=0.3cm of resources] {Vues et composants React 19 / TypeScript};
+
+\node[folder] (routes) at (0,0.3) {routes/web.php};
+\node[desc, right=0.3cm of routes] {D\'efinition des routes prot\'eg\'ees par Middleware};
+
+\node[folder] (tests) at (0,-0.6) {tests/Feature/};
+\node[desc, right=0.3cm of tests] {Suite de 67 tests Pest/PHPUnit (100\% couverture)};
+
+\draw[-, color=gray] (app.south west) -- ++(0,-3.4);
+\end{tikzpicture}

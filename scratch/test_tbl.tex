@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{bidi}
+\setmainfont{Amiri}[Script=Arabic]
+\newcommand{\ucfieldar}[2]{%
+  #1 & \parbox[t]{\linewidth}{#2} \\
+  \hline
+}
+\begin{document}
+\setRTL
+\begin{tabularx}{\textwidth}{|p{3cm}|X|}
+\hline
+الحقل & الوصف \\
+\hline
+\ucfieldar{السيناريو}{
+1. الخطوة الأولى.\\
+2. الخطوة الثانية.\\
+3. الخطوة الثالثة.
+}
+\end{tabularx}
+\end{document}

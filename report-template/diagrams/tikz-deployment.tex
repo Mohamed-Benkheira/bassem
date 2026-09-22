@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=stealth,
+    nodebox/.style={draw=black!70, fill=gray!5, rounded corners=4pt, line width=1pt, minimum width=4.5cm, minimum height=2.8cm, align=center, font=\footnotesize},
+    inside/.style={draw=blue!70!black, fill=white, rounded corners=2pt, minimum width=3.8cm, minimum height=0.7cm, align=center, font=\scriptsize},
+    arr/.style={<->, thick, >=stealth}
+]
+\node[nodebox] (client) at (0,0) {
+\textbf{Poste Client}\\[4pt]
+\begin{tikzpicture}
+\node[inside, fill=cyan!10] {Navigateur Web moderne\\Chrome / Firefox / Edge};
+\end{tikzpicture}
+};
+
+\node[nodebox, minimum width=5.5cm, minimum height=4cm] (server) at (6.5,0) {
+\textbf{Serveur d'Application (LEMP)}\\[2pt]
+\begin{tikzpicture}
+\node[inside, fill=green!10] (nginx) {Nginx Web Server / SSL};
+\node[inside, fill=red!10, below=0.3cm of nginx] (php) {PHP 8.2-FPM / Laravel 12/13};
+\node[inside, fill=yellow!15, below=0.3cm of php] (mysql) {SGBD MySQL 8.0+};
+\end{tikzpicture}
+};
+
+\draw[arr] (client) -- node[above, font=\scriptsize] {HTTPS (Port 443)} node[below, font=\scriptsize] {Protocole TLS 1.3} (server);
+\end{tikzpicture}

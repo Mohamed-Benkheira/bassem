@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=stealth,
+    role/.style={draw=blue!80!black, fill=blue!10, rounded corners=3pt, minimum width=3.2cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries},
+    perm/.style={draw=green!60!black, fill=green!5, rounded corners=2pt, minimum width=2.8cm, minimum height=0.7cm, align=center, font=\scriptsize},
+    arrow/.style={->, thick, >=stealth, color=darkgray}
+]
+\node[role, fill=purple!15] (admin) {Administrateur IT};
+\node[role, fill=orange!15, below=0.7cm of admin] (manager) {Responsable M\'etrologie};
+\node[role, fill=blue!15, left=0.8cm of manager] (comm) {Commercial};
+\node[role, fill=yellow!20, right=0.8cm of manager] (tech) {Technicien M\'etrologue};
+\node[role, fill=gray!15, below=0.8cm of comm] (client) {Client Externe};
+\node[role, fill=teal!15, below=0.8cm of manager] (delegate) {M\'etrologue D\'el\'egu\'e};
+
+\node[perm, below=0.7cm of client] (p_client) {Cr\'eer Demandes\\T\'el\'echarger Certificats};
+\node[perm, below=0.7cm of delegate] (p_del) {Valider Certificats\\(Mode D\'el\'egation Trac\'e)};
+\node[perm, below=0.7cm of tech] (p_tech) {Prise en Charge\\Upload Rapports};
+
+\draw[arrow] (admin) -- (manager);
+\draw[arrow] (admin) -| (comm);
+\draw[arrow] (admin) -| (tech);
+\draw[arrow] (manager) -- (delegate);
+\draw[arrow] (client) -- (p_client);
+\draw[arrow] (delegate) -- (p_del);
+\draw[arrow] (tech) -- (p_tech);
+\end{tikzpicture}

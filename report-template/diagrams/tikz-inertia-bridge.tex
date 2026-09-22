@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=stealth,
+    block/.style={draw=gray!70, fill=white, rounded corners=3pt, line width=0.8pt, minimum width=2.8cm, minimum height=1.2cm, align=center, font=\footnotesize},
+    bridge/.style={draw=blue!80!black, fill=blue!10, rounded corners=4pt, line width=1.2pt, minimum width=3.2cm, minimum height=1.4cm, align=center, font=\small\bfseries},
+    arrow/.style={->, thick, >=stealth}
+]
+\node[block, fill=cyan!10] (react) {\textbf{Frontend React 19}\\[2pt]Composants UI / Pages\\State Management};
+\node[bridge, right=1.8cm of react] (inertia) {Passerelle Inertia.js\\[2pt]\footnotesize Protocole X-Inertia\\Routage Hybride Monolithique};
+\node[block, fill=red!10, right=1.8cm of inertia] (laravel) {\textbf{Backend Laravel 12}\\[2pt]Contr\^oleurs / Middleware\\Mod\`eles Eloquent};
+
+\draw[arrow] (react.east) -- node[above, font=\scriptsize] {Inertia.visit()} (inertia.west);
+\draw[arrow] (inertia.east) -- node[above, font=\scriptsize] {Route / Action} (laravel.west);
+\draw[arrow] (laravel.south west) to[bend left=25] node[below, font=\scriptsize] {Inertia::render('Page', \$props)} (react.south east);
+\end{tikzpicture}

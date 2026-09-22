@@ -1,0 +1,20 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces معمارية العميل والخادم 3-Tiers لتطبيق معايرة المعدات\relax }}{7}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces آلية عمل تقنية Inertia.js للربط بين Laravel و React\relax }}{7}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces هيكل الأدوار ومصفوفة الصلاحيات (\LR {RBAC})\relax }}{9}{figure.caption.19}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces الهيكل التنظيمي لشركة أليسيف (\LR {ALICEF SPA})\relax }}{11}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces مقارنة شاملة بين مسار العمل اليدوي القديم والنظام الرقمي الجديد\relax }}{13}{figure.caption.23}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces المخطط العام لحالات الاستخدام لنظام إدارة الشهادات (\LR {Système de gestion des certificats})\relax }}{17}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces مخطط التسلسل : عملية المصادقة وتوجيه الجلسة\relax }}{25}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces مخطط التسلسل : تقديم الطلب ودراسته التجارية\relax }}{26}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces مخطط التسلسل : التنفيذ المخبري ومراقبة الجودة\relax }}{26}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces مخطط التسلسل : تثبيت الشهادة وتحميلها للزبون\relax }}{27}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces مخطط الحالات والانتقالات لدورة حياة طلب المعايرة\relax }}{27}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces مخطط فئات مجال المعايرة والمترولوجيا (\LR {Domain Class Diagram})\relax }}{28}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces المخطط العلائقي لقاعدة البيانات MySQL\relax }}{30}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces مخطط النشر الفيزيائي للمنصة (\LR {LEMP Topology})\relax }}{30}{figure.caption.52}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces الهيكلة البرمجية للمشروع وتوزيع المجلدات والمسارات\relax }}{33}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces هرم الاختبارات الآلية ومستويات الفحص\relax }}{35}{figure.caption.56}%

@@ -1,0 +1,47 @@
+\begin{tikzpicture}[>=stealth, scale=0.9, every node/.style={transform shape},
+    actor/.style={draw=blue!80!black, fill=blue!10, rounded corners=3pt, minimum width=2.4cm, minimum height=1cm, align=center, font=\footnotesize\bfseries},
+    uc/.style={draw=black!70, fill=gray!5, ellipse, minimum width=3.4cm, minimum height=0.8cm, align=center, font=\scriptsize},
+    arr/.style={-, thick, color=gray!70}
+]
+\node[actor] (client) at (0, 6) {Client};
+\node[actor] (comm) at (0, 3) {Commercial};
+\node[actor] (manager) at (0, 0) {Responsable\\M\'etrologie};
+\node[actor] (tech) at (0, -3) {Technicien\\M\'etrologue};
+\node[actor] (admin) at (0, -6) {Administrateur};
+
+\node[uc] (uc_auth) at (5, 7) {UC01: Authentification \& Session};
+\node[uc] (uc_cat) at (5, 5.7) {UC02: Consulter Catalogue};
+\node[uc] (uc_req) at (5, 4.4) {UC03: Cr\'eer Demande Multi-\'Equipements};
+\node[uc] (uc_quote) at (5, 3.1) {UC04: Qualifier \& \'Emettre Devis};
+\node[uc] (uc_sched) at (5, 1.8) {UC05: N\'egocier / Valider Date};
+\node[uc] (uc_assign) at (5, 0.5) {UC06: Affecter Technicien};
+\node[uc] (uc_exec) at (5, -0.8) {UC07: Effectuer \'Etalonnage};
+\node[uc] (uc_rep) at (5, -2.1) {UC08: Uploader Rapport d'Essai};
+\node[uc] (uc_rev) at (5, -3.4) {UC09: Revue Qualit\'e \& Rework};
+\node[uc] (uc_cert) at (5, -4.7) {UC10: Valider Certificat Immuable};
+\node[uc] (uc_down) at (5, -6) {UC11: T\'el\'echarger Certificat};
+\node[uc] (uc_audit) at (5, -7.3) {UC12: Audit \& \'Etalons};
+
+\draw[arr] (client) -- (uc_auth);
+\draw[arr] (client) -- (uc_cat);
+\draw[arr] (client) -- (uc_req);
+\draw[arr] (client) -- (uc_sched);
+\draw[arr] (client) -- (uc_down);
+
+\draw[arr] (comm) -- (uc_auth);
+\draw[arr] (comm) -- (uc_quote);
+
+\draw[arr] (manager) -- (uc_auth);
+\draw[arr] (manager) -- (uc_sched);
+\draw[arr] (manager) -- (uc_assign);
+\draw[arr] (manager) -- (uc_rev);
+\draw[arr] (manager) -- (uc_cert);
+\draw[arr] (manager) -- (uc_audit);
+
+\draw[arr] (tech) -- (uc_auth);
+\draw[arr] (tech) -- (uc_exec);
+\draw[arr] (tech) -- (uc_rep);
+
+\draw[arr] (admin) -- (uc_auth);
+\draw[arr] (admin) -- (uc_audit);
+\end{tikzpicture}

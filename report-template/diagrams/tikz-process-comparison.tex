@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=stealth,
+    oldproc/.style={draw=red!70!black, fill=red!5, rounded corners=3pt, minimum width=4.5cm, minimum height=0.8cm, align=center, font=\scriptsize},
+    newproc/.style={draw=green!70!black, fill=green!5, rounded corners=3pt, minimum width=4.5cm, minimum height=0.8cm, align=center, font=\scriptsize},
+    arr/.style={->, thick, >=stealth}
+]
+\node[draw=red!80, fill=red!15, font=\small\bfseries, minimum width=5cm] (hold) {\'Etat des Lieux Traditionnel (Existant)};
+\node[oldproc, below=0.4cm of hold] (o1) {Fiches de demande papier / emails dispers\'es};
+\node[oldproc, below=0.4cm of o1] (o2) {Saisie manuelle sur tableurs Excel non partag\'es};
+\node[oldproc, below=0.4cm of o2] (o3) {Planification t\'el\'ephonique sujette aux d\'esaccords};
+\node[oldproc, below=0.4cm of o3] (o4) {Risque d'emploi d'\'etalons expir\'es non trac\'es};
+\node[oldproc, below=0.4cm of o4] (o5) {Retard de transmission des certificats d'essai};
+
+\node[draw=green!80!black, fill=green!15, font=\small\bfseries, minimum width=5cm, right=2.2cm of hold] (hnew) {Syst\`eme Web Propos\'e (Projet)};
+\node[newproc, below=0.4cm of hnew] (n1) {Portail client unifi\'e multi-\'equipements};
+\node[newproc, below=0.4cm of n1] (n2) {Base de donn\'ees centralis\'ee MySQL \& ACID};
+\node[newproc, below=0.4cm of n2] (n3) {Validation concert\'ee des dates en ligne};
+\node[newproc, below=0.4cm of n3] (n4) {Blocage automatique des \'etalons p\'erim\'es};
+\node[newproc, below=0.4cm of n4] (n5) {Certificats num\'eriques immuables t\'el\'echargeables};
+
+\draw[arr, color=red!70] (o1) -- (o2);
+\draw[arr, color=red!70] (o2) -- (o3);
+\draw[arr, color=red!70] (o3) -- (o4);
+\draw[arr, color=red!70] (o4) -- (o5);
+
+\draw[arr, color=green!70!black] (n1) -- (n2);
+\draw[arr, color=green!70!black] (n2) -- (n3);
+\draw[arr, color=green!70!black] (n3) -- (n4);
+\draw[arr, color=green!70!black] (n4) -- (n5);
+\end{tikzpicture}

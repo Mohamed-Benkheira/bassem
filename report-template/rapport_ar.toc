@@ -1,0 +1,70 @@
+\contentsline {chapter}{شكر و عرفان}{i}{chapter*.1}%
+\contentsline {chapter}{إهداء}{ii}{chapter*.2}%
+\contentsline {chapter}{ملخص}{iii}{chapter*.3}%
+\contentsline {chapter}{R\'esum\'e}{iv}{chapter*.4}%
+\contentsline {chapter}{Abstract}{v}{chapter*.5}%
+\contentsline {chapter}{قائمة الاختصارات}{1}{chapter*.9}%
+\contentsline {chapter}{المقدمة العامة}{2}{chapter*.11}%
+\contentsline {chapter}{\numberline {1}المفاهيم العامة والأسس النظرية}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}تعريف الإنترنت والويب}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}تعريف الإنترنت}{5}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}تعريف الويب}{5}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}الفرق بين الإنترنت والويب}{6}{subsection.1.1.3}%
+\contentsline {section}{\numberline {1.2}أنواع تطبيقات الويب وهندسة العميل والخادم}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}المواقع الثابتة والديناميكية}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}معمارية العميل والخادم ونموذج 3-Tiers}{6}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}تقنية الوساطة Inertia.js}{7}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}التقنيات المستعملة في الواجهة الأمامية (\LR {Frontend})}{7}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}مكتبة React 19 ولغة TypeScript}{7}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}إطار التنسيق Tailwind CSS v4 وأداة البناء Vite}{8}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}التقنيات المستعملة في الواجهة الخلفية (\LR {Backend})}{8}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}لغة PHP 8.2+ ونمط المعمارية MVC}{8}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}إطار العمل Laravel 12 ومحرك Eloquent ORM}{8}{subsection.1.4.2}%
+\contentsline {section}{\numberline {1.5}أمن التطبيقات ونظام إدارة الصلاحيات (\LR {RBAC})}{8}{section.1.5}%
+\contentsline {chapter}{\numberline {2}الدراسة التمهيدية}{10}{chapter.2}%
+\contentsline {section}{\numberline {2.1}تقديم المؤسسة المستخدمة (\LR {ALICEF SPA})}{10}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}تعريف الشركة ونشاطها}{10}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}المجالات المترولوجية المعتمدة لدى شركة \LR {ALICEF SPA}}{11}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}الهيكل التنظيمي لشركة \LR {ALICEF SPA}}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}دراسة الوضع الحالي ونقده}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}وصف الإجراءات اليدوية السابقة}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}نقد الوضع القائم ونقاط الضعف}{12}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}الحل المقترح ومواصفات الاحتياجات}{13}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}الحل الرقمي المعتمد}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}المتطلبات الوظيفية (\LR {Besoins Fonctionnels})}{13}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}المتطلبات غير الوظيفية (\LR {Besoins Non-Fonctionnels})}{14}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}المنهجية المتبعة في تطوير المشروع}{14}{section.2.5}%
+\contentsline {chapter}{\numberline {3}التحليل والتصميم}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}تحديد الفاعلين والمخطط العام لحالات الاستخدام}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}الفاعلون في النظام}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}المخطط العام لحالات الاستخدام}{16}{subsection.3.1.2}%
+\contentsline {subsubsection}{تحليل العلاقات والتبادلات بين حالات الاستخدام}{18}{section*.27}%
+\contentsline {section}{\numberline {3.2}بطاقات وصف حالات الاستخدام}{18}{section.3.2}%
+\contentsline {section}{\numberline {3.3}النمذجة الحركية (مخططات التسلسل)}{25}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}مخطط تسلسل المصادقة والتحقق من الصلاحيات}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}مخطط تسلسل تقديم الطلب والتأهيل التجاري}{26}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}مخطط تسلسل تنفيذ المعايرة، رفع التقرير والمراجعة}{26}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}مخطط تسلسل الاعتماد النهائي للشهادة والتحميل}{27}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}مخطط الحالات والانتقالات لدورة حياة الطلب}{27}{section.3.4}%
+\contentsline {section}{\numberline {3.5}قواعد التسيير والترميز الموحد}{27}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}قواعد الترميز الرسمي للوثائق}{27}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}قواعد التسيير المعتمدة (\LR {RG})}{28}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}النمذجة الهيكلية وقاموس المعطيات}{28}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}مخطط الفئات الخاص بالمجال المترولوجي}{28}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}قاموس المعطيات للجداول الأساسية}{29}{subsection.3.6.2}%
+\contentsline {section}{\numberline {3.7}مخطط النشر الفيزيائي للمنصة}{30}{section.3.7}%
+\contentsline {chapter}{\numberline {4}الإنجاز والاختبارات}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}بيئة التطوير والأدوات المعتمدة}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}الهيكلة البرمجية للمشروع}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}تطبيق مبدأ عدم قابلية تعديل الشهادات (\LR {Immutability})}{33}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}استعراض واجهات النظام الرئيسية}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}الواجهة العامة ودليل الخدمات المترولوجية}{34}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}فضاء الزبون : إدراج طلب متعدد المعدات وتتبع الشهادات}{34}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}لوحة تحكم مسؤول المترولوجيا}{34}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}فضاء التقني المترولوجي}{34}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}استراتيجية الاختبارات والتحقق الآلي}{34}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}هرم الاختبارات}{34}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}نتائج حزمة الاختبارات الآلية}{35}{subsection.4.4.2}%
+\contentsline {chapter}{الخاتمة العامة والآفاق المستقبلية}{36}{chapter*.59}%
+\contentsline {chapter}{قائمة المراجع والمصادر}{38}{chapter*.62}%
+\contentsline {chapter}{الملاحق}{40}{appendix*.63}%

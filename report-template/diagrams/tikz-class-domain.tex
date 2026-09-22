@@ -1,0 +1,82 @@
+\begin{tikzpicture}[>=stealth, scale=0.82, every node/.style={transform shape},
+    classbox/.style={draw=black!80, fill=yellow!5, rectangle, rounded corners=2pt, minimum width=3.8cm, align=left, font=\scriptsize}
+]
+\node[classbox] (client) at (0,4.5) {
+\textbf{Client}\\
+\rule{3.6cm}{0.4pt}\\
++ id: int\\
++ company\_name: string\\
++ email: string\\
++ phone: string\\
+\rule{3.6cm}{0.4pt}\\
++ requests(): HasMany\\
++ contracts(): HasMany
+};
+
+\node[classbox] (req) at (5.5,4.5) {
+\textbf{CalibrationRequest}\\
+\rule{3.6cm}{0.4pt}\\
++ id: int\\
++ reference: string\\
++ status: string\\
++ scheduled\_date: date\\
+\rule{3.6cm}{0.4pt}\\
++ items(): HasMany\\
++ operations(): HasMany\\
++ quotation(): HasOne
+};
+
+\node[classbox] (item) at (11,4.5) {
+\textbf{CalibrationRequestItem}\\
+\rule{3.6cm}{0.4pt}\\
++ id: int\\
++ equipment\_name: string\\
++ serial\_number: string\\
++ tolerance: string\\
+\rule{3.6cm}{0.4pt}\\
++ service(): BelongsTo\\
++ certificate(): HasOne
+};
+
+\node[classbox] (op) at (5.5,0) {
+\textbf{CalibrationOperation}\\
+\rule{3.6cm}{0.4pt}\\
++ id: int\\
++ status: string\\
++ scheduled\_date: date\\
+\rule{3.6cm}{0.4pt}\\
++ technician(): BelongsTo\\
++ reports(): HasMany\\
++ certificate(): HasOne
+};
+
+\node[classbox] (rep) at (0,0) {
+\textbf{CalibrationReport}\\
+\rule{3.6cm}{0.4pt}\\
++ id: int\\
++ file\_path: string\\
++ status: string\\
++ rejection\_reason: text\\
+\rule{3.6cm}{0.4pt}\\
++ reviewer(): BelongsTo
+};
+
+\node[classbox] (cert) at (11,0) {
+\textbf{CalibrationCertificate}\\
+\rule{3.6cm}{0.4pt}\\
++ id: int\\
++ certificate\_number: string\\
++ is\_draft: bool\\
++ is\_final: bool\\
+\rule{3.6cm}{0.4pt}\\
++ validator(): BelongsTo\\
++ isImmutable(): bool
+};
+
+\draw[->, thick] (client) -- node[above, font=\tiny] {1 \dots *} (req);
+\draw[->, thick] (req) -- node[above, font=\tiny] {1 \dots *} (item);
+\draw[->, thick] (req) -- node[right, font=\tiny] {1 \dots *} (op);
+\draw[->, thick] (op) -- node[above, font=\tiny] {1 \dots *} (rep);
+\draw[->, thick] (op) -- node[above, font=\tiny] {1 \dots 1} (cert);
+\draw[->, dashed] (item) -- (cert);
+\end{tikzpicture}

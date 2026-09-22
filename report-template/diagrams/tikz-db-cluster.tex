@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=stealth,
+    tbl/.style={draw=blue!80!black, fill=blue!5, rounded corners=2pt, minimum width=2.8cm, minimum height=0.7cm, align=center, font=\scriptsize\bfseries},
+    conn/.style={-, thick, color=gray!80}
+]
+\node[tbl, fill=purple!10] (users) at (0,3) {users};
+\node[tbl, fill=blue!15] (clients) at (0,1.5) {clients};
+\node[tbl, fill=green!15] (req) at (3.5,1.5) {calibration\_requests};
+\node[tbl] (items) at (7.5,1.5) {calibration\_request\_items};
+\node[tbl] (ops) at (3.5,0) {calibration\_operations};
+\node[tbl] (reps) at (0,0) {calibration\_reports};
+\node[tbl, fill=yellow!20] (certs) at (7.5,0) {calibration\_certificates};
+\node[tbl, fill=orange!15] (std) at (3.5,-1.5) {metrology\_materials};
+\node[tbl, fill=red!10] (audit) at (7.5,-1.5) {audit\_logs};
+
+\draw[conn] (users) -- (clients);
+\draw[conn] (clients) -- (req);
+\draw[conn] (req) -- (items);
+\draw[conn] (req) -- (ops);
+\draw[conn] (ops) -- (reps);
+\draw[conn] (ops) -- (certs);
+\draw[conn] (ops) -- (std);
+\draw[conn] (users) -| (audit);
+\end{tikzpicture}
