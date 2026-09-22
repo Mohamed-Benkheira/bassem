@@ -1,0 +1,26 @@
+\begin{tikzpicture}[font=\scriptsize, >=stealth,
+  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
+  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
+  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+  edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
+
+\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
+\node[action] (dossier) at (-2.6, -1.5) {Ouvrir le dossier};
+\node[action] (associer) at (-2.6, -3.0) {Associer chaque \'equipement\\\`a une prestation};
+\node[decision] (hors) at (-2.6, -4.5) {\'Equipement hors\\p\'erim\`etre ?};
+\node[action] (calcul) at (-2.6, -6.0) {Calculer\\\texttt{HT + TVA 19\% + TTC}};
+\node[action] (devis) at (-2.6, -7.5) {Confirmer le devis\\\texttt{DEV-YYYY-XXXX}};
+\node[action] (flux) at (-2.6, -9.0) {Mettre \`a jour le flux\\et notifier};
+\node[startstop] (fin) at (-2.6, -10.5) {Fin};
+\node[action] (rejet) at (2.6, -4.5) {Rejeter avec motif\\et ignorer};
+
+\draw[->] (debut) -- (dossier);
+\draw[->] (dossier) -- (associer);
+\draw[->] (associer) -- (hors);
+\draw[->] (hors.south) -- node[edgelabel, right=4pt] {Non} (calcul.north);
+\draw[->] (hors.east) -- node[edgelabel, above] {Oui} (rejet.west);
+\draw[->] (rejet.south) |- node[edgelabel, pos=0.3, right=2pt] {ignorer} (calcul.south);
+\draw[->] (calcul) -- (devis);
+\draw[->] (devis) -- (flux);
+\draw[->] (flux) -- (fin);
+\end{tikzpicture}

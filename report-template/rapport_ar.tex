@@ -3,12 +3,12 @@
 %% ============================================================
 %% إعدادات الميتاداتا ومعلومات المذكرة
 %% ============================================================
-\themeAr{تطوير تطبيق ويب لتسيير عملية معايرة المعدات}
-\themeFr{D\'eveloppement d'une application web pour la gestion du processus d'\'etalonnage des \'equipements}
-\hostorg{شركة أليسيف (\LR{ALICEF SPA})}
+\themeAr{تصميم وإنجاز تطبيق ويب لتسيير ومعايرة معدات القياس والمترولوجيا الصناعية}
+\themeFr{Conception et R\'ealisation d'une Application Web de Gestion de la Calibration des \'Equipements de Mesure et de M\'etrologie Industrielle}
+\hostorg{المخبر الوطني للمعايرة والمترولوجيا الصناعية (LNEMI)}
 \supervisor{الأستاذة بن عياش سميرة}
-\promoter{بوشارب موراد}
-\students{خنشالي محمد باسم}
+\promoter{السيد سمير محالبي}
+\students{خنشالي محمد باسيم (Khanchali Mohamed Bassem)}
 \promotion{2024 / 2026}
 
 \begin{document}
@@ -33,9 +33,9 @@
 
 كما أعبر عن عميق امتناني وتقديري للأستاذة المشرفة \textbf{بن عياش سميرة} على دعمها المستمر وتوجيهاتها القيمة ونصائحها السديدة طوال فترة إنجاز هذا المشروع.
 
-وأخص بالشكر المؤطر في المؤسسة المستخدمة \textbf{السيد بوشارب موراد} من شركة \textbf{\LR{ALICEF SPA}} على جهوده القيمة، وتعاونه البناء، وحرصه الدائم على تزويدنا بكل ما يفيد لإنجاح هذا العمل وربطه بالمعايير الصناعية المعتمدة.
+وأخص بالشكر المؤطر في المؤسسة المستقبلة \textbf{السيد سمير محالبي} على جهوده القيمة، وتعاونه البناء، وحرصه الدائم على تزويدنا بكل ما يفيد لإنجاح هذا العمل وربطه بالمعايير الصناعية المعتمدة.
 
-كما أتوجه بالشكر والتقدير إلى السادة أعضاء لجنة المناقشة والتحكيم لتفضلهم بقبول تقييم هذه المذكرة، وإلى كافة الأساتذة وأعضاء هيئة التدريس والإدارة في \textbf{المعهد الوطني المتخصص في التكوين المهني (\LR{INSFP}) رحمانية - سيدي عبد الله}، على ما بذلوه من جهد لتوفير أفضل الظروف لتكويننا طيلة فترة دراستنا.
+كما أتوجه بالشكر والتقدير إلى السادة أعضاء لجنة المناقشة والتحكيم لتفضلهم بقبول تقييم هذه المذكرة، وإلى كافة الأساتذة وأعضاء هيئة التدريس والإدارة في \textbf{المعهد الوطني المتخصص في التكوين المهني (INSFP) رحمانية - سيدي عبد الله}، على ما بذلوه من جهد لتوفير أفضل الظروف لتكويننا طيلة فترة دراستنا.
 
 وأخيراً، أتقدم بالشكر إلى جميع الزملاء والأصدقاء وكل من ساهم من قريب أو من بعيد في إنجاز هذا المشروع.
 \end{shokr}
@@ -49,9 +49,9 @@
 {\itshape
 أهدي هذا العمل المتواضع :
 
-إلى الينبوع الذي لا ينضب من الحنان والعطاء، إلى من رعتني بصبرها وسهرها ودعواتها المباركة، إلى أغلى ما أملك في الوجود : \textbf{أمي الغالية} (حفظها الله ورعاها).
+إلى الينبوع الذي لا ينضب من الحنان والعطاء، إلى من رعتني بصبرها ودعواتها المباركة، إلى أغلى ما أملك في الوجود : \textbf{أمي الغالية}.
 
-إلى سندي ومثلي الأعلى وقدوتي في الحياة، إلى من علمني الصبر وعزة النفس وثمار الجد والكفاح، أطال الله في عمره ومتّعه بموفور الصحة والعافية : \textbf{أبي العزيز}.
+إلى من علمني الكفاح وعزة النفس وغرس في نفسي حب العلم والعمل، إلى قدوتي ومثلي الأعلى، إلى من غاب عن عيني وبقيت ذكراه حية في قلبي : \textbf{روحي والدي الطاهرة} (رحمه الله وأسكنه فسيح جناته).
 
 إلى إخوتي وأخواتي الأعزاء، على مساندتهم الدائمة وتشجيعهم المستمر لي في كافة مراحل دراستي.
 
@@ -68,25 +68,25 @@
 %% الملخصات (عربي، فرنسي، إنجليزي)
 %% ------------------------------------------------------------
 \begin{abstractar}
-تعتبر المترولوجيا الصناعية والمعايرة الدورية لمعدات وأدوات القياس من الركائز الاستراتيجية الأساسية لضمان جودة المنتجات، ودقة التصنيع، وتحقيق مطابقة المعايير الدولية (\LR{ISO/IEC 17025}). 
+تعتبر المترولوجيا الصناعية والمعايرة الدورية لمعدات وأدوات القياس من الركائز الاستراتيجية الأساسية لضمان جودة المنتجات، ودقة التصنيع، وتحقيق مطابقة المعايير الدولية (ISO/IEC 17025). 
 
 يقدم هذا العمل تصميم وإنجاز تطبيق ويب متكامل ومخصص لتسيير دورة الحياة الشاملة لعمليات معايرة وتدقيق الأجهزة القياسية عبر ستة مجالات فيزيائية رئيسية (الضغط، الحرارة، الكهرباء، الأبعاد، الوزن والكتلة، وعزم الدوران). تسمح هذه المنصة بالربط الفعال والمباشر بين الزبائن من المؤسسات الصناعية، المصلحة التجارية، مسؤولي مخبر المترولوجيا، والتقنيين المؤهلين لتنفيذ التجارب. 
 
-تم تطوير النظام وفق معمارية برمجية حديثة تعتمد على إطار العمل \textbf{Laravel 12} مع تقنية \textbf{Inertia.js} ومكتبة \textbf{React 19} ولغة \textbf{TypeScript}، وقاعدة بيانات \textbf{MySQL}، مع إدماج نظام صلاحيات محكم (\LR{RBAC})، وعزل كامل لبيانات الزبائن، وضمان عدم قابلية تعديل شهادات المعايرة النهائية، ومتابعة آلية لصلاحية العتاد المرجعي، وسجل تدقيق أمني شامل لكافة العمليات. تم تأكيد موثوقية التطبيق من خلال 67 اختباراً مؤتمتاً بنجاح تام.
+تم تطوير النظام وفق معمارية برمجية حديثة تعتمد على إطار العمل \textbf{Laravel 12} مع تقنية \textbf{Inertia.js} ومكتبة \textbf{React 19} ولغة \textbf{TypeScript}، وقاعدة بيانات \textbf{MySQL}، مع إدماج نظام صلاحيات محكم (RBAC)، وعزل كامل لبيانات الزبائن، وضمان عدم قابلية تعديل شهادات المعايرة النهائية، ومتابعة آلية لصلاحية العتاد المرجعي، وسجل تدقيق أمني شامل لكافة العمليات. تم تأكيد موثوقية التطبيق من خلال 67 اختباراً مؤتمتاً بنجاح تام.
 
 \vspace{0.6cm}
 \noindent\textbf{الكلمات المفتاحية :} معايرة المعدات، مترولوجيا صناعية، Laravel، React، Inertia.js، شهادات المعايرة، الأمان الرقمي، تدقيق العمليات.
 \end{abstractar}
 
 \begin{abstractfr}
-La m\'etrologie industrielle et l'\'etalonnage p\'eriodique des \'equipements de mesure constituent un pilier strat\'egique incontournable pour garantir la conformit\'e aux normes de qualit\'e internationales (\LR{ISO/IEC 17025}). Ce m\'emoire pr\'esente la conception et la r\'ealisation d'une application web d'entreprise d\'edi\'ee \`a la gestion int\'egrale du cycle de vie des op\'erations de calibration couvrant six domaines physiques (pression, temp\'erature, \'electricit\'e, dimensionnel, pesage et couple). D\'evelopp\'ee avec Laravel, Inertia.js, React 19, TypeScript et MySQL, la plateforme int\`egre un contr\^ole d'acc\`es RBAC, l'immutabilit\'e des certificats d\'efinitifs, le suivi des \'etalons de r\'ef\'erence et une piste d'audit inalt\'erable. Une suite de 67 tests automatis\'es valide la fiabilit\'e du syst\`eme \`a 100\%.
+La m\'etrologie industrielle et l'\'etalonnage p\'eriodique des \'equipements de mesure constituent un pilier strat\'egique incontournable pour garantir la conformit\'e aux normes de qualit\'e internationales (ISO/IEC 17025). Ce m\'emoire pr\'esente la conception et la r\'ealisation d'une application web d'entreprise d\'edi\'ee \`a la gestion int\'egrale du cycle de vie des op\'erations de calibration couvrant six domaines physiques (pression, temp\'erature, \'electricit\'e, dimensionnel, pesage et couple). D\'evelopp\'ee avec Laravel, Inertia.js, React 19, TypeScript et MySQL, la plateforme int\`egre un contr\^ole d'acc\`es RBAC, l'immutabilit\'e des certificats d\'efinitifs, le suivi des \'etalons de r\'ef\'erence et une piste d'audit inalt\'erable. Une suite de 67 tests automatis\'es valide la fiabilit\'e du syst\`eme \`a 100\%.
 
 \vspace{0.6cm}
 \noindent\textbf{Mots-cl\'es :} Calibration d'\'equipements, M\'etrologie industrielle, Laravel, Inertia.js, React, Certificats officiels, Immutabilit\'e, Piste d'audit.
 \end{abstractfr}
 
 \begin{abstracten}
-Industrial metrology and periodic equipment calibration represent a vital foundation for ensuring precision manufacturing, operational safety, and compliance with international quality standards such as ISO/IEC 17025. This thesis presents the comprehensive design and engineering of an enterprise web platform managing the end-to-end lifecycle of measurement equipment calibration across six physical domains (\LR{pressure, temperature, electrical, dimensional, mass, and torque}). Built with Laravel, Inertia.js, React 19, TypeScript, and MySQL, the platform enforces role-based authorization (\LR{RBAC}), multi-tenant client isolation, strict immutability of finalized calibration certificates, automated reference standards expiration alerts, and comprehensive audit trail logging verified by 67 automated tests.
+Industrial metrology and periodic equipment calibration represent a vital foundation for ensuring precision manufacturing, operational safety, and compliance with international quality standards such as ISO/IEC 17025. This thesis presents the comprehensive design and engineering of an enterprise web platform managing the end-to-end lifecycle of measurement equipment calibration across six physical domains (pressure, temperature, electrical, dimensional, mass, and torque). Built with Laravel, Inertia.js, React 19, TypeScript, and MySQL, the platform enforces role-based authorization (RBAC), multi-tenant client isolation, strict immutability of finalized calibration certificates, automated reference standards expiration alerts, and comprehensive audit trail logging verified by 67 automated tests.
 
 \vspace{0.6cm}
 \noindent\textbf{Keywords :} Equipment Calibration, Industrial Metrology, Laravel, Inertia.js, React, Digital Certificates, Immutability, Audit Trail.
@@ -102,29 +102,28 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 %% ------------------------------------------------------------
 %% قائمة الاختصارات
 %% ------------------------------------------------------------
-\chapter*{قائمة الاختصارات \LR{(Glossaire)}}
+\chapter*{قائمة الاختصارات (Glossaire)}
 \addcontentsline{toc}{chapter}{قائمة الاختصارات}
 
 \begin{abbrevtablear}
-  \ucfieldar{BTS}{شهادة تقني سامي (\LR{Brevet de Technicien Sup\'erieur})}
+  \ucfieldar{BTS}{شهادة تقني سامي (Brevet de Technicien Supérieur)}
   \ucfieldar{INSFP}{المعهد الوطني المتخصص في التكوين المهني}
-  \ucfieldar{ALICEF SPA}{شركة أليسيف ش.ذ.أ (\LR{ALICEF SPA}) - مخبر المعايرة المعتمد (المؤسسة المستخدمة)}
-  \ucfieldar{ALGERAC}{الهيئة الجزائرية للاعتماد (\LR{Organisme Alg\'erien d'Accr\'editation})}
-  \ucfieldar{ISO}{المنظمة الدولية للتقييس (\LR{International Organization for Standardization})}
-  \ucfieldar{IEC}{اللجنة الكهروتقنية الدولية (\LR{International Electrotechnical Commission})}
-  \ucfieldar{UML}{لغة النمذجة الموحدة (\LR{Unified Modeling Language})}
-  \ucfieldar{UP}{المنهجية الموحدة للتطوير (\LR{Unified Process})}
-  \ucfieldar{MVC}{نمط المعمارية البرمجية: نموذج - واجهة - متحكم (\LR{Model - View - Controller})}
-  \ucfieldar{SPA}{تطبيق الصفحة الواحدة (\LR{Single Page Application})}
-  \ucfieldar{API}{واجهة برمجة التطبيقات (\LR{Application Programming Interface})}
-  \ucfieldar{RBAC}{التحكم في الوصول المعتمد على الأدوار (\LR{Role-Based Access Control})}
-  \ucfieldar{ORM}{رسم الخرائط العلائقية للكائنات (\LR{Object-Relational Mapping})}
-  \ucfieldar{LEMP}{حزمة خادم الويب: \LR{Linux, Nginx, MySQL, PHP}}
-  \ucfieldar{CSRF}{حماية ضد تزوير الطلبات عبر المواقع (\LR{Cross-Site Request Forgery})}
-  \ucfieldar{XSS}{حماية ضد البرمجة النصية عبر المواقع (\LR{Cross-Site Scripting})}
+  \ucfieldar{LNEMI}{المخبر الوطني للمعايرة والمترولوجيا الصناعية}
+  \ucfieldar{ISO}{المنظمة الدولية للتقييس (International Organization for Standardization)}
+  \ucfieldar{IEC}{اللجنة الكهروتقنية الدولية (International Electrotechnical Commission)}
+  \ucfieldar{UML}{لغة النمذجة الموحدة (Unified Modeling Language)}
+  \ucfieldar{UP}{المنهجية الموحدة للتطوير (Unified Process)}
+  \ucfieldar{MVC}{نمط المعمارية البرمجية: نموذج - واجهة - متحكم (Model - View - Controller)}
+  \ucfieldar{SPA}{تطبيق الصفحة الواحدة (Single Page Application)}
+  \ucfieldar{API}{واجهة برمجة التطبيقات (Application Programming Interface)}
+  \ucfieldar{RBAC}{التحكم في الوصول المعتمد على الأدوار (Role-Based Access Control)}
+  \ucfieldar{ORM}{رسم الخرائط العلائقية للكائنات (Object-Relational Mapping)}
+  \ucfieldar{LEMP}{حزمة خادم الويب: Linux, Nginx, MySQL, PHP}
+  \ucfieldar{CSRF}{حماية ضد تزوير الطلبات عبر المواقع (Cross-Site Request Forgery)}
+  \ucfieldar{XSS}{حماية ضد البرمجة النصية عبر المواقع (Cross-Site Scripting)}
   \ucfieldar{ACID}{خصائص الموثوقية في قواعد البيانات: الذرية، التناسق، العزل، والديمومة}
-  \ucfieldar{HTTP/HTTPS}{بروتوكول نقل النص الفائق الآمن (\LR{HyperText Transfer Protocol Secure})}
-  \ucfieldar{TLS}{أمان طبقة النقل والتشفير (\LR{Transport Layer Security})}
+  \ucfieldar{HTTP/HTTPS}{بروتوكول نقل النص الفائق الآمن (HyperText Transfer Protocol Secure)}
+  \ucfieldar{TLS}{أمان طبقة النقل والتشفير (Transport Layer Security)}
 \end{abbrevtablear}
 
 
@@ -150,7 +149,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 وانطلاقًا من هذا الواقع، جاءت فكرة مشروعنا المتمثلة في تصميم وإنجاز تطبيق ويب خاص بـ \textbf{تسيير ومعايرة معدات القياس والمترولوجيا الصناعية}، بهدف تقديم حل رقمي متكامل يساهم في تحسين عملية التسيير، وتتبع مسار المعدات، وإصدار شهادات المعايرة الرسمية بطريقة موثوقة وغير قابلة للتلاعب.
 
 \section*{الإشكالية وفرضية العمل}
-رغم التطور التكنولوجي الكبير، إلا أن العديد من مخابر المعايرة والوحدات الصناعية ما تزال تعتمد على طرق تقليدية وشبه يدوية في تسيير بياناتها، مثل السجلات الورقية، وجداول البيانات المنفصلة (\LR{Excel})، والمراسلات عبر البريد الإلكتروني العادي. وهو ما يؤدي إلى عدة مشاكل جوهرية:
+رغم التطور التكنولوجي الكبير، إلا أن العديد من مخابر المعايرة والوحدات الصناعية ما تزال تعتمد على طرق تقليدية وشبه يدوية في تسيير بياناتها، مثل السجلات الورقية، وجداول البيانات المنفصلة (Excel)، والمراسلات عبر البريد الإلكتروني العادي. وهو ما يؤدي إلى عدة مشاكل جوهرية:
 \begin{itemize}
   \item بطء معالجة الطلبات وطول فترة الانتظار بين تقديم الطلب وإصدار الفواتير التقديرية.
   \item صعوبة التنسيق بين الزبائن والمصلحة التجارية والمسؤولين التقنيين حول مواعيد التدخل.
@@ -165,13 +164,13 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \og كيف يمكن تصميم وتطوير تطبيق ويب فعال وآمن يساعد على رقمنة وتسيير دورة الحياة الكاملة لعمليات معايرة معدات القياس، مع ضمان سهولة الاستخدام، والسرعة، وعزل بيانات الزبائن، وعدم قابلية تعديل الشهادات النهائية، وتوفير سجل تدقيق أمني شامل لكافة العمليات؟ \fg
 \end{quote}
 
-وتقوم فرضية العمل على أن بناء منصة ويب تعتمد على معمارية العميل والخادم الحديثة من خلال دمج إطار العمل \textbf{Laravel 12} مع تقنية \textbf{Inertia.js} ومكتبة \textbf{React 19}، وتطبيق نظام صارم لإدارة الصلاحيات (\LR{RBAC})، سيسمح بأتمتة تدفق العمليات، وإلغاء الأخطاء البشرية، وتوفير بيئة موثوقة تحفظ الوثائق القانونية وتضمن تتبعاً تاماً وفق متطلبات الجودة العالمية.
+وتقوم فرضية العمل على أن بناء منصة ويب تعتمد على معمارية العميل والخادم الحديثة من خلال دمج إطار العمل \textbf{Laravel 12} مع تقنية \textbf{Inertia.js} ومكتبة \textbf{React 19}، وتطبيق نظام صارم لإدارة الصلاحيات (RBAC)، سيسمح بأتمتة تدفق العمليات، وإلغاء الأخطاء البشرية، وتوفير بيئة موثوقة تحفظ الوثائق القانونية وتضمن تتبعاً تاماً وفق متطلبات الجودة العالمية.
 
 \section*{أهداف المشروع}
 يهدف هذا المشروع إلى تحقيق الأهداف الرئيسية التالية:
 \begin{enumerate}
   \item رقمنة عملية تسجيل طلبات المعايرة والسماح للزبون بإدخال مجموعة من المعدات المتنوعة في طلب واحد.
-  \item تسيير المعالجة التجارية للطلبات من خلال إعداد الفواتير الشكلية (\LR{Devis}) وتحديد الرسوم القانونية تلقائياً.
+  \item تسيير المعالجة التجارية للطلبات من خلال إعداد الفواتير الشكلية (Devis) وتحديد الرسوم القانونية تلقائياً.
   \item إتاحة التنسيق والاتفاق الإلكتروني بين الزبون والمخبر حول تاريخ ومكان المعايرة (في المخبر أو في موقع الزبون).
   \item تنظيم توزيع المهام وجدولة تدخلات التقنيين المترولوجيين ومتابعة مراحل الإنجاز.
   \item المراجعة النوعية للتقارير مع إمكانية طلب تصحيحات تقنية معللة (\textit{Rework}) قبل الاعتماد.
@@ -184,7 +183,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 تم تقسيم هذه المذكرة إلى أربعة فصول رئيسية بالإضافة إلى المقدمة العامة والخاتمة العامة، وذلك وفق ما يلي:
 \begin{itemize}
   \item \textbf{الفصل الأول: المفاهيم العامة والأسس النظرية :} يتناول المفاهيم الأساسية لشبكة الإنترنت والويب، معمارية العميل والخادم، ونظرة تفصيلية على التقنيات المستعملة في الواجهة الأمامية والخلفية والأمان.
-  \item \textbf{الفصل الثاني: الدراسة التمهيدية :} يختص بتقديم المؤسسة المستخدمة (شركة أليسيف \LR{ALICEF SPA})، وهيكلها التنظيمي، ونقد الوضع الحالي، وتحديد المتطلبات الوظيفية والتقنية والمنهجية المتبعة.
+  \item \textbf{الفصل الثاني: الدراسة التمهيدية :} يختص بتقديم المؤسسة المستقبلة (المخبر الوطني للمعايرة)، وهيكلها التنظيمي، ونقد الوضع الحالي، وتحديد المتطلبات الوظيفية والتقنية والمنهجية المتبعة.
   \item \textbf{الفصل الثالث: التحليل والتصميم :} يركز على نمذجة النظام بواسطة لغة UML، من خلال مخططات حالات الاستخدام، والبطاقات الوصفية، ومخططات التسلسل، ومخطط الحالات والانتقالات، ومخطط الفئات وقاموس المعطيات ومخطط النشر.
   \item \textbf{الفصل الرابع: الإنجاز والاختبارات :} يعرض بيئة التطوير، والهيكلة البرمجية، وواجهات التطبيق المنجزة، والنتائج الكاملة لحزمة الاختبارات الآلية المؤكدة لسلامة النظام.
 \end{itemize}
@@ -205,7 +204,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 الإنترنت هي شبكة عالمية ضخمة تربط بين ملايين أجهزة الحاسوب والشبكات حول العالم، وتسمح بتبادل المعلومات والبيانات بين المستخدمين باستخدام حزمة بروتوكولات موحدة أهمها بروتوكول \textbf{TCP/IP}. وتوفر الإنترنت العديد من الخدمات المتنوعة مثل البريد الإلكتروني، ونقل الملفات، والاتصال الصوتي والمرئي، والخدمات السحابية.
 
 \subsection{تعريف الويب}
-الويب (\textit{World Wide Web}) هو أحد أهم الخدمات والتطبيقات التي تعمل فوق شبكة الإنترنت، حيث يسمح للمستخدمين بتصفح وثائق ومستندات مترابطة تشعبياً تحتوي على نصوص، وصور، وفيديوهات باستخدام متصفحات الويب الحديثة، والاعتماد على محددات الموارد الموحدة (\LR{URL}).
+الويب (\textit{World Wide Web}) هو أحد أهم الخدمات والتطبيقات التي تعمل فوق شبكة الإنترنت، حيث يسمح للمستخدمين بتصفح وثائق ومستندات مترابطة تشعبياً تحتوي على نصوص، وصور، وفيديوهات باستخدام متصفحات الويب الحديثة، والاعتماد على محددات الموارد الموحدة (URL).
 
 \subsection{الفرق بين الإنترنت والويب}
 رغم أن الكثير يخلط بين المفهومين في الاستعمال اليومي، إلا أن هناك فرقاً جوهرياً بينهما:
@@ -217,24 +216,24 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \section{أنواع تطبيقات الويب وهندسة العميل والخادم}
 \subsection{المواقع الثابتة والديناميكية}
 \begin{itemize}
-  \item \textbf{المواقع الثابتة (\LR{Static Websites}) :} تعرض محتوى ثابتاً ومبرمجاً مسبقاً لا يتغير بناءً على تفاعل المستخدم، وتعتمد فقط على لغات العرض مثل HTML و CSS.
-  \item \textbf{المواقع والتطبيقات الديناميكية (\LR{Dynamic Web Applications}) :} تعتمد على خوادم المعالجة وقواعد البيانات لتوليد محتوى مخصص ومتغير في الوقت الفعلي حسب رغبة وهوية المستخدم، وتسمح بإجراء عمليات الحفظ، التعديل، والحساب المعقد، وهو النمط الذي يندرج ضمنه مشروعنا.
+  \item \textbf{المواقع الثابتة (Static Websites) :} تعرض محتوى ثابتاً ومبرمجاً مسبقاً لا يتغير بناءً على تفاعل المستخدم، وتعتمد فقط على لغات العرض مثل HTML و CSS.
+  \item \textbf{المواقع والتطبيقات الديناميكية (Dynamic Web Applications) :} تعتمد على خوادم المعالجة وقواعد البيانات لتوليد محتوى مخصص ومتغير في الوقت الفعلي حسب رغبة وهوية المستخدم، وتسمح بإجراء عمليات الحفظ، التعديل، والحساب المعقد، وهو النمط الذي يندرج ضمنه مشروعنا.
 \end{itemize}
 
 \subsection{معمارية العميل والخادم ونموذج 3-Tiers}
-يقوم النموذج التقليدي لمعمارية العميل والخادم على طرفين أساسيين: \textbf{العميل (\LR{Client})} وهو المتصفح أو الجهاز الذي يرسل الطلبات، و\textbf{الخادم (\LR{Server})} وهو الجهاز أو التطبيق المركزي الذي يستقبل الطلبات، يعالجها برمجياً، ويرجع النتائج المناسبة.
+يقوم النموذج التقليدي لمعمارية العميل والخادم على طرفين أساسيين: \textbf{العميل (Client)} وهو المتصفح أو الجهاز الذي يرسل الطلبات، و\textbf{الخادم (Server)} وهو الجهاز أو التطبيق المركزي الذي يستقبل الطلبات، يعالجها برمجياً، ويرجع النتائج المناسبة.
 
 وقد تم تطوير تطبيقنا بالاعتماد على معمارية الطبقات الثلاث (\textbf{3-Tiers}) التي تضمن تنظيماً محكماً وفصلاً تاماً بين المسؤوليات:
 \begin{enumerate}
-  \item \textbf{طبقة العرض (\LR{Tier 1 - Presentation}) :} متصفح الويب لدى المستخدم، ويعتمد على مكونات React 19 ولغة TypeScript لتوفير واجهات تفاعلية وسريعة.
-  \item \textbf{طبقة المعالجة والمنطق البرمجي (\LR{Tier 2 - Application Server}) :} خادم التطبيق المعتمد على إطار العمل Laravel 12، ويتولى فحص المدخلات، وتطبيق الصلاحيات، وإدارة دورة العمليات.
-  \item \textbf{طبقة البيانات (\LR{Tier 3 - Database}) :} نظام إدارة قواعد البيانات MySQL 8.0، المسؤول عن الحفظ الآمن، والالتزام بمعايير المعاملات الموثوقة (\LR{ACID}).
+  \item \textbf{طبقة العرض (Tier 1 - Presentation) :} متصفح الويب لدى المستخدم، ويعتمد على مكونات React 19 ولغة TypeScript لتوفير واجهات تفاعلية وسريعة.
+  \item \textbf{طبقة المعالجة والمنطق البرمجي (Tier 2 - Application Server) :} خادم التطبيق المعتمد على إطار العمل Laravel 12، ويتولى فحص المدخلات، وتطبيق الصلاحيات، وإدارة دورة العمليات.
+  \item \textbf{طبقة البيانات (Tier 3 - Database) :} نظام إدارة قواعد البيانات MySQL 8.0، المسؤول عن الحفظ الآمن، والالتزام بمعايير المعاملات الموثوقة (ACID).
 \end{enumerate}
 
 \begin{figure}[H]
   \centering
   \begin{LTR}
-  \input{diagrams/tikz-web-arch.tex}
+  \resizebox{\textwidth}{!}{\input{diagrams/tikz-web-arch.tex}}
   \end{LTR}
   \caption{معمارية العميل والخادم 3-Tiers لتطبيق معايرة المعدات}
   \label{fig:web-arch}
@@ -243,18 +242,18 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \subsection{تقنية الوساطة Inertia.js}
 تعتبر تقنية \textbf{Inertia.js} نقلة نوعية في تطوير تطبيقات الويب الحديثة، حيث تتيح الجمع بين مزايا التطبيقات أحادية الصفحة (\textit{Single Page Applications}) وسهولة وبساطة التطوير الأحادي التقليدي (\textit{Classic Monolith}).
 
-فبدلاً من الاضطرار لبناء واجهة برمجية منفصلة بالكامل (\LR{REST API}) وإعادة كتابة عمليات التحقق وتسيير الرموز الأمنية، تسمح تقنية Inertia باستعمال نظام التوجيه والمتحكمات الأصيل الخاص بـ Laravel، مع إرسال استجابات البيانات بتنسيق JSON إلى مكونات React دون الحاجة إلى إعادة تحميل الصفحة بالكامل عند الانتقال بين الشاشات.
+فبدلاً من الاضطرار لبناء واجهة برمجية منفصلة بالكامل (REST API) وإعادة كتابة عمليات التحقق وتسيير الرموز الأمنية، تسمح تقنية Inertia باستعمال نظام التوجيه والمتحكمات الأصيل الخاص بـ Laravel، مع إرسال استجابات البيانات بتنسيق JSON إلى مكونات React دون الحاجة إلى إعادة تحميل الصفحة بالكامل عند الانتقال بين الشاشات.
 
 \begin{figure}[H]
   \centering
   \begin{LTR}
-  \input{diagrams/tikz-inertia-bridge.tex}
+  \resizebox{\textwidth}{!}{\input{diagrams/tikz-inertia-bridge.tex}}
   \end{LTR}
   \caption{آلية عمل تقنية Inertia.js للربط بين Laravel و React}
   \label{fig:inertia-bridge}
 \end{figure}
 
-\section{التقنيات المستعملة في الواجهة الأمامية (\LR{Frontend})}
+\section{التقنيات المستعملة في الواجهة الأمامية (Frontend)}
 \subsection{مكتبة React 19 ولغة TypeScript}
 \textbf{React 19} هي مكتبة برمجية رائدة مفتوحة المصدر طورتها شركة Meta، وتعتمد على تقسيم واجهة المستخدم إلى مكونات برمجية مستقلة وقابلة لإعادة الاستخدام (\textit{Component-Based Architecture}). وتستعمل تقنية الـ \textit{Virtual DOM} لتحديث الأجزاء المتغيرة من الصفحة فقط بأعلى كفاءة ممكنة.
 
@@ -265,19 +264,19 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 
 ويتم تجميع وإدارة أصول الواجهة الأمامية عبر أداة \textbf{Vite 8} فائقة السرعة، والتي تضمن تجربة تطوير سلسة بفضل خاصية الاستبدال الفوري للمكونات أثناء التعديل (\textit{Hot Module Replacement}).
 
-\section{التقنيات المستعملة في الواجهة الخلفية (\LR{Backend})}
+\section{التقنيات المستعملة في الواجهة الخلفية (Backend)}
 \subsection{لغة PHP 8.2+ ونمط المعمارية MVC}
 تم بناء خادم التطبيق باستخدام لغة \textbf{PHP} في إصداراتها الحديثة، والتي تتميز بسرعة التنفيذ بفضل محرك JIT والتحقق المتقدم من الأنواع. ويتبع النظام معمارية \textbf{MVC} التي تقسم البرنامج إلى:
 \begin{itemize}
-  \item \textbf{النموذج (\LR{Model}) :} يمثل جداول وقواعد البيانات وقواعد الأعمال.
-  \item \textbf{الواجهة (\LR{View}) :} شاشات العرض والتفاعل التي يشاهدها المستخدم.
-  \item \textbf{المتحكم (\LR{Controller}) :} الرابط الذي يستقبل الطلبات وينسق بين البيانات وواجهات العرض.
+  \item \textbf{النموذج (Model) :} يمثل جداول وقواعد البيانات وقواعد الأعمال.
+  \item \textbf{الواجهة (View) :} شاشات العرض والتفاعل التي يشاهدها المستخدم.
+  \item \textbf{المتحكم (Controller) :} الرابط الذي يستقبل الطلبات وينسق بين البيانات وواجهات العرض.
 \end{itemize}
 
 \subsection{إطار العمل Laravel 12 ومحرك Eloquent ORM}
-يعد إطار العمل \textbf{Laravel} البيئة الأكثر اكتمالاً واحترافية لتطوير تطبيقات المؤسسات بلغة PHP. يوفر محرك الـ \textbf{Eloquent ORM} سهولة بالغة في التعامل مع قواعد البيانات من خلال كائنات برمجية، وإجراء الاستعلامات المترابطة، وحماية النظام من ثغرات الحقن (\LR{SQL Injection}). كما يدير Laravel نظام التهجير (\LR{Migrations}) الذي يوثق تاريخ وتطور بنية قاعدة البيانات.
+يعد إطار العمل \textbf{Laravel} البيئة الأكثر اكتمالاً واحترافية لتطوير تطبيقات المؤسسات بلغة PHP. يوفر محرك الـ \textbf{Eloquent ORM} سهولة بالغة في التعامل مع قواعد البيانات من خلال كائنات برمجية، وإجراء الاستعلامات المترابطة، وحماية النظام من ثغرات الحقن (SQL Injection). كما يدير Laravel نظام التهجير (Migrations) الذي يوثق تاريخ وتطور بنية قاعدة البيانات.
 
-\section{أمن التطبيقات ونظام إدارة الصلاحيات (\LR{RBAC})}
+\section{أمن التطبيقات ونظام إدارة الصلاحيات (RBAC)}
 لحماية سرية البيانات الصناعية، تم تزويد التطبيق بنظام أمني متقدم يرتكز على التحقق من الهوية وإدارة الوصول المعتمدة على الأدوار (\textbf{RBAC}) :
 
 \begin{figure}[H]
@@ -285,19 +284,19 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \begin{LTR}
   \input{diagrams/tikz-rbac-model.tex}
   \end{LTR}
-  \caption{هيكل الأدوار ومصفوفة الصلاحيات (\LR{RBAC})}
+  \caption{هيكل الأدوار ومصفوفة الصلاحيات (RBAC)}
   \label{fig:rbac-model}
 \end{figure}
 
 ويضمن النظام الآليات الأمنية التالية:
 \begin{itemize}
-  \item حماية شاملة ضد هجمات تزوير الطلبات عبر المواقع (\LR{CSRF}) بتوليد رموز أمنية متجددة مع كل جلسة.
+  \item حماية شاملة ضد هجمات تزوير الطلبات عبر المواقع (CSRF) بتوليد رموز أمنية متجددة مع كل جلسة.
   \item التشفير التام لكلمات المرور باستخدام خوارزمية التجزئة الآمنة \textbf{bcrypt}.
   \item عزل تام لبيانات الزبائن بحيث يمنع أي مستخدم خارجي من الوصول إلى ملفات أو شهادات مؤسسة أخرى.
 \end{itemize}
 
 \section*{خاتمة الفصل الأول}
-تناول هذا الفصل الأول الأسس والمفاهيم النظرية الضرورية لفهم بنية تطبيقات الويب الحديثة، واستعرض المعمارية التقنية للمشروع بمختلف مستوياتها. وسيتطرق الفصل الثاني إلى الدراسة التمهيدية للمشروع وتقديم المؤسسة المستخدمة (شركة أليسيف \LR{ALICEF SPA}) وتحليل الاحتياجات الوظيفية.
+تناول هذا الفصل الأول الأسس والمفاهيم النظرية الضرورية لفهم بنية تطبيقات الويب الحديثة، واستعرض المعمارية التقنية للمشروع بمختلف مستوياتها. وسيتطرق الفصل الثاني إلى الدراسة التمهيدية للمشروع وتقديم المؤسسة المستقبلة وتحليل الاحتياجات الوظيفية.
 
 
 %% ============================================================
@@ -306,44 +305,44 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \chapter{الدراسة التمهيدية}
 
 \section*{مقدمة الفصل}
-بعد التطرق في الفصل السابق إلى أهم المفاهيم النظرية المتعلقة بعالم تطوير الويب والتقنيات الحديثة المستعملة في هذا المجال، سنتناول في هذا الفصل الدراسة التمهيدية الخاصة بمشروعنا، والتي تهدف إلى تقديم الإطار العام للمشروع وتحليل السياق الميداني الذي جاء فيه. 
+بعد التطرق في الفصل السابق إلى أهم المفاهيم النظرية المتعلقة بعالم تطوير الويب والتقنيات الحديثة المستعملة في هذا المجال، سنتناول في هذا الفصل الدراسة التمهيدية الخاصة بمشروعنا، والتي تهدف إلى تقديم الإطار العام للمشروع وتحليل السياق الذي جاء فيه. 
 
-حيث سنقوم أولاً بتقديم المؤسسة المستخدمة (المستفيدة) التي احتضنت فترة التربص ومجالات تخصصها، وهي \textbf{شركة أليسيف (\LR{ALICEF SPA})}، ثم عرض الهيكل التنظيمي للمؤسسة، قبل الانتقال إلى تحليل الوضع القائم ونقده من أجل إبراز الحاجة الفعلية إلى الحل الرقمي المقترح وتحديد المتطلبات الوظيفية وغير الوظيفية.
+حيث سنقوم أولاً بتقديم المؤسسة المستقبِلة التي احتضنت فترة التربص ومجالات تخصصها، ثم عرض الهيكل التنظيمي للمؤسسة، قبل الانتقال إلى تحليل الوضع الحالي ونقده من أجل إبراز الحاجة الفعلية إلى الحل الرقمي المقترح وتحديد المتطلبات الوظيفية وغير الوظيفية.
 
-\section{تقديم المؤسسة المستخدمة (\LR{ALICEF SPA})}
-\subsection{تعريف الشركة ونشاطها}
-تعتبر المؤسسة المستخدمة (المستفيدة)، \textbf{شركة أليسيف ش.ذ.أ (\LR{ALICEF SPA}) - مخبر المترولوجيا والمعايرة الصناعية}، من أبرز المؤسسات الرائدة والمرجعية في قطاع المترولوجيا وخدمات القياس والمعايرة الصناعية في الجزائر. تسعى المؤسسة إلى تقديم خدمات عالية الدقة في مجال معايرة، وضبط، ومراقبة، وتدقيق مختلف أجهزة وأدوات القياس الصناعية المستخدمة في كبرى القطاعات الإنتاجية مثل الطاقة، والمحروقات، والصناعات الصيدلانية، والغذائية، والبتروكيماويات.
+\section{تقديم المؤسسة المستقبِلة}
+\subsection{تعريف المؤسسة ونشاطها}
+تعتبر المؤسسة المستقبِلة، \textbf{المخبر الوطني للمعايرة والمترولوجيا الصناعية (LNEMI)}، من المؤسسات المرجعية الرائدة في قطاع الصناعة والقياس في الجزائر. تسعى المؤسسة إلى تقديم خدمات المعايرة، والضبط، والتدقيق لمختلف أدوات وأجهزة القياس الصناعية المستعملة في قطاعات الطاقة، والبتروكيماويات، والصناعات الغذائية، ومصانع الأدوية.
 
-وتعمل شركة \LR{ALICEF SPA} وفق معايير الجودة الدولية الأكثر صرامة، حيث تحوز على الاعتماد الرسمي من طرف \textbf{الهيئة الجزائرية للاعتماد (\LR{ALGERAC})} وفق المواصفة الدولية \textbf{ISO/IEC 17025} الخاصة بكفاءة مخابر المعايرة والاختبار (تحت رقم الاعتماد: \LR{Accr\'editation N$^\circ$ 1-1-023})، مما يمنح شهادات المعايرة والتقارير الفنية الصادرة عنها موثوقية واعترافاً رسمياً كاملاً لدى الهيئات الرقابية والشركاء الصناعيين على المستويين الوطني والدولي.
+وتعمل المؤسسة وفق معايير الجودة الدولية المعتمدة لمخابر المعايرة والاختبار \textbf{ISO/IEC 17025}، مما يضمن الاعتراف بصلاحية وموثوقية الشهادات الممنوحة للمتعاملين الصناعيين.
 
-\subsection{المجالات المترولوجية المعتمدة لدى شركة \LR{ALICEF SPA}}
-تضم المخابر الفنية لشركة \LR{ALICEF SPA} ستة مجالات فيزيائية رئيسية مجهزة بأحدث العتاد المرجعي القياسي (\LR{\'Etalons de r\'ef\'erence})، وتتمثل في المجالات التالية:
+\subsection{المجالات المترولوجية المعتمدة في المخبر}
+يقدم المخبر خدمات المعايرة في ستة مجالات فيزيائية رئيسية:
 \begin{enumerate}
-  \item \textbf{مجال الضغط (\LR{Pression}) :} معايرة مقاييس الضغط (\LR{Manom\`etres})، ومحولات الضغط التفاضلي، والمستشعرات الهيدروليكية من نطاق التفريغ حتى 1000 بار.
-  \item \textbf{مجال الحرارة (\LR{Temp\'erature}) :} معايرة المجسات الحرارية والمقاومات البلاتينية (\LR{Pt100})، والمزدوجات الحرارية (\LR{Thermocouples})، وأفران وحمامات المعايرة في نطاق من -50 درجة مئوية إلى 1200 درجة مئوية.
-  \item \textbf{مجال الكهرباء والتردد (\LR{\'Electricit\'e et Fr\'equence}) :} معايرة أجهزة القياس الرقمية متعددة الأغراض (\LR{Multim\`etres})، والملاقط الأمبيرمترية، ومولدات الإشارة، والمقاومات القياسية.
-  \item \textbf{مجال الأبعاد (\LR{Dimensionnel}) :} فحص ومعايرة كتل العيار للأطوال، والفرجار الورني (\LR{Pieds \`a coulisse})، والميكرومترات، ومقارنات الدقة العالية.
-  \item \textbf{مجال الوزن والكتلة (\LR{Pesage et Masse}) :} فحص ومطابقة كتل العيار من الرتب الدقيقة ومعايرة الموازين المخبرية التحليلية وموازين الشاحنات والجسور الوزنية الصناعية.
-  \item \textbf{مجال عزم الدوران والقوة (\LR{Couple et Force}) :} معايرة المفاتيح الدينامومترية ومفكات البراغي المحددة للعزم ومستشعرات قوى الشد والضغط.
+  \item \textbf{مجال الضغط (Pression) :} معايرة مقاييس الضغط (Manomètres)، ومحولات الضغط التفاضلي، والمستشعرات الهيدروليكية من نطاق التفريغ حتى 1000 بار.
+  \item \textbf{مجال الحرارة (Température) :} معايرة المجسات الحرارية (Pt100)، والمزدوجات الحرارية (Thermocouples)، ومقاييس الحرارة الرقمية في نطاق من -50 درجة مئوية إلى 1200 درجة مئوية.
+  \item \textbf{مجال الكهرباء (Électricité) :} معايرة أجهزة القياس الرقمية متعددة الأغراض (Multimètres)، والملاقط الأمبيرمترية، والمقاومات القياسية.
+  \item \textbf{مجال الأبعاد (Dimensionnel) :} معايرة الكتل المرجعية للأطوال، والفرجار الورني (Pieds à coulisse)، والميكرومترات، ومقارنات الدقة العالية.
+  \item \textbf{مجال الوزن والكتلة (Pesage et Masse) :} فحص ومطابقة كتل العيار من الرتب الدقيقة ومعايرة الموازين المخبرية وموازين الشاحنات الصناعية.
+  \item \textbf{مجال عزم الدوران (Couple) :} معايرة المفاتيح الدينامومترية ومفكات البراغي المحددة للعزم.
 \end{enumerate}
 
-\section{الهيكل التنظيمي لشركة \LR{ALICEF SPA}}
-يتكون الهيكل التنظيمي للشركة من مصالح متكاملة تضمن الفصل التام بين الجانب الإداري والتجاري والجانب الفني المستقل للمخابر:
+\section{الهيكل التنظيمي للمؤسسة}
+يتكون الهيكل التنظيمي للمخبر من مصالح متكاملة تضمن الفصل بين الجانب الإداري التجاري والجانب الفني المستقل:
 
 \begin{figure}[H]
   \centering
   \begin{LTR}
   \input{diagrams/tikz-org-chart.tex}
   \end{LTR}
-  \caption{الهيكل التنظيمي لشركة أليسيف (\LR{ALICEF SPA})}
+  \caption{الهيكل التنظيمي للمخبر الوطني للمعايرة (LNEMI)}
   \label{fig:org-chart}
 \end{figure}
 
 \begin{itemize}
-  \item \textbf{الإدارة العامة (\LR{Direction G\'en\'erale}) :} مسؤولة عن التسيير الاستراتيجي وتوفير الموارد المالية والبشرية والتطويرية للشركة.
-  \item \textbf{دائرة ضمان الجودة (\LR{D\'epartement Qualit\'e}) :} تسهر على التطبيق الدائم لمقتضيات المعيار الدولي \LR{ISO/IEC 17025}، ومتابعة سلسلة التتبع المترولوجي، وإدارة التدقيقات الدورية.
-  \item \textbf{مخبر المترولوجيا والمديرية الفنية (\LR{Laboratoire M\'etrologie}) :} يضم المهندسين والتقنيين المترولوجيين المتخصصين ومسؤول صيانة وتتبع صلاحية العتاد المرجعي القياسي.
-  \item \textbf{المصلحة التجارية وعلاقات الزبائن (\LR{Service Commercial}) :} مكلفة باستقبال طلبات الزبائن، وإعداد الفواتير الشكلية (\LR{Devis})، وتنسيق مواعيد التدخل في المخابر أو في مواقع المصانع.
+  \item \textbf{الإدارة العامة :} مسؤولة عن التسيير الاستراتيجي وتوفير الموارد.
+  \item \textbf{دائرة ضمان الجودة :} تسهر على تطبيق دليل الجودة الصارم ومطابقة المعيار ISO 17025.
+  \item \textbf{مخبر المترولوجيا الفني :} يضم المهندسين والتقنيين المترولوجيين ومسؤول صيانة الأدوات المرجعية.
+  \item \textbf{المصلحة التجارية :} مكلفة باستقبال طلبات الزبائن وإصدار الفواتير التقديرية والعقود.
 \end{itemize}
 
 \section{دراسة الوضع الحالي ونقده}
@@ -379,7 +378,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \subsection{الحل الرقمي المعتمد}
 يتمثل الحل المقترح في إنشاء منصة ويب مركزية موحدة تضمن الربط التفاعلي الآني بين الزبائن وكافة مصالح المخبر، مع رقمنة كاملة لدورة حياة طلبات المعايرة، وإصدار شهادات إلكترونية رسمية مؤمنة ومغلقة تماماً ضد التعديل فور اعتمادها النهائي.
 
-\subsection{المتطلبات الوظيفية (\LR{Besoins Fonctionnels})}
+\subsection{المتطلبات الوظيفية (Besoins Fonctionnels)}
 \begin{itemize}
   \item إتاحة تسجيل طلبات متعددة المعدات دفعة واحدة للزبائن.
   \item أتمتة حساب الفواتير الشكلية وإشعار المصلحة التجارية فور وصول الطلبات.
@@ -390,7 +389,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \item قفل وتثبيت شهادات المعايرة إلكترونياً ومنع تعديلها نهائياً.
 \end{itemize}
 
-\subsection{المتطلبات غير الوظيفية (\LR{Besoins Non-Fonctionnels})}
+\subsection{المتطلبات غير الوظيفية (Besoins Non-Fonctionnels)}
 \begin{itemize}
   \item الأمان العالي وعزل حسابات وبيانات كل مؤسسة صناعية بشكل تام.
   \item سرعة الاستجابة وسلاسة التنقل بفضل تقنية Inertia.js.
@@ -398,7 +397,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \end{itemize}
 
 \section{المنهجية المتبعة في تطوير المشروع}
-اعتمدنا في إنجاز هذا المشروع على \textbf{المنهجية الموحدة (\LR{UP - Unified Process})} المعززة بلغة النمذجة \textbf{UML}، لكونها منهجية تكرارية، موجهة بالاستعمال، ومبنية على معمارية متينة، مما يسمح باختبار النظام تدريجياً وتفادي المخاطر التقنية.
+اعتمدنا في إنجاز هذا المشروع على \textbf{المنهجية الموحدة (UP - Unified Process)} المعززة بلغة النمذجة \textbf{UML}، لكونها منهجية تكرارية، موجهة بالاستعمال، ومبنية على معمارية متينة، مما يسمح باختبار النظام تدريجياً وتفادي المخاطر التقنية.
 
 \section*{خاتمة الفصل الثاني}
 مكنتنا الدراسة التمهيدية من ضبط الإطار التنظيمي للمشروع، وتشخيص نقائص الوضع القديم بدقة، وتحديد أهداف الحل الرقمي البديل. وسيتولى الفصل الثالث ترجمة هذه المتطلبات إلى نمذجة تحليلية وتصميمية متكاملة.
@@ -414,309 +413,386 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 
 \section{تحديد الفاعلين والمخطط العام لحالات الاستخدام}
 \subsection{الفاعلون في النظام}
-بناءً على المخطط الشامل لحالات الاستخدام الخاص بـ \textbf{"نظام إدارة الشهادات" (\LR{Système de gestion des certificats})}، تم تحديد خمسة فاعلين أساسيين يتفاعلون مع المنصة:
+تم تحديد ستة فاعلين أساسيين يتفاعلون مع المنصة:
 \begin{enumerate}
-  \item \textbf{الزبون (\LR{Client}) :} يمثل المؤسسة الصناعية أو المتعامل الطالب لخدمات المعايرة؛ ويتولى المهام التالية:
-    \begin{itemize}
-      \item إرسال طلب معايرة (\LR{Envoyer une demande}).
-      \item استلام الشهادة المعتمدة (\LR{Recevoir certificat}).
-      \item الاطلاع على ورقة الوقت وتتبع مدة الإنجاز (\LR{Voir feuille de temps}).
-      \item تصفح أرشيف الشهادات السابقة (\LR{Voir archive}).
-      \item تحميل العقد المبرم (\LR{Télécharger un contrat}).
-      \item الاطلاع على السجل التاريخي لكافة العمليات (\LR{Voir historique}).
-      \item اختيار وتأكيد تاريخ التدخل (\LR{Choisir la date d'intervention}).
-    \end{itemize}
-  \item \textbf{المكلف التجاري (\LR{Commercial}) :} مسؤول المعاملات التجارية وتسيير العقود؛ ويتولى المهام التالية:
-    \begin{itemize}
-      \item معاينة ودراسة طلب الزبون (\LR{Voir la demande}).
-      \item إحالة وتمرير الطلب إلى المدير (\LR{Transmettre la demande}).
-      \item إدارة العقود والشروط المالية (\LR{Gérer un contrat}).
-      \item مسح الشهادات الورقية ضوئياً (\LR{Scanner un certificat}).
-      \item أرشفة الشهادات وحفظها إلكترونياً (\LR{Archiver un certificat}).
-    \end{itemize}
-  \item \textbf{المدير / مسؤول المترولوجيا (\LR{Manager}) :} المسؤول الفني والتنظيمي الأول للمخبر؛ ويتولى:
-    \begin{itemize}
-      \item استلام الطلب المحال من المصلحة التجارية (\LR{Recevoir la demande}).
-      \item تعيين وتوزيع المهام والعمليات على التقنيين (\LR{Affecter le travail}).
-      \item استلام ومراجعة تقارير المترولوجيا (\LR{Recevoir rapport métrologie}).
-      \item إنشاء وتوليد الشهادات (\LR{Créer un certificat}).
-      \item الاعتماد والمصادقة النهائية على الشهادات (\LR{Valider un certificat}).
-    \end{itemize}
-  \item \textbf{التقني المترولوجي (\LR{Métrologue}) :} القائم بالقياسات والتجارب المخبرية والميدانية؛ ويتولى:
-    \begin{itemize}
-      \item استلام العمل المعين له من المدير (\LR{Recevoir le travail affecté}).
-      \item اقتراح موعد وتاريخ التدخل على الزبون (\LR{Proposer une date d'intervention}).
-      \item إنجاز القياسات وإرسال تقرير المترولوجيا إلى المدير (\LR{Envoyer un rapport}).
-    \end{itemize}
-  \item \textbf{مدير النظام (\LR{Admin}) :} المشرف التقني العام على أمن وتشغيل المنصة؛ ويتولى:
-    \begin{itemize}
-      \item إدارة حسابات المستخدمين وصلاحيات الوصول (\LR{Gérer les comptes / accès}).
-      \item إدارة عتاد وأجهزة القياس والمعايرة المرجعية (\LR{Gérer les équipements}).
-    \end{itemize}
+  \item \textbf{الزبون (Client) :} يمثل المؤسسة الصناعية؛ يقوم بتسجيل الطلبات وتتبع مسارها وقبول المواعيد وتحميل الشهادات النهائية.
+  \item \textbf{المكلف التجاري (Commercial) :} يدرس الطلبات ويربطها بأسعار الدليل ويصدر الفواتير الشكلية والعقود.
+  \item \textbf{مسؤول المترولوجيا (Responsable Métrologie) :} يحدد المواعيد، يوزع المهام على التقنيين، يراجع تقارير الاختبارات، ويعتمد الشهادات الرسمية.
+  \item \textbf{التقني المترولوجي (Technicien Métrologue) :} ينفذ القياسات المخبرية ويرفع تقرير نتائج الاختبار بصيغة PDF.
+  \item \textbf{التقني المفوض (Délégué) :} تقني يحمل تفويضاً رسمياً لاعتماد الشهادات أثناء غياب المسؤول مع تسجيل اسمه الكامل في سجل التدقيق.
+  \item \textbf{مسؤول النظام (Administrateur) :} يدير الحسابات والصلاحيات ويتابع سجل الأمان والتدقيق.
 \end{enumerate}
 
-\noindent
-إلى جانب هؤلاء الفاعلين، تبرز وظيفة مركزية مشتركة بين جميع الفاعلين بدون استثناء:
-\begin{itemize}
-  \item \textbf{تسجيل الدخول (\LR{Se connecter}) :} وظيفة الدخول الموحد والمصادقة والتحقق من الهوية والأمان (\LR{commun à tous les acteurs})، وهي البوابة الإلزامية التي يمر عبرها كل فاعل للولوج إلى فضائه المخصص.
-\end{itemize}
-
 \subsection{المخطط العام لحالات الاستخدام}
-يوضح الشكل~\ref{fig:uc-general} المخطط العام الشامل لحالات الاستخدام الخاص بـ \textbf{"نظام إدارة الشهادات" (\LR{Système de gestion des certificats})}، موضحاً كافة الوظائف والعلاقات التفاعلية بين الفاعلين الخمسة.
+يوضح الشكل التالي المخطط الشامل لحالات الاستخدام وتوزيعها بين الفاعلين:
 
-\begin{figure}[p]
+\begin{figure}[H]
   \centering
-  \includegraphics[height=0.84\textheight,keepaspectratio]{figures/use_case_global.jpg}
-  \caption{المخطط العام لحالات الاستخدام لنظام إدارة الشهادات (\LR{Système de gestion des certificats})}
+  \begin{LTR}
+  \input{diagrams/tikz-uc-general.tex}
+  \end{LTR}
+  \caption{المخطط العام لحالات الاستخدام في المنصة}
   \label{fig:uc-general}
 \end{figure}
 
-\subsubsection{تحليل العلاقات والتبادلات بين حالات الاستخدام}
-يكشف المخطط العام عن خمس علاقات محورية تنظم تدفق العمل بين مختلف الفاعلين:
-\begin{enumerate}
-  \item \textbf{علاقة التمرير والإحالة (\LR{«transmet»}) :} تنطلق من حالة الاستخدام \LR{\textbf{Transmettre la demande}} لدى التجاري نحو حالة الاستخدام \LR{\textbf{Recevoir la demande}} لدى المدير (\LR{Manager})، لإحالة الملف إلكترونياً بعد استيفاء التأهيل الأولي.
-  \item \textbf{علاقة التعيين والتكليف (\LR{«affecte»}) :} تنطلق من حالة الاستخدام \LR{\textbf{Affecter le travail}} لدى المدير نحو حالة الاستخدام \LR{\textbf{Recevoir le travail affecté}} لدى التقني المترولوجي (\LR{Métrologue})، لتكليفه بمهمة المعايرة.
-  \item \textbf{علاقة الاقتراح والتوافق (\LR{«propose»}) :} تنطلق من حالة الاستخدام \LR{\textbf{Proposer une date d'intervention}} لدى المترولوجي نحو حالة الاستخدام \LR{\textbf{Choisir la date d'intervention}} لدى الزبون (\LR{Client})، بهدف الاتفاق المسبق على الموعد المناسب للطرفين.
-  \item \textbf{علاقة إرسال التقرير المترولوجي (\LR{«transmet»}) :} تنطلق من حالة الاستخدام \LR{\textbf{Envoyer un rapport}} لدى المترولوجي نحو حالة الاستخدام \LR{\textbf{Recevoir rapport métrologie}} لدى المدير (\LR{Manager})، لعرض نتائج القياسات والارتياب المحسوب للمصادقة الفنية.
-  \item \textbf{علاقة التضمين الإلزامية (\LR{«include»}) :} تربط حالة الاستخدام \LR{\textbf{Gérer un contrat}} لدى التجاري بحالة الاستخدام \LR{\textbf{Créer un certificat}} لدى المدير، حيث يقتضي تفعيل وإدارة العقد إطلاق إجراءات إنشاء مسودة الشهادة الرسمية المرتبطة به.
-\end{enumerate}
-
 \section{بطاقات وصف حالات الاستخدام}
-فيما يلي الوصف التفصيلي لحالات الاستخدام الأساسية المستخلصة من المخطط العام، وفق التنسيق المعياري المعتمد:
+فيما يلي الوصف التفصيلي لحالات الاستخدام الأساسية وفق الجدول المعتمد في المعهد:
 
 %% بطاقة 1
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تسجيل الدخول وإدارة الجلسة (\LR{UC01})}
-  \ucfieldar{العنوان}{تسجيل الدخول والمصادقة (\LR{UC01 - Se connecter})}
-  \ucfieldar{الفاعلون}{جميع الفاعلين (الزبون، المكلف التجاري، المدير، التقني المترولوجي، مدير النظام)}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تسجيل الدخول وإدارة الجلسة (UC01)}
+  \ucfieldar{العنوان}{تسجيل الدخول وإدارة الجلسة (UC01)}
+  \ucfieldar{الفاعلون}{جميع الفاعلين (الزبون، التجاري، مسؤول المترولوجيا، التقني، المشرف)}
   \ucfieldar{الشروط المسبقة}{وجود حساب مسجل ومفعل في قاعدة البيانات.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يدخل المستخدم إلى صفحة الدخول الموحد (/login).\newline
-    2. يكتب البريد الإلكتروني وكلمة المرور الخاصة به.\newline
-    3. يتحقق النظام من صحة البيانات وتطابق كلمة المرور المشفرة بتقنية Bcrypt.\newline
-    4. يفتح النظام جلسة آمنة ويجدد رمز الحماية ضد هجمات CSRF.\newline
-    5. يتم توجيه المستخدم تلقائياً إلى لوحة التحكم الخاصة برتبته وصلاحياته.
+    1. يدخل المستخدم إلى صفحة الدخول (/login).\\
+    2. يكتب البريد الإلكتروني وكلمة المرور.\\
+    3. يتحقق النظام من صحة البيانات وتطابق كلمة المرور المشفرة.\\
+    4. يفتح النظام جلسة آمنة ويجدد رمز الحماية CSRF.\\
+    5. يتم توجيه المستخدم إلى لوحة التحكم الخاصة برتبته.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    3.أ بيانات خاطئة: يعرض النظام رسالة تنبيه بالخطأ، ويفرغ حقل كلمة المرور، ويسجل المحاولة في سجل الأمان.
+    3.أ بيانات خاطئة : يعرض النظام رسالة تنبيه بالخطأ ويفرغ حقل كلمة المرور.
   }
-  \ucfieldar{الشروط اللاحقة}{فتح الجلسة بنجاح وتفعيل الفضاء الوظيفي المخصص للفاعل.}
+  \ucfieldar{الشروط اللاحقة}{فتح الجلسة بنجاح وتفعيل الصلاحيات المناسبة.}
 \end{usecasetablear}
+% مخطط النشاط UC01
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-01.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : تسجيل الدخول والتحقق من الصلاحيات}
+  \label{fig:act-01}
+\end{figure}
+
 
 %% بطاقة 2
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - إرسال طلب معايرة (\LR{UC02})}
-  \ucfieldar{العنوان}{إرسال طلب معايرة (\LR{UC02 - Envoyer une demande})}
-  \ucfieldar{الفاعلون}{الزبون (\LR{Client})}
-  \ucfieldar{الشروط المسبقة}{تسجيل الدخول بحساب زبون مفعل.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تصفح دليل المعايرة (UC02)}
+  \ucfieldar{العنوان}{تصفح دليل خدمات المعايرة (UC02)}
+  \ucfieldar{الفاعلون}{الزبون، الزائر العام}
+  \ucfieldar{الشروط المسبقة}{الوصول إلى الموقع الإلكتروني.}
   \ucfieldar{السيناريو الاسمي}{
-    1. ينقر الزبون على زر "إنشاء طلب جديد".\newline
-    2. يدخل بيانات الأجهزة المراد معايرتها (الاسم، الرقم التسلسلي، الصانع، نطاق القياس والدقة).\newline
-    3. يحدد الزبون موقع التدخل المفضل (في المخبر أو في مقر المؤسسة) والملاحظات الفنية.\newline
-    4. يؤكد الزبون إرسال الطلب عبر المنصة.\newline
-    5. ينشئ النظام مرجعاً تلقائياً للطلب REQ-YYYY-XXXX، ويسجله بحالة SUBMITTED، ويشعر المصلحة التجارية آلياً.
+    1. يفتح المستخدم صفحة الدليل المترولوجي.\\
+    2. يعرض النظام المجالات الستة المعتمدة (الضغط، الحرارة، الكهرباء، إلخ).\\
+    3. يختار المستخدم مجاله المطلوب ويبحث عن الأجهزة المناسبة.\\
+    4. يعرض النظام نطاق القياس، وحدود الخطأ المسموحة، والسعر الفردي التقديري.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ عدم ملء الحقول الإلزامية: يمنع النظام الحفظ ويحدد الحقول الناقصة للمستخدم.
+    4.أ لا توجد نتائج للبحث : يقترح النظام إعادة ضبط معايير التصفية.
   }
-  \ucfieldar{الشروط اللاحقة}{حفظ الطلب بنجاح وتوفره في قائمة معالجة المكلف التجاري.}
+  \ucfieldar{الشروط اللاحقة}{تحديد الخدمات المترولوجية المطلوبة للزبون.}
 \end{usecasetablear}
+% مخطط النشاط UC02
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-02.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : تصفح دليل خدمات المعايرة}
+  \label{fig:act-02}
+\end{figure}
+
 
 %% بطاقة 3
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - معاينة وإحالة الطلب للمدير (\LR{UC03})}
-  \ucfieldar{العنوان}{معاينة وإحالة الطلب للمدير (\LR{UC03 - Voir et Transmettre la demande})}
-  \ucfieldar{الفاعلون}{المكلف التجاري (\LR{Commercial})، المدير (\LR{Manager})}
-  \ucfieldar{الشروط المسبقة}{وصول طلب جديد من الزبون إلى النظام.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تقديم طلب معايرة متعدد المعدات (UC03)}
+  \ucfieldar{العنوان}{إنشاء وتقديم طلب معايرة متعدد المعدات (UC03)}
+  \ucfieldar{الفاعلون}{الزبون}
+  \ucfieldar{الشروط المسبقة}{تسجيل الدخول في فضاء الزبون.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يفتح المكلف التجاري قائمة الطلبات الواردة ويطلع على محتوى الطلب (Voir la demande).\newline
-    2. يطابق الأجهزة مع قائمة الخدمات المترولوجية المتاحة وأسعار الدليل.\newline
-    3. يتأكد التجاري من استيفاء البيانات الإدارية والمالية.\newline
-    4. ينقر التجاري على خيار "إحالة الطلب إلى المدير" (Transmettre la demande).\newline
-    5. يحول النظام الطلب إلى حساب المدير (Recevoir la demande) مع إشعاره بجاهزية الملف للتوزيع الفني.
+    1. ينقر الزبون على زر "طلب معايرة جديد".\\
+    2. يضيف الزبون تباعاً المعدات المطلوبة (الاسم، الرقم التسلسلي، الصانع، نطاق القياس، الدقة المطلوبة).\\
+    3. يحدد الزبون مكان التدخل المفضل (في المخبر أو في مصنع الزبون).\\
+    4. يؤكد الزبون إرسال الطلب.\\
+    5. ينشئ النظام المرجع التلقائي REQ-YYYY-XXXX، ويسجل الطلب بحالة SUBMITTED ويشعر المصلحة التجارية.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ جهاز خارج اختصاص المخبر: يرفض المكلف الجهاز غير المطابق مع توضيح السبب للزبون.
+    4.أ القائمة فارغة : يمنع النظام الحفظ ويطلب إدراج أداة قياس واحدة على الأقل.
   }
-  \ucfieldar{الشروط اللاحقة}{انتقال مسؤولية الملف إلى المدير لتنظيم التدخل الميداني/المخبري.}
+  \ucfieldar{الشروط اللاحقة}{تسجيل الطلب وحفظ المعدات في قاعدة البيانات.}
 \end{usecasetablear}
+% مخطط النشاط UC03
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-03.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : إنشاء وتقديم طلب معايرة متعدد المعدات}
+  \label{fig:act-03}
+\end{figure}
+
 
 %% بطاقة 4
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - استلام وتعيين العمل للمترولوجي (\LR{UC04})}
-  \ucfieldar{العنوان}{استلام وتعيين العمل للمترولوجي (\LR{UC04 - Recevoir et Affecter le travail})}
-  \ucfieldar{الفاعلون}{المدير (\LR{Manager})، التقني المترولوجي (\LR{Métrologue})}
-  \ucfieldar{الشروط المسبقة}{إحالة الطلب من المكلف التجاري إلى المدير.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - التأهيل التجاري وإصدار الفاتورة الشكلية (UC04)}
+  \ucfieldar{العنوان}{التأهيل التجاري وإصدار الفاتورة الشكلية (UC04)}
+  \ucfieldar{الفاعلون}{المكلف التجاري}
+  \ucfieldar{الشروط المسبقة}{وجود طلب جديد في قائمة الانتظار.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يستلم المدير إشعار الطلب ويفتح ملف التدخل (Recevoir la demande).\newline
-    2. يطلع المدير على قائمة التقنيين المترولوجيين ومستوى جاهزيتهم وتخصصاتهم الفنية.\newline
-    3. يختار المدير التقني الأنسب لتنفيذ عملية المعايرة.\newline
-    4. يؤكد المدير تعيين العملية (Affecter le travail).\newline
-    5. يستلم التقني المترولوجي إشعاراً بتكليفه بالمهمة (Recevoir le travail affecté) وتظهر في جدول مهامه.
+    1. يفتح المكلف التجاري ملف الطلب.\\
+    2. يطابق كل معدة مع خدمة المعايرة المناسبة في الدليل.\\
+    3. يحسب النظام المجموع دون رسوم، ويضيف نسبة الرسم على القيمة المضافة 19\%، ويستخرج المجموع الكلي.\\
+    4. يؤكد التجاري إصدار الفاتورة التقديرية بالمرجع DEV-YYYY-XXXX.\\
+    5. يتغير مسار الطلب ويتم إشعار الزبون بالمبلغ.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ عدم توفر تقني في التخصص حالياً: تعليق التعيين وتحديد موعد لاحق مع تنبيه الإدارة.
+    2.أ جهاز خارج اختصاص المخبر : يرفض المكلف الجهاز المعني مع تدوين السبب.
   }
-  \ucfieldar{الشروط اللاحقة}{تثبيت ارتباط المهمة بالتقني المترولوجي في قاعدة البيانات.}
+  \ucfieldar{الشروط اللاحقة}{إتاحة الفاتورة الشكلية في حساب الزبون.}
 \end{usecasetablear}
+% مخطط النشاط UC04
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-04.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : التأهيل التجاري وإصدار الفاتورة الشكلية}
+  \label{fig:act-04}
+\end{figure}
+
 
 %% بطاقة 5
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - اقتراح واختيار تاريخ التدخل (\LR{UC05})}
-  \ucfieldar{العنوان}{اقتراح واختيار تاريخ التدخل (\LR{UC05 - Proposer et Choisir la date})}
-  \ucfieldar{الفاعلون}{التقني المترولوجي (\LR{Métrologue})، الزبون (\LR{Client})}
-  \ucfieldar{الشروط المسبقة}{تعيين مهمة المعايرة للتقني المترولوجي.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - جدولة والاتفاق على موعد المعايرة (UC05)}
+  \ucfieldar{العنوان}{جدولة والاتفاق على موعد المعايرة (UC05)}
+  \ucfieldar{الفاعلون}{مسؤول المترولوجيا، الزبون}
+  \ucfieldar{الشروط المسبقة}{قبول الفاتورة التقديرية للطلب.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يفحص التقني المترولوجي جدول أعبائه وجاهزية الأجهزة العيارية اللازمة للعملية.\newline
-    2. يقترح التقني تاريخاً أو تواريخ محددة للتدخل ويدرجها بالنظام (Proposer une date d'intervention).\newline
-    3. يتلقى الزبون إشعاراً بالموعد المقترح ويدخل إلى حسابه.\newline
-    4. يختار الزبون التاريخ المناسب ويؤكد موافقته (Choisir la date d'intervention).\newline
-    5. يثبت النظام موعد التدخل رسمياً وينقل حالة الطلب إلى مجدول (\LR{SCHEDULED}).
+    1. يدرس مسؤول المترولوجيا جدول توفر مخابر القياس.\\
+    2. يقترح تاريخاً محدداً للمعايرة مع تأكيد مكان التدخل.\\
+    3. يتلقى الزبون إشعاراً بالمقترح، ويدخل لحسابه ويوافق على الموعد.\\
+    4. ينقل النظام الطلب آلياً إلى حالة مجدول (SCHEDULED).
   }
   \ucfieldar{السيناريوهات البديلة}{
-    4.أ عدم ملاءمة التواريخ للزبون: يقترح الزبون فترة بديلة ويعود الملف للتقني للتنسيق.
+    3.أ رفض التاريخ من الزبون : يرفض الزبون الموعد مع اقتراح تاريخ بديل، ويعود الملف للتفاوض.
   }
-  \ucfieldar{الشروط اللاحقة}{تثبيت موعد التدخل النهائي في أجندة المخبر وفضاء الزبون.}
+  \ucfieldar{الشروط اللاحقة}{تثبيت موعد المعايرة رسمياً بين الطرفين.}
 \end{usecasetablear}
+% مخطط النشاط UC05
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-05.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : جدولة والاتفاق على موعد المعايرة}
+  \label{fig:act-05}
+\end{figure}
+
 
 %% بطاقة 6
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - إنجاز القياس وإرسال تقرير المترولوجيا (\LR{UC06})}
-  \ucfieldar{العنوان}{إنجاز القياس وإرسال التقرير (\LR{UC06 - Envoyer un rapport})}
-  \ucfieldar{الفاعلون}{التقني المترولوجي (\LR{Métrologue})}
-  \ucfieldar{الشروط المسبقة}{حلول موعد التدخل واستلام العتاد للفحص.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تعيين العملية للتقني المختص (UC06)}
+  \ucfieldar{العنوان}{تعيين العملية للتقني المختص (UC06)}
+  \ucfieldar{الفاعلون}{مسؤول المترولوجيا}
+  \ucfieldar{الشروط المسبقة}{وصول الطلب إلى مرحلة الجدولة.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يبدأ التقني المترولوجي عملية المعايرة باستخدام المعايير والأجهزة المرجعية الصالحة.\newline
-    2. يسجل قراءات القياس ونقاط الاختبار والظروف المحيطة (الحرارة، الرطوبة).\newline
-    3. يحسب نسبة الارتياب ويعد التقرير الفني النهائي للنتائج بصيغة PDF.\newline
-    4. يدخل التقني لواجهة العملية ويرفع التقرير مع تدوين ملاحظاته الفنية.\newline
-    5. ينقر التقني على "إرسال التقرير" (Envoyer un rapport)، فيحفظه النظام ويشعر المدير للمراجعة.
+    1. يفتح المسؤول لوحة متابعة عبء عمل التقنيين.\\
+    2. يختار التقني المؤهل لمجال القياس المطلوب (مثال: تقني معتمد في الضغط).\\
+    3. يربط العملية بالتقني المختار.\\
+    4. يحول النظام حالة العملية إلى قيد الإنجاز (\LR{IN\_PROGRESS}) ويشعر التقني.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    1.أ عدم صلاحية الجهاز الخاضع للمعايرة: يحرر التقني تقرير عدم مطابقة ويوثق الخلل.
+    2.أ التقني في حالة تشبع : يختار المسؤول تقنياً بديلاً يملك نفس التأهيل.
   }
-  \ucfieldar{الشروط اللاحقة}{إيداع التقرير الفني وتحول حالته إلى قيد المراجعة الفنية.}
+  \ucfieldar{الشروط اللاحقة}{ظهور العملية في قائمة مهام التقني المعني.}
 \end{usecasetablear}
+% مخطط النشاط UC06
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-06.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : تعيين العملية للتقني المختص}
+  \label{fig:act-06}
+\end{figure}
+
 
 %% بطاقة 7
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - استلام ومراجعة تقرير المترولوجيا (\LR{UC07})}
-  \ucfieldar{العنوان}{استلام ومراجعة تقرير المترولوجيا (\LR{UC07 - Recevoir rapport métrologie})}
-  \ucfieldar{الفاعلون}{المدير (\LR{Manager})}
-  \ucfieldar{الشروط المسبقة}{إرسال التقرير المترولوجي من قبل التقني.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تنفيذ المعايرة المخبرية (UC07)}
+  \ucfieldar{العنوان}{تنفيذ المعايرة المخبرية (UC07)}
+  \ucfieldar{الفاعلون}{التقني المترولوجي}
+  \ucfieldar{الشروط المسبقة}{تعيين العملية للتقني.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يستلم المدير التقرير المودع ويفتحه للمراجعة (Recevoir rapport métrologie).\newline
-    2. يدقق المدير في سلسلة القياسات المرجعية، ونتائج الحسابات، وقيم الارتياب.\newline
-    3. يتأكد المدير من مطابقة الإجراءات للمواصفة القياسية الدولية ISO/IEC 17025.\newline
-    4. يعتمد المدير التقرير الفني ويصادق على صحة نتائجه.\newline
-    5. يحول النظام حالة التقرير إلى APPROVED مما يمهد لإنشاء الشهادة الرسمية.
+    1. يؤكد التقني استلام المعدة وبدء التدخل.\\
+    2. يختار الأجهزة المرجعية العيارية المطلوبة للتجربة.\\
+    3. يتحقق النظام آلياً من سريان صلاحية الأجهزة العيارية.\\
+    4. ينجز التقني نقاط المعايرة المحددة في الإجراء الفني ويسجل النتائج.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ وجود غموض أو خطأ حسابي: يرفض المدير التقرير مع تقديم ملاحظات إلزامية لإعادة المعالجة (Rework).
+    3.أ جهاز مرجعي منتهي الصلاحية : يحظر النظام متابعة العملية بالأداة المنتهية وينبه التقني والمسؤول.
   }
-  \ucfieldar{الشروط اللاحقة}{الموافقة الفنية التامة على نتائج الاختبارات والقياسات.}
+  \ucfieldar{الشروط اللاحقة}{إتمام القياسات الفيزيائية بنجاح.}
 \end{usecasetablear}
+% مخطط النشاط UC07
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-07.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : تنفيذ المعايرة المخبرية}
+  \label{fig:act-07}
+\end{figure}
+
 
 %% بطاقة 8
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - إدارة العقد وإنشاء الشهادة (\LR{UC08})}
-  \ucfieldar{العنوان}{إدارة العقد وإنشاء الشهادة (\LR{UC08 - Gérer un contrat / Créer un certificat})}
-  \ucfieldar{الفاعلون}{المكلف التجاري (\LR{Commercial})، المدير (\LR{Manager})}
-  \ucfieldar{الشروط المسبقة}{اعتماد تقرير المترولوجيا الفني واستكمال الجوانب الإدارية.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - رفع تقرير المعايرة (UC08)}
+  \ucfieldar{العنوان}{رفع تقرير نتائج المعايرة (UC08)}
+  \ucfieldar{الفاعلون}{التقني المترولوجي}
+  \ucfieldar{الشروط المسبقة}{إنهاء التجارب وحساب الارتياب في القياس.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يدخل المكلف التجاري إلى واجهة إدارة العقود (Gérer un contrat).\newline
-    2. يراجع البنود والشروط المالية والتنظيمية ويفعل العقد المبرم مع الزبون.\newline
-    3. بموجب علاقة التضمين الإلزامية («include»)، يتم استدعاء وظيفة "إنشاء شهادة" (Créer un certificat) لدى المدير.\newline
-    4. يولد النظام مسودة الشهادة الرسمية مسترجعةً بيانات العتاد والقياسات المعتمدة آلياً.\newline
-    5. يعين النظام مرجعاً أولياً للشهادة ويضعها في حالة مسودة بانتظار الاعتماد.
+    1. يدخل التقني لواجهة العملية.\\
+    2. يرفع الملف الفني المنجز لنتائج المعايرة (PDF).\\
+    3. يسجل ملاحظاته الفنية ويؤكد الإيداع.\\
+    4. يفحص النظام امتداد الملف ويحفظه في مسار التخزين الآمن.\\
+    5. يتغير وضع التقرير إلى مقدم (SUBMITTED) ويشعر المسؤول للتدقيق.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ عدم تسوية وضعية العقد: تعليق توليد الشهادة إلى حين تسوية الملف التعاقدي.
+    4.أ صيغة غير مسموحة : يرفض النظام الملف ويطلب بصيغة PDF فقط.
   }
-  \ucfieldar{الشروط اللاحقة}{إتاحة العقد المبرم وتوليد مسودة الشهادة في حساب المدير.}
+  \ucfieldar{الشروط اللاحقة}{إتاحة التقرير للرقابة النوعية.}
 \end{usecasetablear}
+% مخطط النشاط UC08
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-08.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : رفع تقرير نتائج المعايرة}
+  \label{fig:act-08}
+\end{figure}
+
 
 %% بطاقة 9
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - اعتماد والمصادقة على الشهادة (\LR{UC09})}
-  \ucfieldar{العنوان}{المصادقة على الشهادة (\LR{UC09 - Valider un certificat})}
-  \ucfieldar{الفاعلون}{المدير (\LR{Manager})}
-  \ucfieldar{الشروط المسبقة}{إنشاء مسودة الشهادة الرسمية في النظام.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - المراجعة النوعية وقبول التقرير أو طلب تصحيحه (UC09)}
+  \ucfieldar{العنوان}{المراجعة النوعية وقبول التقرير أو طلب تصحيحه (UC09)}
+  \ucfieldar{الفاعلون}{مسؤول المترولوجيا}
+  \ucfieldar{الشروط المسبقة}{إيداع التقرير من قبل التقني.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يفتح المدير واجهة مسودة الشهادة ويدقق في كافة تفاصيلها وبياناتها الفنية.\newline
-    2. ينقر المدير على زر "المصادقة والاعتماد النهائي" (Valider un certificat).\newline
-    3. يمنح النظام الشهادة رقماً تسلسلياً معيارياً نهائياً CERT-DOM-YYYY-XXXXX.\newline
-    4. يفعل النظام القفل الرقمي الحصري (is\_final = true) لمنع أي تعديل لاحق على المعطيات.\newline
-    5. تسجل العملية واسم المدير وتوقيت الختم في سجل التدقيق الأمني المشفر.
+    1. يفتح المسؤول التقرير ويراجع الحسابات والارتيابات المسجلة.\\
+    2. يجد البيانات مطابقة للمواصفات المعيارية.\\
+    3. ينقر على "قبول واعتماد التقرير".\\
+    4. تتحول حالة التقرير إلى APPROVED وتتجهز مرحلة استخراج الشهادة.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    1.أ وجود خطأ شكلي في المسودة: يعدل المدير الخطأ قبل الضغط على التثبيت النهائي.
+    2.أ وجود نقص أو خطأ في القياس : ينقر على "طلب إعادة المعالجة (Rework)"، ويدخل تعليلاً فنياً إجبارياً، ويرجع النظام الملف للتقني لمعالجته.
   }
-  \ucfieldar{الشروط اللاحقة}{تحول الشهادة إلى وثيقة رسمية نهائية سارية المفعول قانونياً.}
+  \ucfieldar{الشروط اللاحقة}{الموافقة الفنية على النتائج أو توجيهها للتصحيح.}
 \end{usecasetablear}
+% مخطط النشاط UC09
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-09.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : المراجعة النوعية وقبول التقرير أو طلب تصحيحه}
+  \label{fig:act-09}
+\end{figure}
+
 
 %% بطاقة 10
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - مسح وأرشفة الشهادة (\LR{UC10})}
-  \ucfieldar{العنوان}{مسح وأرشفة الشهادة (\LR{UC10 - Scanner et Archiver un certificat})}
-  \ucfieldar{الفاعلون}{المكلف التجاري (\LR{Commercial})}
-  \ucfieldar{الشروط المسبقة}{مصادقة المدير على الشهادة وتوفر نسختها الرسمية المعتمدة.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - إنشاء وتثبيت شهادة المعايرة الرسمية (UC10)}
+  \ucfieldar{العنوان}{إنشاء وتثبيت شهادة المعايرة الرسمية (UC10)}
+  \ucfieldar{الفاعلون}{مسؤول المترولوجيا / التقني المفوض}
+  \ucfieldar{الشروط المسبقة}{اعتماد تقرير المعايرة.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يقوم المكلف التجاري بسحب النسخة الورقية المعتمدة وإجراء مسح ضوئي عالي الدقة (Scanner un certificat).\newline
-    2. يرفع المكلف التجاري الملف الممسوح ضوئياً ويربطه برقم الشهادة في النظام.\newline
-    3. ينقر التجاري على خيار "أرشفة الشهادة" (Archiver un certificat).\newline
-    4. يحفظ النظام الشهادة وملحقاتها في الأرشيف الإلكتروني الآمن غير القابل للحذف.\newline
-    5. تتاح الشهادة آلياً في فضاء الزبون مع إرسال إشعار فوري له بالإنجاز.
+    1. يفتح المسؤول صفحة توليد الشهادة الرسمية.\\
+    2. يولد النظام مسودة الشهادة بالبيانات الدقيقة.\\
+    3. يراجع المسؤول التفاصيل وينقر على "اعتماد وتثبيت نهائي".\\
+    4. يمنح النظام الشهادة رقماً معيارياً فريداً CERT-DOM-YYYY-XXXXX، ويضبط القفل الحصري (\LR{is\_final = true}).\\
+    5. تسجل العملية واسم الموقع في سجل التدقيق غير القابل للتعديل، وتصبح حالة الطلب مكتملة (COMPLETED).
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ جودة المسح الضوئي غير كافية: يعاد المسح الضوئي لضمان وضوح الأختام والأرقام.
+    3.أ التوقيع بتفويض : يوثق النظام في السجل أن العملية تمت تحت نظام التفويض المعتمد.
   }
-  \ucfieldar{الشروط اللاحقة}{إيداع الشهادة في الأرشيف الرقمي وإتاحتها للتحميل من قبل الزبون.}
+  \ucfieldar{الشروط اللاحقة}{قفل الشهادة نهائياً ومنع أي تعديل لاحق عليها.}
 \end{usecasetablear}
+% مخطط النشاط UC10
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-10.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : إنشاء وتثبيت شهادة المعايرة الرسمية}
+  \label{fig:act-10}
+\end{figure}
+
 
 %% بطاقة 11
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - استلام الشهادة والاطلاع على الأرشيف والسجل (\LR{UC11})}
-  \ucfieldar{العنوان}{استلام الشهادة والأرشيف والسجل (\LR{UC11 - Recevoir certificat, Voir archive/historique})}
-  \ucfieldar{الفاعلون}{الزبون (\LR{Client})}
-  \ucfieldar{الشروط المسبقة}{أرشفة الشهادة الرسمية وتفعيل رابطها في فضاء الزبون.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تحميل الشهادة المعتمدة (UC11)}
+  \ucfieldar{العنوان}{تحميل الشهادة المعتمدة (UC11)}
+  \ucfieldar{الفاعلون}{الزبون}
+  \ucfieldar{الشروط المسبقة}{تثبيت الشهادة بحالة نهائية.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يتلقى الزبون إشعاراً باكتمال العملية وجاهزية شهادة المعايرة.\newline
-    2. يدخل الزبون إلى حسابه ويستعرض قائمة الشهادات المعتمدة (Recevoir certificat).\newline
-    3. ينقر الزبون على زر تحميل الشهادة الرقمية بصيغة PDF المؤمنة.\newline
-    4. يمكن للزبون تصفح أرشيف شهاداته السابقة عبر واجهة الأرشيف (Voir archive).\newline
-    5. يستعرض الزبون السجل التاريخي لكافة التدخلات ومواعيد القياس لمعداته (Voir historique).
+    1. يدخل الزبون إلى حسابه بعد تلقي إشعار الإتمام.\\
+    2. يستعرض قائمة أجهزته التي تحمل شارة "معايرة معتمدة".\\
+    3. ينقر على "تحميل شهادة المعايرة".\\
+    4. يتأكد النظام من ملكية الزبون للملف، ويزيد عداد التحميل، ويرسل ملف PDF المؤمن.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    3.أ محاولة تحميل شهادة لا تخص الزبون: حظر فوري للعملية وتنبيه نظام الأمان.
+    4.أ محاولة تحميل شهادة لزبون آخر : منع فوري وتسجيل محاولة خرق أمني.
   }
-  \ucfieldar{الشروط اللاحقة}{حصول الزبون على الشهادة الرسمية لمطابقة الجودة الصناعية لديه.}
+  \ucfieldar{الشروط اللاحقة}{حصول الزبون على الشهادة الرسمية لمطابقة الجودة لديه.}
 \end{usecasetablear}
+% مخطط النشاط UC11
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-11.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : تحميل الشهادة المعتمدة}
+  \label{fig:act-11}
+\end{figure}
+
 
 %% بطاقة 12
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - تحميل العقد والاطلاع على ورقة الوقت (\LR{UC12})}
-  \ucfieldar{العنوان}{تحميل العقد والاطلاع على ورقة الوقت (\LR{UC12 - Télécharger contrat et Voir feuille de temps})}
-  \ucfieldar{الفاعلون}{الزبون (\LR{Client})}
-  \ucfieldar{الشروط المسبقة}{إبرام العقد وتحديد مواعيد التدخل الميداني/المخبري.}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - متابعة صلاحية العتاد المرجعي (UC12)}
+  \ucfieldar{العنوان}{متابعة صلاحية العتاد المرجعي (UC12)}
+  \ucfieldar{الفاعلون}{مسؤول المترولوجيا، مدير النظام}
+  \ucfieldar{الشروط المسبقة}{تسجيل الدخول بصلاحية المشرف.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يدخل الزبون إلى فضاء التعاقد في حسابه الخاص.\newline
-    2. ينقر الزبون على "تحميل العقد" (Télécharger un contrat) بصيغة PDF.\newline
-    3. يفتح الزبون تبويب متابعة الإنجاز والوقت (Voir feuille de temps).\newline
-    4. يستعرض النظام المخطط الزمني الكامل: تاريخ تقديم الطلب، تاريخ الإحالة، تاريخ اقتراح الموعد، وتاريخ المعايرة.\newline
-    5. يتابع الزبون بشفافية كاملة كافة الفترات المستغرقة في معالجة ملفه.
+    1. يفتح المشرف جدول الأجهزة العيارية للمخبر.\\
+    2. يستعرض النظام تواريخ آخر رصد وتاريخ انتهاء الصلاحية لكل عتاد.\\
+    3. يميز النظام بالألوان الأجهزة القريبة من الانتهاء، ويقفل تلقائياً الأجهزة المنتهية.\\
+    4. يسجل المشرف شهادات المعايرة الجديدة العائدة من هيئات التقييس الوطنية.
   }
   \ucfieldar{السيناريوهات البديلة}{
     --
   }
-  \ucfieldar{الشروط اللاحقة}{تمكين الزبون من متابعة الجداول الزمنية والوثائق التعاقدية لطلباته.}
+  \ucfieldar{الشروط اللاحقة}{استمرار مطابقة عتاد المخبر لمعايير ISO 17025.}
 \end{usecasetablear}
+% مخطط النشاط UC12
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-12.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : متابعة صلاحية العتاد المرجعي}
+  \label{fig:act-12}
+\end{figure}
+
 
 %% بطاقة 13
-\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - إدارة الحسابات، الصلاحيات والعتاد المرجعي (\LR{UC13})}
-  \ucfieldar{العنوان}{إدارة الحسابات، الصلاحيات والعتاد (\LR{UC13 - Gérer comptes/accès et équipements})}
-  \ucfieldar{الفاعلون}{مدير النظام (\LR{Admin})}
-  \ucfieldar{الشروط المسبقة}{تسجيل الدخول بحساب المشرف العام للنظام (\LR{Admin}).}
+\begin{usecasetablear}{بطاقة وصف حالة الاستخدام - سجل التدقيق الأمني الشامل (UC13)}
+  \ucfieldar{العنوان}{سجل التدقيق الأمني الشامل (UC13)}
+  \ucfieldar{الفاعلون}{مدير النظام، مسؤول المترولوجيا}
+  \ucfieldar{الشروط المسبقة}{صلاحيات الاطلاع على السجلات الأمنية.}
   \ucfieldar{السيناريو الاسمي}{
-    1. يفتح مدير النظام لوحة الإدارة العامة والمراقبة.\newline
-    2. يقوم بإدارة حسابات المستخدمين وصلاحيات الوصول وتعيين الأدوار (Gérer les comptes / accès).\newline
-    3. يفتح قسم إدارة العتاد والأجهزة المرجعية للمخبر (Gérer les équipements).\newline
-    4. يتابع تواريخ سريان شهادات معايرة الأجهزة العيارية للمخبر، ويقفل تلقائياً الأجهزة المنتهية.\newline
-    5. يسجل شهادات المطابقة الجديدة العائدة من هيئات التقييس الوطنية لضمان استمرار الاعتماد.
+    1. يفتح مدير النظام قسم سجل التدقيق (Audit Trail).\\
+    2. يعرض النظام قائمة موثقة لكافة العمليات الحساسة مرتبة زمنياً.\\
+    3. يمكن البحث والتصفية حسب الكيان، أو المستخدم، أو التاريخ.\\
+    4. يعرض النظام تفاصيل كل حركة: هوية الفاعل، عنوان IP، التوقيت بالثواني، والقيم السابقة والجديدة بتنسيق JSON.
   }
   \ucfieldar{السيناريوهات البديلة}{
-    2.أ محاولة إلغاء الحساب الإداري الرئيسي: يمنع النظام العملية تلقائياً حفاظاً على استقرار المنصة.
+    --
   }
-  \ucfieldar{الشروط اللاحقة}{ضمان أمان وصلاحية الحسابات ودقة عتاد القياس المخبري.}
+  \ucfieldar{الشروط اللاحقة}{توثيق كامل لكافة العمليات للرجوع إليها في التدقيق الدولي.}
 \end{usecasetablear}
+% مخطط النشاط UC13
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \input{diagrams/tikz-act-13.tex}
+  \end{LTR}
+  \caption{مخطط النشاط : سجل التدقيق الأمني الشامل}
+  \label{fig:act-13}
+\end{figure}
+
 
 \section{النمذجة الحركية (مخططات التسلسل)}
 توضح مخططات التسلسل التالية الترتيب الزمني للرسائل المتبادلة بين الكائنات لتنفيذ أهم العمليات:
@@ -775,14 +851,18 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 
 \section{قواعد التسيير والترميز الموحد}
 \subsection{قواعد الترميز الرسمي للوثائق}
-\begin{itemize}
-  \item \textbf{مرجع طلب المعايرة :} \texttt{REQ-[YYYY]-[SEQ4]} (مثال: \texttt{REQ-2026-0012}).
-  \item \textbf{مرجع الفاتورة التقديرية :} \texttt{DEV-[YYYY]-[SEQ4]} (مثال: \texttt{DEV-2026-0012}).
-  \item \textbf{رقم شهادة المعايرة الرسمية :} \texttt{CERT-[DOM]-[YYYY]-[SEQ5]} (مثال: \texttt{CERT-PRES-2026-00045}).
-  \item \textbf{رمز العتاد المرجعي المخبري :} \texttt{ETL-[DOM]-[SERIE]} (مثال: \texttt{ETL-PRES-WIKA-01}).
-\end{itemize}
+تعتمد المنصة نظام ترميز موحداً يضمن تفرد كل وثيقة في قاعدة البيانات ويحافظ على إمكانية التتبع الكامل للمستندات. يوضح الجدول التالي تنسيق كل مرجع مع تفسير مكوناته ومثال تطبيقي:
 
-\subsection{قواعد التسيير المعتمدة (\LR{RG})}
+\begin{codiftablear}{ترميز المراجع الرسمية للوثائق}
+  \codifrowar{REQ-\textit{YYYY}-\textit{XXXX}}{مرجع طلب المعايرة: السنة (YYYY) ثم رقم تسلسلي من 4 أرقام}{REQ-2026-0012}
+  \codifrowar{DEV-\textit{YYYY}-\textit{XXXX}}{مرجع الفاتورة التقديرية (الدراسة التجارية)}{DEV-2026-0012}
+  \codifrowar{CTR-\textit{YYYY}-\textit{XXXX}}{مرجع العقد الموقع مع الزبون}{CTR-2026-0008}
+  \codifrowar{CERT-\textit{DOM}-\textit{YYYY}-\textit{XXXXX}}{رقم شهادة المعايرة: رمز المجال، السنة، ثم رقم من 5 أرقام}{CERT-PRES-2026-00045}
+  \codifrowar{ETL-\textit{DOM}-\textit{SERIE}}{رمز العتاد المرجعي المخبري (المجال + الرقم التسلسلي)}{ETL-PRES-WIKA-01}
+  \codifrowar{SRV-\textit{DOM}-\textit{NN}}{رمز خدمة المعايرة في الدليل (المجال + تسلسل)}{SRV-PRES-01}
+\end{codiftablear}
+
+\subsection{قواعد التسيير المعتمدة (RG)}
 \begin{itemize}
   \item \textbf{RG1 (تعدد المعدات) :} يجب أن يحتوي طلب المعايرة على معدة قياس واحدة على الأقل ($1..*$).
   \item \textbf{RG2 (تأكيد الموعد) :} يمنع الشروع في معايرة أي معدة قبل مصادقة الزبون الصريحة على تاريخ ومكان التدخل.
@@ -802,15 +882,33 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \begin{LTR}
   \input{diagrams/tikz-class-domain.tex}
   \end{LTR}
-  \caption{مخطط فئات مجال المعايرة والمترولوجيا (\LR{Domain Class Diagram})}
+  \caption{مخطط فئات مجال المعايرة والمترولوجيا (Domain Class Diagram)}
   \label{fig:class-domain}
 \end{figure}
+
+\subsection{الجدول التركيبي للفئات الأساسية}
+يلخص الجدول التالي أهم الخواص والأساليب السلوكية لكل فئة من فئات المجال:
+
+\begin{summarytablear}{الجدول التركيبي للفئات الأساسية (Class Summary)}
+  \summaryrowar{User}{id, name, email, password, role, is\_delegated\_manager, client\_id}{login(), logout(), assignRole()}
+  \summaryrowar{Client}{id, company\_name, contact\_name, email, phone, tax\_id}{createRequest(), manageContracts()}
+  \summaryrowar{CalibrationService}{id, code, name, domain, unit\_price}{listByDomain(), updatePrice()}
+  \summaryrowar{CalibrationRequest}{id, reference, client\_id, status, scheduled\_date, location}{submit(), schedule(), statusFlow()}
+  \summaryrowar{RequestItem}{id, request\_id, service\_id, name, serial, tolerance}{validateTolerance()}
+  \summaryrowar{Quotation}{id, reference, request\_id, total\_ht, tva\_rate, total\_ttc}{computeTotals(), approve()}
+  \summaryrowar{Contract}{id, contract\_number, client\_id, start\_date, end\_date}{archive()}
+  \summaryrowar{CalibrationOperation}{id, request\_id, technician\_id, status}{assign(), start(), complete()}
+  \summaryrowar{CalibrationReport}{id, operation\_id, file\_path, status, rejection\_reason}{submit(), approve(), requestRework()}
+  \summaryrowar{Certificate}{id, number, operation\_id, is\_draft, is\_final}{generate(), validate(), lock()}
+  \summaryrowar{MetrologyMaterial}{id, code, name, calibration\_date, expiration\_date}{checkValidity(), alertIfExpired()}
+  \summaryrowar{AuditLog}{id, user\_id, action, entity\_type, old\_values, new\_values}{record(), query()}
+\end{summarytablear}
 
 \subsection{قاموس المعطيات للجداول الأساسية}
 فيما يلي البنية التفصيلية لأهم جداول قاعدة البيانات:
 
 %% جدول المستخدمين
-\begin{dbtablear}{قاموس معطيات جدول المستخدمين (\LR{users})}
+\begin{dbtablear}{قاموس معطيات جدول المستخدمين (users)}
   \dbcolar{id}{bigint unsigned}{لا}{المعرف الرقمي الفريد (مفتاح رئيسي)}
   \dbcolar{name}{varchar(255)}{لا}{الاسم الكامل للمستخدم}
   \dbcolar{email}{varchar(255)}{لا}{البريد الإلكتروني (اسم المستخدم الفريد)}
@@ -821,19 +919,19 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \end{dbtablear}
 
 %% جدول المؤسسات
-\begin{dbtablear}{قاموس معطيات جدول المؤسسات والزبائن (\LR{clients})}
+\begin{dbtablear}{قاموس معطيات جدول المؤسسات والزبائن (clients)}
   \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للمؤسسة}
   \dbcolar{company\_name}{varchar(255)}{لا}{التسمية الرسمية للشركة}
   \dbcolar{contact\_name}{varchar(255)}{لا}{اسم ولقب المسؤول المخول}
   \dbcolar{email}{varchar(255)}{لا}{البريد الإلكتروني للاتصال المهني}
   \dbcolar{phone}{varchar(50)}{لا}{رقم الهاتف الرسمي}
-  \dbcolar{tax\_id}{varchar(100)}{نعم}{رقم التعريف الجبائي (\LR{NIF})}
+  \dbcolar{tax\_id}{varchar(100)}{نعم}{رقم التعريف الجبائي (NIF)}
 \end{dbtablear}
 
 %% جدول طلبات المعايرة
 \begin{dbtablear}{قاموس معطيات جدول طلبات المعايرة (calibration\_requests)}
   \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للطلب}
-  \dbcolar{reference}{varchar(50)}{لا}{المرجع الرقمي للطلب (\LR{REQ-YYYY-XXXX})}
+  \dbcolar{reference}{varchar(50)}{لا}{المرجع الرقمي للطلب (REQ-YYYY-XXXX)}
   \dbcolar{client\_id}{bigint unsigned}{لا}{مفتاح أجنبي يشير إلى الزبون صاحب الطلب}
   \dbcolar{status}{varchar(50)}{لا}{الحالة الحالية للطلب في مسار المعايرة}
   \dbcolar{scheduled\_date}{date}{نعم}{التاريخ المتفق عليه للتدخل}
@@ -851,6 +949,97 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \dbcolar{validated\_at}{timestamp}{نعم}{التوقيت الدقيق لاعتماد وتثبيت الشهادة}
 \end{dbtablear}
 
+%% جدول خدمات المعايرة
+\begin{dbtablear}{قاموس معطيات جدول خدمات المعايرة (calibration\_services)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للخدمة}
+  \dbcolar{code}{varchar(50)}{لا}{رمز الخدمة في الدليل (SRV-DOM-NN)}
+  \dbcolar{name}{varchar(255)}{لا}{التسمية الرسمية للخدمة}
+  \dbcolar{domain}{varchar(50)}{لا}{المجال الفيزيائي (الضغط، الحرارة، الكهرباء...)}
+  \dbcolar{unit\_price}{decimal(10,2)}{لا}{التعرفة الفردية دون رسوم}
+  \dbcolar{description}{text}{نعم}{الوصف التقني للخدمة}
+\end{dbtablear}
+
+%% جدول عناصر الطلب (المعدات)
+\begin{dbtablear}{قاموس معطيات جدول عناصر الطلب والعتاد (calibration\_request\_items)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للعنصر}
+  \dbcolar{calibration\_request\_id}{bigint unsigned}{لا}{مفتاح أجنبي يشير إلى الطلب الأب}
+  \dbcolar{calibration\_service\_id}{bigint unsigned}{نعم}{مفتاح أجنبي يشير إلى الخدمة المطابقة}
+  \dbcolar{equipment\_name}{varchar(255)}{لا}{تسمية الجهاز المراد معايرته}
+  \dbcolar{serial\_number}{varchar(100)}{لا}{الرقم التسلسلي عند الصانع}
+  \dbcolar{brand}{varchar(100)}{نعم}{العلامة التجارية}
+  \dbcolar{model}{varchar(100)}{نعم}{الطراز}
+  \dbcolar{measurement\_range}{varchar(100)}{نعم}{نطاق القياس (مثال 0-250 bar)}
+  \dbcolar{tolerance}{varchar(100)}{نعم}{الحدود المسموحة (مثال ±0.5\%)}
+  \dbcolar{quantity}{int}{لا}{الكمية المطلوبة (الافتراضي 1)}
+\end{dbtablear}
+
+%% جدول الفواتير التقديرية
+\begin{dbtablear}{قاموس معطيات جدول الفواتير التقديرية (quotations)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للفاتورة}
+  \dbcolar{reference}{varchar(50)}{لا}{المرجع الرسمي (DEV-YYYY-XXXX)}
+  \dbcolar{calibration\_request\_id}{bigint unsigned}{لا}{مفتاح أجنبي يربط الفاتورة بالطلب}
+  \dbcolar{total\_ht}{decimal(12,2)}{لا}{المجموع الكلي دون رسوم}
+  \dbcolar{tva\_rate}{decimal(5,2)}{لا}{نسبة الرسم على القيمة المضافة 19\%}
+  \dbcolar{total\_ttc}{decimal(12,2)}{لا}{المجموع الكلي شاملاً الأعباء}
+  \dbcolar{status}{varchar(30)}{لا}{الحالة (مسودة، مرسلة، مقبولة)}
+\end{dbtablear}
+
+%% جدول العقود
+\begin{dbtablear}{قاموس معطيات جدول العقود (contracts)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للعقد}
+  \dbcolar{contract\_number}{varchar(50)}{لا}{رقم العقد الإطاري}
+  \dbcolar{client\_id}{bigint unsigned}{لا}{مفتاح أجنبي يشير إلى الزبون المتعاقد}
+  \dbcolar{start\_date}{date}{لا}{تاريخ بداية سريان العقد}
+  \dbcolar{end\_date}{date}{لا}{تاريخ انتهاء العقد}
+  \dbcolar{status}{varchar(30)}{لا}{حالة العقد (نشط، مؤرشف)}
+\end{dbtablear}
+
+%% جدول عمليات المعايرة
+\begin{dbtablear}{قاموس معطيات جدول عمليات المعايرة (calibration\_operations)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للعملية}
+  \dbcolar{calibration\_request\_id}{bigint unsigned}{لا}{مفتاح أجنبي يشير إلى الطلب الأب}
+  \dbcolar{technician\_id}{bigint unsigned}{نعم}{مفتاح أجنبي يشير إلى التقني المكلف}
+  \dbcolar{assigned\_by}{bigint unsigned}{نعم}{مفتاح أجنبي يشير إلى المسؤول الموكل}
+  \dbcolar{status}{varchar(50)}{لا}{الحالة (مكلفة، قيد الإنجاز، منجزة)}
+  \dbcolar{started\_at}{timestamp}{نعم}{لحظة بدء القياسات}
+  \dbcolar{completed\_at}{timestamp}{نعم}{لحظة إتمام القياسات}
+\end{dbtablear}
+
+%% جدول تقارير المعايرة
+\begin{dbtablear}{قاموس معطيات جدول التقارير الفنية (calibration\_reports)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للتقرير}
+  \dbcolar{calibration\_operation\_id}{bigint unsigned}{لا}{مفتاح أجنبي يربط التقرير بالعملية}
+  \dbcolar{file\_path}{varchar(500)}{لا}{مسار التخزين الآمن للملف}
+  \dbcolar{file\_name}{varchar(255)}{لا}{الاسم الأصلي للملف}
+  \dbcolar{status}{varchar(30)}{لا}{الحالة (مقدم، مقبول، مرفوض)}
+  \dbcolar{rejection\_reason}{text}{نعم}{التعليل الإجباري عند طلب التصحيح}
+  \dbcolar{reviewed\_by}{bigint unsigned}{نعم}{المسؤول الذي أجرى المراجعة النوعية}
+  \dbcolar{reviewed\_at}{timestamp}{نعم}{وقت المراجعة النوعية}
+\end{dbtablear}
+
+%% جدول العتاد المرجعي
+\begin{dbtablear}{قاموس معطيات جدول العتاد المرجعي (metrology\_materials)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للعتاد}
+  \dbcolar{code}{varchar(50)}{لا}{الرمز الداخلي (ETL-DOM-SERIE)}
+  \dbcolar{name}{varchar(255)}{لا}{تسمية الأداة المرجعية}
+  \dbcolar{serial\_number}{varchar(100)}{لا}{الرقم التسلسلي للمعايرة}
+  \dbcolar{calibration\_date}{date}{لا}{تاريخ آخر رصد مترولوجي}
+  \dbcolar{expiration\_date}{date}{لا}{نهاية صلاحية الاستعمال المخبري}
+  \dbcolar{status}{varchar(30)}{لا}{الحالة (صالح، منتهي، خارج الخدمة)}
+\end{dbtablear}
+
+%% جدول سجل التدقيق
+\begin{dbtablear}{قاموس معطيات جدول سجل التدقيق الأمني (audit\_logs)}
+  \dbcolar{id}{bigint unsigned}{لا}{المعرف الفريد للسجل}
+  \dbcolar{user\_id}{bigint unsigned}{نعم}{مفتاح أجنبي يشير إلى منفذ العملية}
+  \dbcolar{action}{varchar(100)}{لا}{نوع العملية (إنشاء، تحديث، اعتماد...)}
+  \dbcolar{entity\_type}{varchar(100)}{لا}{الكيان المتأثر (طلب، تقرير، شهادة)}
+  \dbcolar{entity\_id}{bigint unsigned}{لا}{رقم الكيان المتأثر}
+  \dbcolar{old\_values}{json}{نعم}{القيم السابقة بتنسيق JSON}
+  \dbcolar{new\_values}{json}{نعم}{القيم الجديدة بتنسيق JSON}
+  \dbcolar{ip\_address}{varchar(45)}{نعم}{عنوان IP الخاص بالمصدر}
+\end{dbtablear}
+
 \begin{figure}[H]
   \centering
   \begin{LTR}
@@ -860,6 +1049,44 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \label{fig:db-cluster}
 \end{figure}
 
+\section{الانتقال إلى النموذج العلائقي (Passage au Modèle Relationnel)}
+\subsection{قواعد التحويل المعتمدة}
+النموذج العلائقي يمثل تجسيداً قاعدياً لمخطط الفئات، ويتم التحويل وفق القواعد التالية:
+\begin{itemize}
+  \item \textbf{R1 — الفئة إلى جدول :} كل فئة من فئات المجال تتحول إلى جدول مستقل في قاعدة البيانات.
+  \item \textbf{R2 — الخواص إلى أعمدة :} كل خاصية تصبح عموداً بنفس نوعها المحدد في المخطط المفاهيمي.
+  \item \textbf{R3 — العلاقة 1..N :} تُضاف مفتاح أجنبي (\textit{FK}) داخل جدول الجهة المتعددة يشير إلى مفتاح الجهة المرتبطة.
+  \item \textbf{R4 — العلاقة N..M :} تُترجم إلى جدول وسيط (Pivot) يحمل مفاتيح أجنبية للطرفين مع الصفات الوصفية الخاصة بها.
+  \item \textbf{R5 — الوراثة :} أساسي نماذج (الزبون، التقني، المشرف) مستخلصة من الفئة الأم \textbf{User} بالاعتماد على ملاحظة الدور الجوهرية.
+\end{itemize}
+
+\subsection{جدول التحويل (Mapping Table)}
+يلخص الجدول التالي تطبيقات هذه القواعد على فئات النظام:
+
+\begin{relmapar}{جدول تحويل فئات UML إلى جداول SQL}
+  \relmaprow{User}{users}{id}{client\_id}{إضافة العمود role للتفريق بين الأدوار}
+  \relmaprow{Client}{clients}{id}{--}{خاصية client\_id في جدول المستخدمين تحقق رابط 1..*}
+  \relmaprow{CalibrationService}{calibration\_services}{id}{--}{جدول مستقل لمحتوى الدليل المترولوجي}
+  \relmaprow{CalibrationRequest}{calibration\_requests}{id}{client\_id}{رابط 1..N بين الزبون والطلبات}
+  \relmaprow{RequestItem}{calibration\_request\_items}{id}{calibration\_request\_id, calibration\_service\_id}{عناصر الطلب؛ ترتبط بجدول الخدمة مفتاح أجنبي عند التأهيل}
+  \relmaprow{Quotation}{quotations}{id}{calibration\_request\_id}{رابط 1..1 بين الطلب والفواتير}
+  \relmaprow{Contract}{contracts}{id}{client\_id}{عقود إطارية مرتبطة بالزبون}
+  \relmaprow{CalibrationOperation}{calibration\_operations}{id}{calibration\_request\_id, technician\_id, assigned\_by}{تدخل المفاتيح الأجنبية الثلاثة للتعيين والتتبع}
+  \relmaprow{CalibrationReport}{calibration\_reports}{id}{calibration\_operation\_id, reviewed\_by}{التقرير مرتبط بالعملية وبالمراجع النوعي}
+  \relmaprow{Certificate}{calibration\_certificates}{id}{calibration\_operation\_id, validated\_by}{الشهادة مرقمة وحرفياً قياسية}
+  \relmaprow{MetrologyMaterial}{metrology\_materials}{id}{--}{العتاد المرجعي محدودية صلاحية مسجلة}
+  \relmaprow{AuditLog}{audit\_logs}{id}{user\_id}{سجل التدقيق يستقبل مراجع فاعلي كل عملية}
+\end{relmapar}
+
+\subsection{جداول الربط (Pivot Tables)}
+تُستعمل جداول الربط لتحويل علاقات التعدد إلى جداول مستقلة، خاصةً في التعريف التقني للعتاد:
+
+\begin{pivotar}{جداول الربط في قاعدة البيانات}
+  \pivotrow{طلب \LR{(\seqsplit{CalibrationRequest})} $\leftrightarrow$ خدمة \LR{(\seqsplit{CalibrationService})} والعتاد}{calibration\_request\_items}{calibration\_request\_id + calibration\_service\_id}{الجدول الوسيط يخزن أيضاً بيانات الجهاز: الرقم التسلسلي، الطراز، الدقة}
+  \pivotrow{تقني \LR{(User)} $\leftrightarrow$ عملية \LR{(\seqsplit{CalibrationOperation})}}{calibration\_operations}{technician\_id + assigned\_by}{التعيين موثق عبر مفتاحي التقني والمسؤول}
+  \pivotrow{مسؤول \LR{(User)} $\leftrightarrow$ شهادة \LR{(Certificate)}}{calibration\_certificates}{validated\_by}{تسجيل الموقع الرسمي على الشهادة النهائية}
+\end{pivotar}
+
 \section{مخطط النشر الفيزيائي للمنصة}
 يعتمد النشر الفعلي للمنصة على خادم بيئة الإنتاج بحزمة \textbf{LEMP} المؤمنة بشهادة التشفير الرقمي SSL/TLS:
 
@@ -868,7 +1095,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \begin{LTR}
   \input{diagrams/tikz-deployment.tex}
   \end{LTR}
-  \caption{مخطط النشر الفيزيائي للمنصة (\LR{LEMP Topology})}
+  \caption{مخطط النشر الفيزيائي للمنصة (LEMP Topology)}
   \label{fig:deployment}
 \end{figure}
 
@@ -907,7 +1134,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \label{fig:app-structure}
 \end{figure}
 
-\subsection{تطبيق مبدأ عدم قابلية تعديل الشهادات (\LR{Immutability})}
+\subsection{تطبيق مبدأ عدم قابلية تعديل الشهادات (Immutability)}
 تم تطبيق مبدأ الحظر الصارم لأي تعديل على الشهادات النهائية من خلال أحداث النموذج (\textit{Eloquent Model Events}) في الملف \texttt{app/Models/CalibrationCertificate.php}:
 \begin{LTR}
 \begin{verbatim}
@@ -916,7 +1143,8 @@ protected static function booted(): void
     static::updating(function (CalibrationCertificate $cert) {
         if ($cert->getOriginal('is_final')) {
             throw new \DomainException(
-                "Ce certificat est definitif et verrouille. Modification interdite."
+                "This certificate is final and immutable. " .
+                "Modification forbidden."
             );
         }
     });
@@ -924,7 +1152,8 @@ protected static function booted(): void
     static::deleting(function (CalibrationCertificate $cert) {
         if ($cert->is_final) {
             throw new \DomainException(
-                "Suppression d'un certificat officiel interdite."
+                "Deleting a finalized calibration certificate " .
+                "is forbidden."
             );
         }
     });
@@ -936,8 +1165,65 @@ protected static function booted(): void
 \subsection{الواجهة العامة ودليل الخدمات المترولوجية}
 تتيح للزوار والزبائن التعرف على المجالات الستة المعتمدة في المخبر، مع إمكانية البحث الفوري عن أدوات القياس ومعرفة شروط التكفل ومداها الفني.
 
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/welcome.png}
+  \end{LTR}
+  \caption{الواجهة العامة للمنصة ودليل الخدمات المترولوجية}
+  \label{fig:ui-welcome}
+\end{figure}
+
 \subsection{فضاء الزبون : إدراج طلب متعدد المعدات وتتبع الشهادات}
 تسمح للزبون الصناعي بإضافة عدة أجهزة دفعة واحدة مع تحديد أرقامها التسلسلية وخصائصها، ومتابعة تغير حالة كل أداة خطوة بخطوة حتى تحميل شهادة المعايرة المعتمدة بنقرة واحدة.
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/client-requests.png}
+  \end{LTR}
+  \caption{فضاء الزبون : قائمة الطلبات وتتبع حالات المعايرة}
+  \label{fig:ui-client-requests}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/client-create.png}
+  \end{LTR}
+  \caption{فضاء الزبون : نموذج إدراج طلب معايرة متعدد المعدات}
+  \label{fig:ui-client-create}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/client-certificates.png}
+  \end{LTR}
+  \caption{فضاء الزبون : تحميل شهادات المعايرة المعتمدة}
+  \label{fig:ui-client-certificates}
+\end{figure}
+
+\subsection{فضاء المصلحة التجارية}
+يعالج المكلف التجاري الطلبات الواردة، فيطابق كل جهاز مع خدمة المعايرة المناسبة في الدليل، ويصدر الفاتورة التقديرية آلياً (HT + TVA 19\% = TTC)، قبل تحويل الملف إلى مسؤول المترولوجيا.
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/commercial-requests.png}
+  \end{LTR}
+  \caption{فضاء المصلحة التجارية : قائمة الطلبات الواردة وإصدار الفواتير التقديرية}
+  \label{fig:ui-commercial-requests}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/commercial-quotations.png}
+  \end{LTR}
+  \caption{فضاء المصلحة التجارية : إدارة الفواتير والمتابعة التعاقدية}
+  \label{fig:ui-commercial-quotations}
+\end{figure}
 
 \subsection{لوحة تحكم مسؤول المترولوجيا}
 تعتبر مركز القيادة الفني للمخبر، وتوفر:
@@ -948,8 +1234,92 @@ protected static function booted(): void
   \item نظام توقيع واعتماد الشهادات الرسمية وإغلاقها نهائياً.
 \end{itemize}
 
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/manager-dashboard.png}
+  \end{LTR}
+  \caption{لوحة تحكم مسؤول المترولوجيا : لوحة القيادة الفنية}
+  \label{fig:ui-manager-dashboard}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/manager-scheduling.png}
+  \end{LTR}
+  \caption{مسؤول المترولوجيا : اقتراح مواعيد وأماكن المعايرة}
+  \label{fig:ui-manager-scheduling}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/manager-reports.png}
+  \end{LTR}
+  \caption{مسؤول المترولوجيا : المراجعة النوعية لتقارير المعايرة}
+  \label{fig:ui-manager-reports}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/manager-certificates.png}
+  \end{LTR}
+  \caption{مسؤول المترولوجيا : اعتماد وتثبيت شهادات المعايرة الرسمية}
+  \label{fig:ui-manager-certificates}
+\end{figure}
+
 \subsection{فضاء التقني المترولوجي}
 شاشة مبسطة مخصصة لتقنيي المخابر، تعرض المهام الموكلة، وتتحقق من مطابقة الأجهزة العيارية المستعملة، وتوفر نموذجاً لرفع تقرير النتائج النهائي بصيغة PDF.
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/metrology-operations.png}
+  \end{LTR}
+  \caption{فضاء التقني المترولوجي : المهام الموكلة وتنفيذ المعايرة}
+  \label{fig:ui-metrology-operations}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/metrology-materials.png}
+  \end{LTR}
+  \caption{المترولوجيا : متابعة العتاد المرجعي وصيانته}
+  \label{fig:ui-metrology-materials}
+\end{figure}
+
+\subsection{فضاء مسؤول النظام}
+يمكّن مسؤول النظام من جرد حسابات المستخدمين وتدوير الرتب، وضبط دليل الخدمات والطاقات، والاطلاع على سجلات التدقيق الأمني والأرشيف الملتزم بشروط الحفظ.
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/admin-users.png}
+  \end{LTR}
+  \caption{فضاء مسؤول النظام : إدارة حسابات المستخدمين والرتب}
+  \label{fig:ui-admin-users}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/admin-services.png}
+  \end{LTR}
+  \caption{فضاء مسؤول النظام : ضبط دليل الخدمات المترولوجية}
+  \label{fig:ui-admin-services}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.9\linewidth]{figures/admin-audit.png}
+  \end{LTR}
+  \caption{فضاء مسؤول النظام : سجل التدقيق الأمني والتتبع الكامل}
+  \label{fig:ui-admin-audit}
+\end{figure}
 
 \section{استراتيجية الاختبارات والتحقق الآلي}
 \subsection{هرم الاختبارات}
@@ -967,9 +1337,9 @@ protected static function booted(): void
 \subsection{نتائج حزمة الاختبارات الآلية}
 أثبتت النتائج نجاح جميع الاختبارات الـ 67 بنسبة 100\% محققة 273 توكيداً أمنياً ووظيفياً:
 
-\begin{teststablear}{نتائج حزمة الاختبارات الآلية المؤتمتة (\LR{Pest PHP / PHPUnit})}
+\begin{teststablear}{نتائج حزمة الاختبارات الآلية المؤتمتة (Pest PHP / PHPUnit)}
   \testrowar{المصادقة وأمن الجلسات}{8}{8}{100\% ناجح [OK]}
-  \testrowar{عزل بيانات الزبائن (\LR{Multi-Tenants})}{7}{7}{100\% ناجح [OK]}
+  \testrowar{عزل بيانات الزبائن (Multi-Tenants)}{7}{7}{100\% ناجح [OK]}
   \testrowar{طلبات متعددة المعدات}{9}{9}{100\% ناجح [OK]}
   \testrowar{التسعير التجاري والفواتير التقديرية}{6}{6}{100\% ناجح [OK]}
   \testrowar{التنسيق والمصادقة على المواعيد}{6}{6}{100\% ناجح [OK]}
@@ -980,12 +1350,42 @@ protected static function booted(): void
   \testrowar{كشف وحظر الأدوات العيارية المنتهية}{5}{5}{100\% ناجح [OK]}
 \end{teststablear}
 
+\subsection{سيناريوهات التحقق الوظيفي الحرجة}
+يغطي الجدول التالي أبرز سيناريوهات الاختبار الوظيفي التي تحمي المهام المترولوجية الحرجة، مع النتيجة المحصل عليها:
+
+\begin{teststablear}{مصفوفة سيناريوهات التحقق الوظيفي الحرجة}
+  \testrowar{إنشاء طلب متعدد المعدات من الزبون}{1}{1}{ناجح [OK]}
+  \testrowar{دراسة الطلب وربطه بخدمات الدليل}{1}{1}{ناجح [OK]}
+  \testrowar{اقتراح تاريخ ومكان المعايرة والتحقق من قبول الزبون أو رفضه بتعليل}{1}{1}{ناجح [OK]}
+  \testrowar{تعيين العملية للتقني ورفع تقرير المعايرة}{1}{1}{ناجح [OK]}
+  \testrowar{طلب إعادة المعالجة (Rework) بتبرير إجباري}{1}{1}{ناجح [OK]}
+  \testrowar{اعتماد التقرير وتوليد مسودة الشهادة}{1}{1}{ناجح [OK]}
+  \testrowar{توقيع الشهادة في وضع التفويض المخول}{1}{1}{ناجح [OK]}
+  \testrowar{منع أي تعديل على الشهادة النهائية (Immutability)}{1}{1}{ناجح [OK]}
+  \testrowar{عزل بيانات الزبائن ورفض الوصول لبيانات الغير}{1}{1}{ناجح [OK]}
+  \testrowar{تنبيه وحظر العتاد المرجعي المنتهية صلاحيته}{1}{1}{ناجح [OK]}
+  \testrowar{تسجيل سجل التدقيق الكامل للمستخدم وعنوان IP}{1}{1}{ناجح [OK]}
+\end{teststablear}
+
+\subsection{واجهة تشغيل الاختبارات الآلية}
+نُفذت الحزمة التجريبية عبر أمر \LR{\texttt{php artisan test}} فأظهرت النتيجة التالية:
+
+\begin{figure}[H]
+  \centering
+  \begin{LTR}
+  \includegraphics[width=0.85\linewidth]{figures/test-runner.png}
+  \end{LTR}
+  \caption{مخرجات تشغيل حزمة الاختبارات الآلية (67 اختباراً ناجحاً)}
+  \label{fig:test-runner}
+\end{figure}
+
 \begin{LTR}
-\begin{verbatim}
-   PASS  Tests\Feature\CalibrationWorkflowTest
-  Tests:    67 passed (273 assertions)
-  Duration: 2.98s
-\end{verbatim}
+\begin{quote}
+\ttfamily
+   PASS  Tests\textbackslash Feature\textbackslash CalibrationWorkflowTest\\
+  Tests:    67 passed (273 assertions)\\
+  Duration: 4.13s
+\end{quote}
 \end{LTR}
 
 \section*{خاتمة الفصل الرابع}
@@ -999,7 +1399,7 @@ protected static function booted(): void
 \addcontentsline{toc}{chapter}{الخاتمة العامة والآفاق المستقبلية}
 
 \section*{حصيلة المشروع}
-تناول هذا العمل تصميم وإنجاز تطبيق ويب متكامل ومخصص لتسيير ومتابعة عمليات معايرة معدات القياس والمترولوجيا الصناعية وفق معايير الجودة الدولية (\LR{ISO/IEC 17025}) لصالح المؤسسة المستخدمة \textbf{شركة أليسيف (\LR{ALICEF SPA})}.
+تناول هذا العمل تصميم وإنجاز تطبيق ويب متكامل ومخصص لتسيير ومتابعة عمليات معايرة معدات القياس والمترولوجيا الصناعية وفق معايير الجودة الدولية (ISO/IEC 17025) لصالح المخبر الوطني للمعايرة (LNEMI).
 
 وقد مكننا هذا المشروع من تطبيق المفاهيم الحديثة لهندسة البرمجيات بالاعتماد على المنهجية الموحدة ولغة UML، وبناء منصة متينة تجمع بين قوة إطار العمل \textbf{Laravel 12}، وسلاسة مكتبة \textbf{React 19} عبر تقنية \textbf{Inertia.js}.
 
@@ -1012,47 +1412,80 @@ protected static function booted(): void
   \item إثبات وتوثيق كافة العمليات الحساسة عبر سجل تدقيق أمني غير قابل للحذف.
 \end{itemize}
 
+\section*{الصعوبات والقيود}
+رغم نجاح الإنجاز، سُجلت بعض الصعوبات والقيود التي واجهتنا أثناء هذا العمل ويتعين ذكرها بشفافية:
+\begin{itemize}
+  \item \textbf{تعقيد مجال المترولوجيا :} اقتضى استيعاب المفاهيم الفيزيائية والمعيارية (الارتياب في القياس، نطاقات الصلاحية، التسلسل المترولوجي) جهداً كبيراً لفهمها وصياغتها برمجياً بشكل صحيح، خاصة قواعد \LR{\texttt{ISO/IEC 17025}} المتعلقة بالشهادات والعقود.
+  \item \textbf{إدارة الحالة المتشعبة :} التحكم في التتابع الكامل للحالات (طلب $\rightarrow$ فاتورة $\rightarrow$ جدولة $\rightarrow$ معايرة $\rightarrow$ شهادة) مع كل الفروقات والتفرعات يتطلب صلابة في التصميم واختبارات تغطية واسعة، وتأخر بعض الوظائف الثانوية إلى الإصدارات اللاحقة.
+  \item \textbf{الحاجز اللغوي والبيئة :} كتابة كل الوثائق والمخرجات بالعربية مع الاحتفاظ بالدقة التقنية للمصطلحات الإنجليزية والفرنسية فرض عمل توثيقي إضافي، كما أن غياب تأطير تقني دائم في بعض مراحل التطوير زاد من مدة التجريب.
+  \item \textbf{قيود الأداء على العتاد المتواضع :} توظيف التشفير والتدقيق على كل عملية حساسة ينعكس على استجابة النظام في بيئات التطوير المحلية، وهو ما تمت معالجته عبر تحسين الاستعلامات والفهرسة، مع إمكانية التحسين مستقبلاً بالوسائط التقنية.
+\end{itemize}
+وبذلك تبقى هذه الصعوبات إطاراً دافعاً لتحسينات قادمة أكثر من كونها حدوداً فنية نهائية.
+
 \section*{الآفاق المستقبلية}
 لتعزيز قدرات هذا النظام مستقبلاً، نقترح الآفاق التطويرية التالية:
 \begin{enumerate}
-  \item \textbf{التوقيع الرقمي المعتمد (\LR{PKI}) :} إدماج تقنيات التوقيع الإلكتروني المشفر بمفاتيح التشفير العامة داخل ملفات PDF للشهادات وفق معايير الهيئات الرسمية.
-  \item \textbf{تطبيق متنقل دون اتصال (\LR{PWA Offline}) :} تطوير تطبيق هجين يسمح للتقنيين في المواقع الصناعية البعيدة بتسجيل قياساتهم دون الحاجة لشبكة إنترنت، مع المزامنة الآلية فور توفر الاتصال.
-  \item \textbf{الربط الذكي مع أجهزة القياس (\LR{IoT}) :} ربط منصات القياس الحديثة مباشرة مع النظام لسحب قراءات الارتياب آلياً دون أي تدخل بشري في كتابة النتائج.
-  \item \textbf{بطاقات التعريف الذكية (\LR{QR Code}) :} تثبيت ملصقات تحمل رمز الاستجابة السريعة على كل معدة تمت معايرتها، ليتمكن مدققو الجودة من التحقق من صحة الشهادة بمجرد مسح الرمز بالهاتف.
+  \item \textbf{التوقيع الرقمي المعتمد (PKI) :} إدماج تقنيات التوقيع الإلكتروني المشفر بمفاتيح التشفير العامة داخل ملفات PDF للشهادات وفق معايير الهيئات الرسمية.
+  \item \textbf{تطبيق متنقل دون اتصال (PWA Offline) :} تطوير تطبيق هجين يسمح للتقنيين في المواقع الصناعية البعيدة بتسجيل قياساتهم دون الحاجة لشبكة إنترنت، مع المزامنة الآلية فور توفر الاتصال.
+  \item \textbf{الربط الذكي مع أجهزة القياس (IoT) :} ربط منصات القياس الحديثة مباشرة مع النظام لسحب قراءات الارتياب آلياً دون أي تدخل بشري في كتابة النتائج.
+  \item \textbf{بطاقات التعريف الذكية (QR Code) :} تثبيت ملصقات تحمل رمز الاستجابة السريعة على كل معدة تمت معايرتها، ليتمكن مدققو الجودة من التحقق من صحة الشهادة بمجرد مسح الرمز بالهاتف.
 \end{enumerate}
 
 
 %% ============================================================
 %% قائمة المراجع والمصادر
 %% ============================================================
-\chapter*{قائمة المراجع والمصادر \LR{(Bibliographie)}}
+\chapter*{قائمة المراجع والمصادر (Bibliographie)}
 \addcontentsline{toc}{chapter}{قائمة المراجع والمصادر}
 
-\begin{enumerate}[label={[\arabic*]}]
-\item \textbf{\LR{ISO/IEC 17025:2017}} : \textit{المتطلبات العامة لكفاءة مختبرات الفحص والمعايرة}. المنظمة الدولية للتقييس، جنيف، سويسرا، 2017.
-  
-\item \textbf{دليل مذكرات التخرج - \LR{INSFP} رحمانية} : \textit{الدليل المنهجي لإعداد مذكرات نهاية التكوين - تخصص مطور الويب والوسائط المتنقلة}. المعهد الوطني المتخصص في التكوين المهني رحمانية - سيدي عبد الله، الجزائر.
-  
-\item \begin{LTR} \textbf{Booch, G., Rumbaugh, J., Jacobson, I.} : \textit{The Unified Modeling Language User Guide (2nd Edition)}. Addison-Wesley Professional, 2005. \end{LTR}
-\item \begin{LTR} \textbf{Otwell, T.} : \textit{Laravel Documentation - The PHP Framework for Web Artisans}. \url{https://laravel.com/docs}. \end{LTR}
-\item \begin{LTR} \textbf{Reinink, J.} : \textit{Inertia.js - The Modern Monolith Architecture Protocol}. \url{https://inertiajs.com}. \end{LTR}
-\item \begin{LTR} \textbf{Meta Platforms} : \textit{React Documentation - A JavaScript library for building user interfaces}. \url{https://react.dev}. \end{LTR}
-\item \begin{LTR} \textbf{Microsoft Corporation} : \textit{TypeScript Handbook - The Typed JavaScript at Any Scale}. \url{https://www.typescriptlang.org/docs}. \end{LTR}
-\item \begin{LTR} \textbf{Wathan, A.} : \textit{Tailwind CSS Documentation - Modern Utility-First CSS}. \url{https://tailwindcss.com/docs}. \end{LTR}
-\item \begin{LTR} \textbf{Oracle Corporation} : \textit{MySQL 8.0 Reference Manual}. Oracle Documentation Library, 2025. \end{LTR}
-\item \begin{LTR} \textbf{OWASP Foundation} : \textit{OWASP Top Ten Web Application Security Risks}. Open Web Application Security Project, 2024. \end{LTR}
-\item \begin{LTR} \textbf{Martin, R. C.} : \textit{Clean Architecture: A Craftsman's Guide to Software Structure and Design}. Prentice Hall, 2017. \end{LTR}
-\item \begin{LTR} \textbf{Pest PHP Community} : \textit{Pest - An elegant PHP Testing Framework}. \url{https://pestphp.com}. \end{LTR}
-\end{enumerate}
+\begin{thebibliography}{12}
+
+\bibitem{iso17025}
+\textbf{ISO/IEC 17025:2017} : \textit{Exigences g\'en\'erales concernant la comp\'etence des laboratoires d'\'etalonnage et d'essais}. Organisation Internationale de Normalisation, Gen\`eve, Suisse, 2017.
+
+\bibitem{guide-insfp}
+\textbf{INSFP Rahmania} : \textit{Guide m\'ethodologique de pr\'eparation du m\'emoire de fin de formation -- Option D\'eveloppeur Web et Mobile}. Institut National Sp\'ecialis\'e de la Formation Professionnelle Rahmania, Alger, Alg\'erie.
+
+\bibitem{booch-uml}
+\textbf{BOOCH, G., RUMBAUGH, J., JACOBSON, I}. \textit{The Unified Modeling Language User Guide} (2nd Edition). Addison-Wesley Professional, 2005.
+
+\bibitem{laravel-docs}
+\textbf{OTWELL, T.}. \textit{Laravel Documentation -- The PHP Framework for Web Artisans}. [en ligne]. \url{https://laravel.com/docs} [consult\'e le 15/09/2026].
+
+\bibitem{inertia-docs}
+\textbf{REININK, J.}. \textit{Inertia.js -- The Modern Monolith Architecture Protocol}. [en ligne]. \url{https://inertiajs.com} [consult\'e le 15/09/2026].
+
+\bibitem{react-docs}
+\textbf{META PLATFORMS}. \textit{React Documentation -- A JavaScript library for building user interfaces}. [en ligne]. \url{https://react.dev} [consult\'e le 15/09/2026].
+
+\bibitem{typescript-docs}
+\textbf{MICROSOFT CORPORATION}. \textit{TypeScript Handbook -- The Typed JavaScript at Any Scale}. [en ligne]. \url{https://www.typescriptlang.org/docs} [consult\'e le 15/09/2026].
+
+\bibitem{tailwind-docs}
+\textbf{WATHAN, A.}. \textit{Tailwind CSS Documentation -- Modern Utility-First CSS}. [en ligne]. \url{https://tailwindcss.com/docs} [consult\'e le 15/09/2026].
+
+\bibitem{mysql-docs}
+\textbf{ORACLE CORPORATION}. \textit{MySQL 8.0 Reference Manual}. Oracle Documentation Library, 2025.
+
+\bibitem{owasp}
+\textbf{OWASP FOUNDATION}. \textit{OWASP Top Ten Web Application Security Risks}. Open Web Application Security Project, 2024. [en ligne]. \url{https://owasp.org/www-project-top-ten} [consult\'e le 15/09/2026].
+
+\bibitem{clean-arch}
+\textbf{MARTIN, R. C.}. \textit{Clean Architecture: A Craftsman's Guide to Software Structure and Design}. Prentice Hall, 2017.
+
+\bibitem{pest-docs}
+\textbf{PEST PHP COMMUNITY}. \textit{Pest -- An elegant PHP Testing Framework}. [en ligne]. \url{https://pestphp.com} [consult\'e le 15/09/2026].
+
+\end{thebibliography}
 
 %% ============================================================
 %% الملاحق
 %% ============================================================
 \appendix
-\chapter*{الملاحق \LR{(Annexes)}}
+\chapter*{الملاحق (Annexes)}
 \addcontentsline{toc}{chapter}{الملاحق}
 
-\section*{الملحق أ : كود حماية وتثبيت الشهادات الرسمية \LR{(Laravel Model)}}
+\section*{الملحق أ : كود حماية وتثبيت الشهادات الرسمية (Laravel Model)}
 \begin{LTR}
 \begin{verbatim}
 namespace App\Models;
@@ -1072,33 +1505,15 @@ class CalibrationCertificate extends Model
         'is_final',
         'validated_by',
         'validated_at',
-        'notes',
     ];
-
-    protected $casts = [
-        'is_draft' => 'boolean',
-        'is_final' => 'boolean',
-        'issue_date' => 'date',
-        'expiry_date' => 'date',
-        'validated_at' => 'datetime',
-    ];
-
-    public function operation()
-    {
-        return $this->belongsTo(CalibrationOperation::class, 'calibration_operation_id');
-    }
-
-    public function validator()
-    {
-        return $this->belongsTo(User::class, 'validated_by');
-    }
 
     protected static function booted(): void
     {
         static::updating(function (CalibrationCertificate $certificate) {
             if ($certificate->getOriginal('is_final')) {
                 throw new DomainException(
-                    "Ce certificat est officiel et verrouille. Modification interdite."
+                    "This certificate is official and locked. " .
+                    "Modification is forbidden."
                 );
             }
         });
@@ -1106,7 +1521,8 @@ class CalibrationCertificate extends Model
         static::deleting(function (CalibrationCertificate $certificate) {
             if ($certificate->is_final) {
                 throw new DomainException(
-                    "Suppression d'un certificat officiel final interdite."
+                    "Deleting any finalized calibration certificate " .
+                    "from the database is prohibited."
                 );
             }
         });
@@ -1115,13 +1531,15 @@ class CalibrationCertificate extends Model
 \end{verbatim}
 \end{LTR}
 
-\section*{الملحق ب : كود إنشاء جدول طلبات المعايرة والمعدات \LR{(Migration)}}
+\section*{الملحق ب : كود إنشاء جدول طلبات المعايرة والمعدات (Migration)}
 \begin{LTR}
 \begin{verbatim}
 Schema::create('calibration_requests', function (Blueprint $table) {
     $table->id();
     $table->string('reference', 50)->unique();
-    $table->foreignId('client_id')->constrained('clients')->cascadeOnDelete();
+    $table->foreignId('client_id')
+          ->constrained('clients')
+          ->cascadeOnDelete();
     $table->string('status', 50)->default('DRAFT');
     $table->date('scheduled_date')->nullable();
     $table->string('location', 20)->default('LABORATOIRE');
@@ -1148,5 +1566,61 @@ Schema::create('calibration_request_items', function (Blueprint $table) {
 });
 \end{verbatim}
 \end{LTR}
+
+\section*{الملحق ج : وسيط التحكم في الوصول حسب الرتب (Middleware)}
+\subsection*{مبدأ العمل}
+وسيط \LR{\texttt{RoleMiddleware}} يستبقه كل مسار محمي، ويتحقق من أن رتبة المستخدم الحالل ضمن قائمة الرتب المرخص لها بالوصول، وإلا يعيده إلى لوحة التحكم الخاصة برتبته:
+\begin{LTR}
+\begin{verbatim}
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\Response;
+
+class RoleMiddleware
+{
+    public function handle(
+        Request $request,
+        Closure $next,
+        string ...$roles
+    ): Response {
+        $user = Auth::user();
+
+        if (!$user || !in_array($user->role, $roles, true)) {
+            abort(403, 'Non autoris\u00e9 pour ce r\u00f4le.');
+        }
+
+        return $next($request);
+    }
+}
+\end{verbatim}
+\end{LTR}
+
+\subsection*{التسجيل في النواة وتوظيفه في المسارات}
+يُسجل الوسيط في معالج الأقراص (\LR{\texttt{bootstrap/app.php}}) ثم يُستدعى على مستوى المسارات الحساسة لكل فضاء عملي:
+\begin{LTR}
+\begin{verbatim}
+// bootstrap/app.php
+->withMiddleware(function (Middleware $middleware) {
+    $middleware->alias([
+        'role' => \App\Http\Middleware\RoleMiddleware::class,
+    ]);
+})
+
+// routes/web.php (exemple)
+Route::middleware(['auth', 'role:client'])
+    ->prefix('client')->group(function () {
+        Route::get('/requests',
+            [ClientRequestController::class, 'index'])
+            ->name('requests.index');
+        // ...
+    });
+\end{verbatim}
+\end{LTR}
+
+\subsection*{ملاحظة توضيحية}
+استُمدت هذه الآلية من معايير الأمن الموثقة في مراجع إطار العمل ومراجع أمن التطبيقات \cite{laravel-docs, owasp}, وهي تطبيق عملي لنمط تفويض الصلاحيات المعتمد على الرتب (\textit{Role-Based Access Control}) مع الحفاظ على عزل المساحات الوظيفية لكل فاعل.
 
 \end{document}

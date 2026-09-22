@@ -1,0 +1,24 @@
+\begin{tikzpicture}[font=\scriptsize, >=stealth,
+  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
+  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
+  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+  edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
+
+\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
+\node[action] (disp) at (-2.6, -1.5) {Consulter la disponibilit\'e\\des laboratoires};
+\node[action] (proposer) at (-2.6, -3.0) {Proposer une date et un lieu};
+\node[action] (notifier) at (-2.6, -4.5) {Notifier le client};
+\node[decision] (accepte) at (-2.6, -6.0) {Le client\\accepte ?};
+\node[action] (scheduled) at (-2.6, -7.5) {Statut \texttt{SCHEDULED}};
+\node[startstop] (fin) at (-2.6, -9.0) {Fin};
+\node[action] (autre) at (2.6, -6.0) {Le client propose\\une autre date};
+
+\draw[->] (debut) -- (disp);
+\draw[->] (disp) -- (proposer);
+\draw[->] (proposer) -- (notifier);
+\draw[->] (notifier) -- (accepte);
+\draw[->] (accepte.south) -- node[edgelabel, right=4pt] {Oui} (scheduled.north);
+\draw[->] (accepte.east) -- node[edgelabel, above] {Non} (autre.west);
+\draw[->] (autre.north) |- (proposer.east);
+\draw[->] (scheduled) -- (fin);
+\end{tikzpicture}

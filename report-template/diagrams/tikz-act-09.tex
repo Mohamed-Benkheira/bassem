@@ -1,0 +1,27 @@
+\begin{tikzpicture}[font=\scriptsize, >=stealth,
+  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
+  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
+  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+  edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
+
+\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
+\node[action] (verif) at (-2.6, -1.5) {Ouvrir le rapport et v\'erifier\\les calculs et incertitudes};
+\node[decision] (conformes) at (-2.6, -3.0) {Donn\'ees\\conformes ?};
+\node[action] (approuver) at (-2.6, -4.5) {Approuver le rapport};
+\node[action] (approved) at (-2.6, -6.0) {Statut \texttt{APPROVED}};
+\node[action] (prete) at (-2.6, -7.5) {Pr\^et pour la g\'en\'eration\\du certificat};
+\node[startstop] (fin) at (-2.6, -9.0) {Fin};
+\node[action] (rework) at (2.6, -3.0) {Cliquer sur ``Rework'',\\motif obligatoire};
+\node[action] (retour) at (2.6, -4.5) {Retour au technicien};
+\node[startstop] (finrework) at (2.6, -6.0) {Fin};
+
+\draw[->] (debut) -- (verif);
+\draw[->] (verif) -- (conformes);
+\draw[->] (conformes.south) -- node[edgelabel, right=4pt] {Oui} (approuver.north);
+\draw[->] (conformes.east) -- node[edgelabel, above] {Non} (rework.west);
+\draw[->] (rework) -- (retour);
+\draw[->] (retour) -- (finrework);
+\draw[->] (approuver) -- (approved);
+\draw[->] (approved) -- (prete);
+\draw[->] (prete) -- (fin);
+\end{tikzpicture}

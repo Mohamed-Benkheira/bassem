@@ -1,0 +1,27 @@
+\begin{tikzpicture}[font=\scriptsize, >=stealth,
+  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
+  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
+  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+  edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
+
+\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
+\node[action] (reception) at (-2.6, -1.5) {Confirmer la r\'eception /\\le d\'ebut de l'op\'eration};
+\node[action] (etalons) at (-2.6, -3.0) {Choisir les \'etalons\\de r\'ef\'erence};
+\node[decision] (valides) at (-2.6, -4.5) {\'Etalons\\valides ?};
+\node[action] (mesure) at (-2.6, -6.0) {Effectuer les points\\de mesure};
+\node[action] (resultats) at (-2.6, -7.5) {Enregistrer les r\'esultats};
+\node[startstop] (fin) at (-2.6, -9.0) {Fin};
+\node[action] (bloquer) at (2.6, -4.5) {Bloquer l'op\'eration};
+\node[action] (alerter) at (2.6, -6.0) {Alerter le technicien\\et le responsable};
+\node[startstop] (finbloquee) at (2.6, -7.5) {Fin (bloqu\'ee)};
+
+\draw[->] (debut) -- (reception);
+\draw[->] (reception) -- (etalons);
+\draw[->] (etalons) -- (valides);
+\draw[->] (valides.south) -- node[edgelabel, right=4pt] {Oui} (mesure.north);
+\draw[->] (valides.east) -- node[edgelabel, above] {Non} (bloquer.west);
+\draw[->] (bloquer) -- (alerter);
+\draw[->] (alerter) -- (finbloquee);
+\draw[->] (mesure) -- (resultats);
+\draw[->] (resultats) -- (fin);
+\end{tikzpicture}

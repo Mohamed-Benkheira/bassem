@@ -1,0 +1,27 @@
+\begin{tikzpicture}[font=\scriptsize, >=stealth,
+  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
+  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
+  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+  edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
+
+\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
+\node[action] (connecter) at (-2.6, -1.5) {Se connecter dans l'espace\\client};
+\node[action] (liste) at (-2.6, -3.0) {Afficher la liste des\\\'equipements certifi\'es};
+\node[action] (telecharger) at (-2.6, -4.5) {Cliquer sur ``T\'el\'echarger\\le certificat''};
+\node[decision] (proprio) at (-2.6, -6.0) {Client\\propri\'etaire ?};
+\node[action] (compteur) at (-2.6, -7.5) {Incr\'ementer le compteur};
+\node[action] (pdf) at (-2.6, -9.0) {Servir le PDF s\'ecuris\'e};
+\node[startstop] (fin) at (-2.6, -10.5) {Fin};
+\node[action] (bloquer) at (2.6, -6.0) {Bloquer et journaliser\\la tentative};
+\node[startstop] (finbloquer) at (2.6, -7.5) {Fin};
+
+\draw[->] (debut) -- (connecter);
+\draw[->] (connecter) -- (liste);
+\draw[->] (liste) -- (telecharger);
+\draw[->] (telecharger) -- (proprio);
+\draw[->] (proprio.south) -- node[edgelabel, right=4pt] {Oui} (compteur.north);
+\draw[->] (proprio.east) -- node[edgelabel, above] {Non} (bloquer.west);
+\draw[->] (bloquer) -- (finbloquer);
+\draw[->] (compteur) -- (pdf);
+\draw[->] (pdf) -- (fin);
+\end{tikzpicture}

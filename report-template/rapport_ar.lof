@@ -1,20 +1,49 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces معمارية العميل والخادم 3-Tiers لتطبيق معايرة المعدات\relax }}{7}{figure.caption.17}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces آلية عمل تقنية Inertia.js للربط بين Laravel و React\relax }}{7}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces هيكل الأدوار ومصفوفة الصلاحيات (\LR {RBAC})\relax }}{9}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces هيكل الأدوار ومصفوفة الصلاحيات (RBAC)\relax }}{9}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces الهيكل التنظيمي لشركة أليسيف (\LR {ALICEF SPA})\relax }}{11}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces مقارنة شاملة بين مسار العمل اليدوي القديم والنظام الرقمي الجديد\relax }}{13}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces الهيكل التنظيمي للمخبر الوطني للمعايرة (LNEMI)\relax }}{11}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces مقارنة شاملة بين مسار العمل اليدوي القديم والنظام الرقمي الجديد\relax }}{12}{figure.caption.23}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces المخطط العام لحالات الاستخدام لنظام إدارة الشهادات (\LR {Système de gestion des certificats})\relax }}{17}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces مخطط التسلسل : عملية المصادقة وتوجيه الجلسة\relax }}{25}{figure.caption.41}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces مخطط التسلسل : تقديم الطلب ودراسته التجارية\relax }}{26}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces مخطط التسلسل : التنفيذ المخبري ومراقبة الجودة\relax }}{26}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces مخطط التسلسل : تثبيت الشهادة وتحميلها للزبون\relax }}{27}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces مخطط الحالات والانتقالات لدورة حياة طلب المعايرة\relax }}{27}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces مخطط فئات مجال المعايرة والمترولوجيا (\LR {Domain Class Diagram})\relax }}{28}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces المخطط العلائقي لقاعدة البيانات MySQL\relax }}{30}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces مخطط النشر الفيزيائي للمنصة (\LR {LEMP Topology})\relax }}{30}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces المخطط العام لحالات الاستخدام في المنصة\relax }}{16}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces مخطط النشاط : تسجيل الدخول والتحقق من الصلاحيات\relax }}{17}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces مخطط النشاط : تصفح دليل خدمات المعايرة\relax }}{18}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces مخطط النشاط : إنشاء وتقديم طلب معايرة متعدد المعدات\relax }}{19}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces مخطط النشاط : التأهيل التجاري وإصدار الفاتورة الشكلية\relax }}{20}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces مخطط النشاط : جدولة والاتفاق على موعد المعايرة\relax }}{21}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces مخطط النشاط : تعيين العملية للتقني المختص\relax }}{22}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces مخطط النشاط : تنفيذ المعايرة المخبرية\relax }}{23}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces مخطط النشاط : رفع تقرير نتائج المعايرة\relax }}{24}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces مخطط النشاط : المراجعة النوعية وقبول التقرير أو طلب تصحيحه\relax }}{25}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces مخطط النشاط : إنشاء وتثبيت شهادة المعايرة الرسمية\relax }}{27}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces مخطط النشاط : تحميل الشهادة المعتمدة\relax }}{28}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces مخطط النشاط : متابعة صلاحية العتاد المرجعي\relax }}{29}{figure.caption.50}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces مخطط النشاط : سجل التدقيق الأمني الشامل\relax }}{30}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces مخطط التسلسل : عملية المصادقة وتوجيه الجلسة\relax }}{31}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces مخطط التسلسل : تقديم الطلب ودراسته التجارية\relax }}{31}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces مخطط التسلسل : التنفيذ المخبري ومراقبة الجودة\relax }}{32}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces مخطط التسلسل : تثبيت الشهادة وتحميلها للزبون\relax }}{32}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces مخطط الحالات والانتقالات لدورة حياة طلب المعايرة\relax }}{33}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces مخطط فئات مجال المعايرة والمترولوجيا (Domain Class Diagram)\relax }}{34}{figure.caption.59}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces المخطط العلائقي لقاعدة البيانات MySQL\relax }}{40}{figure.caption.73}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces مخطط النشر الفيزيائي للمنصة (LEMP Topology)\relax }}{43}{figure.caption.76}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces الهيكلة البرمجية للمشروع وتوزيع المجلدات والمسارات\relax }}{33}{figure.caption.55}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces هرم الاختبارات الآلية ومستويات الفحص\relax }}{35}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces الهيكلة البرمجية للمشروع وتوزيع المجلدات والمسارات\relax }}{45}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces الواجهة العامة للمنصة ودليل الخدمات المترولوجية\relax }}{47}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces فضاء الزبون : قائمة الطلبات وتتبع حالات المعايرة\relax }}{48}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces فضاء الزبون : نموذج إدراج طلب معايرة متعدد المعدات\relax }}{49}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces فضاء الزبون : تحميل شهادات المعايرة المعتمدة\relax }}{50}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces فضاء المصلحة التجارية : قائمة الطلبات الواردة وإصدار الفواتير التقديرية\relax }}{51}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces فضاء المصلحة التجارية : إدارة الفواتير والمتابعة التعاقدية\relax }}{51}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces لوحة تحكم مسؤول المترولوجيا : لوحة القيادة الفنية\relax }}{52}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces مسؤول المترولوجيا : اقتراح مواعيد وأماكن المعايرة\relax }}{53}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces مسؤول المترولوجيا : المراجعة النوعية لتقارير المعايرة\relax }}{53}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces مسؤول المترولوجيا : اعتماد وتثبيت شهادات المعايرة الرسمية\relax }}{54}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces فضاء التقني المترولوجي : المهام الموكلة وتنفيذ المعايرة\relax }}{54}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces المترولوجيا : متابعة العتاد المرجعي وصيانته\relax }}{55}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces فضاء مسؤول النظام : إدارة حسابات المستخدمين والرتب\relax }}{56}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces فضاء مسؤول النظام : ضبط دليل الخدمات المترولوجية\relax }}{56}{figure.caption.93}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces فضاء مسؤول النظام : سجل التدقيق الأمني والتتبع الكامل\relax }}{57}{figure.caption.94}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces هرم الاختبارات الآلية ومستويات الفحص\relax }}{58}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces مخرجات تشغيل حزمة الاختبارات الآلية (67 اختباراً ناجحاً)\relax }}{60}{figure.caption.98}%

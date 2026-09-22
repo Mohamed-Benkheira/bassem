@@ -29,6 +29,7 @@
 \RequirePackage{caption}
 \RequirePackage{environ}
 \RequirePackage{setspace}
+\RequirePackage{seqsplit}
 \RequirePackage{tikz}
 \usetikzlibrary{positioning,calc,fit,shapes.geometric,shapes.multipart,backgrounds,arrows.meta}
 \RequirePackage{bidi}
@@ -68,6 +69,8 @@
 \setlength{\parindent}{1.5em}
 \setlength{\parskip}{6pt}
 \setstretch{1.3}
+\emergencystretch=1.5em
+\tolerance=2000
 
 %% ============================================================
 %% METADATA COMMANDS
@@ -246,7 +249,7 @@
 }
 
 \newcommand{\dbcolar}[4]{%
-  \LR{\small\texttt{#1}} & \LR{\small\texttt{#2}} & #3 & #4 \\
+  \LR{\small\texttt{\seqsplit{#1}}} & \LR{\small\texttt{\seqsplit{#2}}} & #3 & #4 \\
   \hline
 }
 
@@ -283,6 +286,90 @@
       \hline
     \end{tabularx}
   \end{table}
+}
+
+\NewEnviron{codiftablear}[1]{%
+  \begin{table}[H]
+    \centering
+    \caption{#1}
+    \vspace{0.2cm}
+    \begin{tabularx}{\textwidth}{|>{\bfseries}p{4.2cm}|X|p{4cm}|}
+      \hline
+      \rowcolor{tableheader}
+      \textcolor{white}{\textbf{العنصر}} & \textcolor{white}{\textbf{الدلالة}} & \textcolor{white}{\textbf{مثال}} \\
+      \hline
+      \BODY
+      \hline
+    \end{tabularx}
+  \end{table}
+}
+
+\newcommand{\codifrowar}[3]{%
+  \LR{\small\texttt{\seqsplit{#1}}} & #2 & \LR{\small\texttt{\seqsplit{#3}}} \\
+  \hline
+}
+
+\NewEnviron{summarytablear}[1]{%
+  \begin{table}[H]
+    \centering
+    \caption{#1}
+    \vspace{0.2cm}
+    \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.6cm}|X|p{4.2cm}|}
+      \hline
+      \rowcolor{tableheader}
+      \textcolor{white}{\textbf{الفئة}} & \textcolor{white}{\textbf{الخواص \LR{(Attributs)}}} & \textcolor{white}{\textbf{الأساليب \LR{(M\'ethodes)}}} \\
+      \hline
+      \BODY
+      \hline
+    \end{tabularx}
+  \end{table}
+}
+
+\newcommand{\summaryrowar}[3]{%
+  \LR{\small\texttt{\seqsplit{#1}}} & #2 & #3 \\
+  \hline
+}
+
+\NewEnviron{relmapar}[1]{%
+  \begin{table}[H]
+    \centering
+    \caption{#1}
+    \vspace{0.2cm}
+    \begin{tabularx}{\textwidth}{|>{\bfseries}p{2.9cm}|>{\small}p{3.2cm}|p{2.1cm}|p{2.4cm}|X|}
+      \hline
+      \rowcolor{tableheader}
+      \textcolor{white}{\textbf{صنف UML}} & \textcolor{white}{\textbf{جدول SQL}} & \textcolor{white}{\textbf{المفتاح الأساسي PK}} & \textcolor{white}{\textbf{مفاتيح أجنبية FK}} & \textcolor{white}{\textbf{ملاحظات}} \\
+      \hline
+      \BODY
+      \hline
+    \end{tabularx}
+  \end{table}
+}
+
+\newcommand{\relmaprow}[5]{%
+  \LR{\small\texttt{\seqsplit{#1}}} & \LR{\small\texttt{\seqsplit{#2}}} & \LR{\small\texttt{\seqsplit{#3}}} & \LR{\small\texttt{\seqsplit{#4}}} & #5 \\
+  \hline
+}
+
+\NewEnviron{pivotar}[1]{%
+  \begin{table}[H]
+    \centering
+    \caption{#1}
+    \vspace{0.2cm}
+    \begin{tabularx}{\textwidth}{|>{\small}p{4.4cm}|p{3.2cm}|p{2.4cm}|X|}
+      \hline
+      \rowcolor{tableheader}
+      \textcolor{white}{\textbf{العلاقة}} & \textcolor{white}{\textbf{جدول الربط \LR{(Pivot)}}} & \textcolor{white}{\textbf{المفاتيح \LR{(FK)}}} & \textcolor{white}{\textbf{ملاحظات}} \\
+      \hline
+      \BODY
+      \hline
+    \end{tabularx}
+  \end{table}
+}
+
+\newcommand{\pivotrow}[4]{%
+  #1 & \LR{\small\texttt{\seqsplit{#2}}} & \LR{\small\texttt{\seqsplit{#3}}} & #4 \\
+  \hline
 }
 
 \endinput

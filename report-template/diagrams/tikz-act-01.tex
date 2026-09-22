@@ -1,0 +1,26 @@
+\begin{tikzpicture}[font=\scriptsize, >=stealth,
+  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
+  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
+  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+  edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
+
+\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
+\node[action] (ouvrir) at (-2.6, -1.5) {Ouvrir la page\\\texttt{/login}};
+\node[action] (saisir) at (-2.6, -3.0) {Saisir l'email et\\le mot de passe};
+\node[decision] (creds) at (-2.6, -4.5) {Credentials\\valides ?};
+\node[action] (hash) at (-2.6, -6.0) {V\'erifier le hash\\bcrypt};
+\node[action] (session) at (-2.6, -7.5) {Ouvrir la session s\'ecuris\'ee,\\r\'eg\'en\'erer le CSRF};
+\node[action] (redirect) at (-2.6, -9.0) {Rediriger vers le tableau\\de bord du r\^ole};
+\node[startstop] (fin) at (-2.6, -10.5) {Fin};
+\node[action] (erreur) at (2.6, -4.5) {Afficher l'erreur et\\vider le mot de passe};
+
+\draw[->] (debut) -- (ouvrir);
+\draw[->] (ouvrir) -- (saisir);
+\draw[->] (saisir) -- (creds);
+\draw[->] (creds.south) -- node[edgelabel, right=4pt] {Oui} (hash.north);
+\draw[->] (creds.east) -- node[edgelabel, above] {Non} (erreur.west);
+\draw[->] (erreur.north) |- (saisir.east);
+\draw[->] (hash) -- (session);
+\draw[->] (session) -- (redirect);
+\draw[->] (redirect) -- (fin);
+\end{tikzpicture}
