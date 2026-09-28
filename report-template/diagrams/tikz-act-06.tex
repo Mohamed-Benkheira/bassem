@@ -1,17 +1,18 @@
-\begin{tikzpicture}[font=\scriptsize, >=stealth,
-  startstop/.style={rectangle, rounded corners=3pt, fill=gray!20, draw=black, minimum width=2.2cm, minimum height=0.65cm, align=center},
-  action/.style={rectangle, rounded corners=3pt, fill=blue!10, draw=black, minimum width=3.6cm, minimum height=0.65cm, align=center},
-  decision/.style={diamond, draw=black, fill=orange!10, aspect=2, text width=2.6cm, align=center, inner sep=1pt},
+\begin{tikzpicture}[font=\scriptsize, >=Stealth,
+  start/.style={circle, fill=black, inner sep=0pt, minimum size=3mm},
+  end/.style={circle, draw=black, double, double distance=1.5pt, inner sep=0pt, minimum size=3mm},
+  action/.style={rectangle, rounded corners=3pt, draw=blue!70!black, fill=blue!10, minimum width=3.6cm, minimum height=0.65cm, align=center, font=\scriptsize},
+  decision/.style={diamond, draw=orange!80!black, fill=orange!10, aspect=1.6, text width=2.4cm, align=center, font=\scriptsize, inner sep=1pt},
   edgelabel/.style={font=\tiny, fill=white, inner sep=1pt}]
 
-\node[startstop] (debut) at (-2.6, 0) {D\'ebut};
-\node[action] (charge) at (-2.6, -1.5) {Ouvrir le tableau de charge};
-\node[action] (choisir) at (-2.6, -3.0) {Choisir le technicien qualifi\'e};
-\node[decision] (deborde) at (-2.6, -4.5) {Technicien\\d\'ebord\'e ?};
-\node[action] (affecter) at (-2.6, -6.0) {Affecter l'op\'eration};
-\node[action] (progress) at (-2.6, -7.5) {Statut \texttt{IN\_PROGRESS}\\et notifier};
-\node[startstop] (fin) at (-2.6, -9.0) {Fin};
-\node[action] (alt) at (2.6, -4.5) {Choisir un technicien\\alternatif};
+\node[start] (debut) at (-2.6, 0) {};
+\node[action] (charge) at (-2.6, -1.7) {Ouvrir le tableau de charge};
+\node[action] (choisir) at (-2.6, -3.4) {Choisir le technicien qualifi\'e};
+\node[decision] (deborde) at (-2.6, -5.1) {Technicien\\d\'ebord\'e ?};
+\node[action] (affecter) at (-2.6, -6.8) {Affecter l'op\'eration};
+\node[action] (progress) at (-2.6, -8.5) {Statut \texttt{IN\_PROGRESS}\\et notifier};
+\node[end] (fin) at (-2.6, -10.2) {};
+\node[action] (alt) at (2.6, -5.1) {Choisir un technicien\\alternatif};
 
 \draw[->] (debut) -- (charge);
 \draw[->] (charge) -- (choisir);

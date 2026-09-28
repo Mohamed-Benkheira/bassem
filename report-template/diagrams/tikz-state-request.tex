@@ -1,27 +1,79 @@
-\begin{tikzpicture}[>=stealth,
-    state/.style={draw=blue!80!black, fill=blue!10, rounded corners=4pt, line width=0.8pt, minimum width=2.5cm, minimum height=0.7cm, align=center, font=\scriptsize\bfseries},
-    startnode/.style={circle, fill=black, minimum size=0.4cm},
-    endnode/.style={circle, draw=black, double, fill=black, minimum size=0.4cm},
-    arr/.style={->, thick, >=stealth, color=darkgray}
+\begin{tikzpicture}[
+    >=Stealth,
+    line width=0.8pt,
+    state/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, text width=4.3cm, align=center, minimum height=1.1cm, font=\footnotesize},
+    terminal/.style={draw=red!70!black, fill=red!10, rounded corners=3pt, minimum width=2.8cm, align=center, font=\footnotesize},
+    startnode/.style={circle, fill=black, minimum size=0.35cm, inner sep=0pt},
+    endnode/.style={circle, draw=black, fill=black, minimum size=0.35cm, inner sep=0pt, double, double distance=1.5pt},
+    arr/.style={->, >=Stealth, line width=0.8pt},
+    lab/.style={font=\scriptsize, inner sep=1pt}
 ]
-\node[startnode] (init) at (0,0) {};
-\node[state, right=0.8cm of init] (draft) {DRAFT};
-\node[state, right=1.2cm of draft] (sub) {SUBMITTED};
-\node[state, right=1.2cm of sub] (comm) {IN\_REVIEW};
-\node[state, below=1.2cm of comm] (sched) {SCHEDULED};
-\node[state, left=1.2cm of sched] (prog) {IN\_PROGRESS};
-\node[state, left=1.2cm of prog] (done) {COMPLETED};
-\node[endnode, left=0.8cm of done] (fin) {};
+% --- \'etats : colonne gauche ---
+\node[startnode] (init) at (0, 1.3) {};
+\node[state] (s1)  at (0, 0)    {\textbf{Soumise}\\[2pt]\scriptsize\texttt{SUBMITTED}};
+\node[state] (s2)  at (0, -2)   {\textbf{Transmise \`a la m\'etrologie}\\[2pt]\scriptsize\texttt{SENT\_TO\_METROLOGY}};
+\node[state] (s3)  at (0, -4)   {\textbf{Date propos\'ee}\\[2pt]\scriptsize\texttt{DATE\_PROPOSED}};
+\node[state] (s4)  at (0, -6)   {\textbf{En attente de confirmation du client}\\[2pt]\scriptsize\texttt{WAITING\_CLIENT\_CONFIRMATION}};
+\node[state] (s5)  at (0, -8)   {\textbf{Accept\'ee}\\[2pt]\scriptsize\texttt{ACCEPTED}};
+\node[state] (s6)  at (0, -10)  {\textbf{Sous contrat}\\[2pt]\scriptsize\texttt{CONTRACTED}};
+\node[state] (s7)  at (0, -12)  {\textbf{Planifi\'ee}\\[2pt]\scriptsize\texttt{SCHEDULED}};
 
-\node[state, fill=red!15, below=1.2cm of sub] (cancel) {CANCELLED};
+% --- \'etats : colonne droite ---
+\node[state] (s8)  at (6.8, -12) {\textbf{Affect\'ee}\\[2pt]\scriptsize\texttt{ASSIGNED}};
+\node[state] (s9)  at (6.8, -10) {\textbf{En cours de calibration}\\[2pt]\scriptsize\texttt{IN\_CALIBRATION}};
+\node[state] (s10) at (6.8, -8)  {\textbf{Rapport t\'el\'evers\'e}\\[2pt]\scriptsize\texttt{REPORT\_UPLOADED}};
+\node[state] (s11) at (6.8, -6)  {\textbf{En attente de certificat}\\[2pt]\scriptsize\texttt{WAITING\_CERTIFICATE}};
+\node[state] (s12) at (6.8, -4)  {\textbf{Certificat g\'en\'er\'e}\\[2pt]\scriptsize\texttt{CERTIFICATE\_GENERATED}};
+\node[state] (s13) at (6.8, -2)  {\textbf{Certificat valid\'e}\\[2pt]\scriptsize\texttt{CERTIFICATE\_VALIDATED}};
+\node[state] (s14) at (6.8, 0)   {\textbf{Termin\'ee}\\[2pt]\scriptsize\texttt{COMPLETED}};
 
-\draw[arr] (init) -- (draft);
-\draw[arr] (draft) -- node[above, font=\tiny] {Soumission} (sub);
-\draw[arr] (sub) -- node[above, font=\tiny] {Prise en charge} (comm);
-\draw[arr] (comm) -- node[right, font=\tiny] {Accord Date} (sched);
-\draw[arr] (sched) -- node[above, font=\tiny] {D\'ebut Op\'eration} (prog);
-\draw[arr] (prog) -- node[above, font=\tiny] {Certificat Valid\'e} (done);
-\draw[arr] (done) -- (fin);
-\draw[arr] (sub) -- node[right, font=\tiny] {Annulation} (cancel);
-\draw[arr] (sched) -- (cancel);
+% --- \'etats terminaux ---
+\node[terminal, minimum height=1.8cm] (rej) at (-4.6, -1) {\textbf{Rejet\'ee}\\[2pt]\scriptsize\texttt{REJECTED}};
+\node[terminal, minimum height=3.2cm] (can) at (-4.6, -6) {\textbf{Annul\'ee}\\[2pt]\scriptsize\texttt{CANCELLED}};
+
+\node[endnode] (fin) at (6.8, 1.3) {};
+
+% --- transition initiale ---
+\draw[arr] (init) -- (s1.north);
+\node[lab] at (0.25, 1.0) {Soumission de la demande};
+
+% --- chemin nominal : colonne gauche ---
+\draw[arr] (s1) -- node[lab, right] {Transmission \`a la m\'etrologie} (s2);
+\draw[arr] (s2) -- node[lab, right] {Proposition de date} (s3);
+\draw[arr] (s3) -- node[lab, right] {En attente de l'accord client} (s4);
+\draw[arr] (s4) -- node[lab, right] {Accord du client} (s5);
+\draw[arr] (s5) -- node[lab, right] {Signature du contrat} (s6);
+\draw[arr] (s6) -- node[lab, right] {Planification} (s7);
+
+% --- chemin nominal : liaison basse ---
+\draw[arr] (s7) -- node[lab, above] {Affectation du technicien} (s8);
+
+% --- chemin nominal : colonne droite ---
+\draw[arr] (s8)  -- node[lab, right] {D\'ebut de la calibration} (s9);
+\draw[arr] (s9)  -- node[lab, right] {T\'el\'eversement du rapport} (s10);
+\draw[arr] (s10) -- node[lab, right] {Attente du certificat} (s11);
+\draw[arr] (s11) -- node[lab, right] {G\'en\'eration du certificat} (s12);
+\draw[arr] (s12) -- node[lab, right] {Validation du certificat} (s13);
+\draw[arr] (s13) -- node[lab, right] {Certificat immuable} (s14);
+
+% --- transition finale ---
+\draw[arr] (s14.north) -- (fin);
+
+% --- boucle de correction du rapport ---
+\draw[arr] (s10.west) -- (4.2, -8) -- (4.2, -10) -- (s9.west);
+\node[lab] at (4.3, -9) {Rapport \`a corriger};
+
+% --- rejet ---
+\draw[arr] (s1.west) -- (-3.2, 0) -- (-3.2, -0.2);
+\node[lab] at (-2.5, 0.15) {Rejet};
+\draw[arr] (s2.west) -- (-3.2, -2) -- (-3.2, -1.8);
+\node[lab] at (-2.5, -1.85) {Rejet};
+
+% --- annulation ---
+\draw[arr] (s3.west) -- (-3.2, -4) -- (-3.2, -4.6);
+\node[lab] at (-2.5, -3.85) {Annulation};
+\draw[arr] (s4.west) -- (-3.2, -6);
+\node[lab] at (-2.5, -5.85) {Annulation};
+\draw[arr] (s5.west) -- (-3.2, -8) -- (-3.2, -7.4);
+\node[lab] at (-2.5, -7.85) {Annulation};
 \end{tikzpicture}

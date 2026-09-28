@@ -1,20 +1,29 @@
-\begin{tikzpicture}[>=stealth,
-    line/.style={dashed, color=gray},
-    box/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
-    msg/.style={->, thick, >=stealth, font=\scriptsize},
-    reply/.style={<-, dashed, thick, >=stealth, font=\scriptsize}
+\begin{tikzpicture}[>=Stealth,
+    line/.style={dashed, color=gray!60, line width=0.5pt},
+    actor/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    sys/.style={draw=orange!80!black, fill=orange!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    actbar/.style={fill=blue!30, draw=blue!50!black, line width=0.3pt},
+    msg/.style={->, thick, >=Stealth, font=\scriptsize},
+    reply/.style={<-, dashed, thick, >=Stealth, font=\scriptsize},
+    mlabel/.style={above, fill=white, inner sep=1.5pt, font=\scriptsize}
 ]
-\node[box] (cl) at (0,0) {Client};
-\node[box] (app) at (4.2,0) {Plateforme Web};
-\node[box] (co) at (8.4,0) {Commercial};
+\node[actor] (cl) at (0,0) {Client};
+\node[sys] (app) at (5.5,0) {Plateforme Web};
+\node[actor] (co) at (11,0) {Commercial};
 
-\draw[line] (cl) -- (0,-5.5);
-\draw[line] (app) -- (4.2,-5.5);
-\draw[line] (co) -- (8.4,-5.5);
+\draw[line] (0,-0.4) -- (0,-5.4);
+\draw[line] (5.5,-0.4) -- (5.5,-5.4);
+\draw[line] (11,-0.4) -- (11,-5.4);
 
-\draw[msg] (0,-1) -- node[above] {1. Soumission Demande Multi-\'Equipements} (4.2,-1);
-\draw[msg] (4.2,-1.8) -- node[above] {2. Notification nouvelle demande} (8.4,-1.8);
-\draw[msg] (8.4,-2.7) -- node[above] {3. Qualification \& Association Services} (4.2,-2.7);
-\draw[msg] (8.4,-3.6) -- node[above] {4. \'Emission du Devis / Contrat} (4.2,-3.6);
-\draw[reply] (0,-4.5) -- node[above] {5. Notification Devis disponible} (4.2,-4.5);
+% Activation bars
+\draw[actbar] (-0.06,-1) rectangle (0.06,-4.6);
+\draw[actbar] (5.44,-1) rectangle (5.56,-4.6);
+\draw[actbar] (10.94,-1.9) rectangle (11.06,-3.7);
+
+% Messages
+\draw[msg] (0,-1) -- node[mlabel] {1. Soumission Demande Multi-\'Equipements} (5.5,-1);
+\draw[msg] (5.5,-1.9) -- node[mlabel] {2. Notification nouvelle demande} (11,-1.9);
+\draw[msg] (11,-2.8) -- node[mlabel] {3. Qualification \& Association Services} (5.5,-2.8);
+\draw[msg] (11,-3.7) -- node[mlabel] {4. \'Emission du Devis / Contrat} (5.5,-3.7);
+\draw[reply] (0,-4.6) -- node[mlabel] {5. Notification Devis disponible} (5.5,-4.6);
 \end{tikzpicture}

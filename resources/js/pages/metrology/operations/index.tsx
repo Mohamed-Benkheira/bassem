@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useNamespace } from '@/hooks/use-namespace';
 import { useTranslation } from '@/hooks/use-translation';
 import AppLayout from '@/layouts/app-layout';
 import type { BreadcrumbItem, CalibrationOperation } from '@/types';
@@ -29,15 +30,16 @@ export default function MetrologyOperationsIndex({ operations, filters, statuses
     const { t, tr, formatDate } = useTranslation();
     const [search, setSearch] = useState(filters.search || '');
     const [status, setStatus] = useState(filters.status || 'all');
+    const basePath = `/${useNamespace()}`;
 
     const breadcrumbs: BreadcrumbItem[] = [
-        { title: t('my_calibrations', 'Mes calibrations'), href: '/metrology/operations' },
+        { title: t('my_calibrations', 'Mes calibrations'), href: `${basePath}/operations` },
     ];
 
     const handleFilter = (e?: React.FormEvent) => {
         if (e) e.preventDefault();
         router.get(
-            '/metrology/operations',
+            `${basePath}/operations`,
             {
                 search: search || undefined,
                 status: status === 'all' ? undefined : status,
@@ -145,7 +147,7 @@ export default function MetrologyOperationsIndex({ operations, filters, statuses
                                         {operations.data.map((op) => (
                                             <tr key={op.id} className="hover:bg-muted/20">
                                                 <td className="px-6 py-4 font-semibold font-mono text-foreground">
-                                                    <Link href={`/metrology/operations/${op.id}`} className="hover:underline text-blue-600">
+                                                    <Link href={`${basePath}/operations/${op.id}`} className="hover:underline text-blue-600">
                                                         {op.operation_number}
                                                     </Link>
                                                 </td>
@@ -175,7 +177,7 @@ export default function MetrologyOperationsIndex({ operations, filters, statuses
                                                 </td>
                                                 <td className="px-6 py-4 text-right">
                                                     <Button asChild size="sm" variant="outline">
-                                                        <Link href={`/metrology/operations/${op.id}`}>
+                                                        <Link href={`${basePath}/operations/${op.id}`}>
                                                             {tr('Consulter', 'View')}
                                                         </Link>
                                                     </Button>

@@ -1,47 +1,64 @@
-\begin{tikzpicture}[>=stealth, scale=0.9, every node/.style={transform shape},
-    actor/.style={draw=blue!80!black, fill=blue!10, rounded corners=3pt, minimum width=2.4cm, minimum height=1cm, align=center, font=\footnotesize\bfseries},
-    uc/.style={draw=black!70, fill=gray!5, ellipse, minimum width=3.4cm, minimum height=0.8cm, align=center, font=\scriptsize},
-    arr/.style={-, thick, color=gray!70}
+\begin{tikzpicture}[>=Stealth, line width=0.8pt,
+    actor/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt,
+        minimum width=2.0cm, minimum height=1cm, align=center, font=\footnotesize\bfseries},
+    uc/.style={draw=blue!70!black, fill=blue!10, ellipse,
+        minimum width=3.0cm, text width=2.6cm, align=center, font=\scriptsize, inner sep=2pt},
+    conn/.style={-, draw=blue!70!black, line width=0.8pt}
 ]
-\node[actor] (client) at (0, 6) {Client};
-\node[actor] (comm) at (0, 3) {Commercial};
-\node[actor] (manager) at (0, 0) {Responsable\\M\'etrologie};
-\node[actor] (tech) at (0, -3) {Technicien\\M\'etrologue};
-\node[actor] (admin) at (0, -6) {Administrateur};
+% --- System boundary ---
+\node[draw=blue!70!black, rounded corners=4pt, line width=0.8pt,
+    minimum width=12.0cm, minimum height=10.7cm, inner sep=0pt] (sys) at (8.8, 4.15) {};
+\node[font=\scriptsize\bfseries, blue!70!black] at (8.8, 9.2)
+    {Syst\`eme : Plateforme de Gestion de Calibration};
 
-\node[uc] (uc_auth) at (5, 7) {UC01: Authentification \& Session};
-\node[uc] (uc_cat) at (5, 5.7) {UC02: Consulter Catalogue};
-\node[uc] (uc_req) at (5, 4.4) {UC03: Cr\'eer Demande Multi-\'Equipements};
-\node[uc] (uc_quote) at (5, 3.1) {UC04: Qualifier \& \'Emettre Devis};
-\node[uc] (uc_sched) at (5, 1.8) {UC05: N\'egocier / Valider Date};
-\node[uc] (uc_assign) at (5, 0.5) {UC06: Affecter Technicien};
-\node[uc] (uc_exec) at (5, -0.8) {UC07: Effectuer \'Etalonnage};
-\node[uc] (uc_rep) at (5, -2.1) {UC08: Uploader Rapport d'Essai};
-\node[uc] (uc_rev) at (5, -3.4) {UC09: Revue Qualit\'e \& Rework};
-\node[uc] (uc_cert) at (5, -4.7) {UC10: Valider Certificat Immuable};
-\node[uc] (uc_down) at (5, -6) {UC11: T\'el\'echarger Certificat};
-\node[uc] (uc_audit) at (5, -7.3) {UC12: Audit \& \'Etalons};
+% --- Actors ---
+\node[actor] (client) at (0, 8) {Client};
+\node[actor] (comm) at (0, 6) {Commercial};
+\node[actor] (manager) at (0, 4) {Responsable\\M\'etrologie};
+\node[actor] (tech) at (0, 2) {Technicien\\M\'etrologue};
+\node[actor] (admin) at (0, 0) {Administrateur};
 
-\draw[arr] (client) -- (uc_auth);
-\draw[arr] (client) -- (uc_cat);
-\draw[arr] (client) -- (uc_req);
-\draw[arr] (client) -- (uc_sched);
-\draw[arr] (client) -- (uc_down);
+% --- Use cases ---
+\node[uc] (uc01) at (4.6, 3.8) {UC01 : Authentification\\\& Session};
+\node[uc] (uc02) at (7.5, 8) {UC02 : Consulter\\Catalogue};
+\node[uc] (uc03) at (13.0, 8) {UC03 : Cr\'eer Demande\\Multi-\'Equipements};
+\node[uc] (uc04) at (13.0, 6.4) {UC04 : Qualifier \&\\\'Emettre Devis};
+\node[uc] (uc05) at (7.5, 4.8) {UC05 : N\'egocier /\\Valider Date};
+\node[uc] (uc06) at (13.0, 4.8) {UC06 : Affecter\\Technicien};
+\node[uc] (uc07) at (7.5, 1.6) {UC07 : Effectuer\\\'Etalonnage};
+\node[uc] (uc08) at (13.0, 1.6) {UC08 : Uploader Rapport\\d'Essai};
+\node[uc] (uc09) at (7.5, 3.2) {UC09 : Revue Qualit\'e\\\& Rework};
+\node[uc] (uc10) at (13.0, 3.2) {UC10 : Valider Certificat\\Immuable};
+\node[uc] (uc11) at (7.5, 6.4) {UC11 : T\'el\'echarger\\Certificat};
+\node[uc] (uc12) at (7.5, 0) {UC12 : Audit \&\\\'Etalons};
 
-\draw[arr] (comm) -- (uc_auth);
-\draw[arr] (comm) -- (uc_quote);
+% --- UC01 : diagonals from the five actors ---
+\draw[conn] (client.east) -- (uc01.west);
+\draw[conn] (comm.east) -- (uc01.west);
+\draw[conn] (manager.east) -- (uc01.west);
+\draw[conn] (tech.east) -- (uc01.west);
+\draw[conn] (admin.east) -- (uc01.west);
 
-\draw[arr] (manager) -- (uc_auth);
-\draw[arr] (manager) -- (uc_sched);
-\draw[arr] (manager) -- (uc_assign);
-\draw[arr] (manager) -- (uc_rev);
-\draw[arr] (manager) -- (uc_cert);
-\draw[arr] (manager) -- (uc_audit);
+% --- Client ---
+\draw[conn] (client.east) -- (uc02.west);
+\draw[conn] (client.north) -- (0, 8.6) -- (13.0, 8.6) -- (uc03.north);
+\draw[conn] (client.east) -- (uc11.west);
+\draw[conn] (client.east) -- (uc05.west);
 
-\draw[arr] (tech) -- (uc_auth);
-\draw[arr] (tech) -- (uc_exec);
-\draw[arr] (tech) -- (uc_rep);
+% --- Commercial ---
+\draw[conn] (comm.east) -- (1.0, 5.6) -- (11, 5.6) -- (11, 6.4) -- (uc04.west);
 
-\draw[arr] (admin) -- (uc_auth);
-\draw[arr] (admin) -- (uc_audit);
+% --- Responsable M\'etrologie ---
+\draw[conn] (manager.east) -- (1.0, 4.6) -- (6.0, 4.6) -- (6.0, 4.8) -- (uc05.west);
+\draw[conn] (manager.east) -- (1.0, 3.1) -- (uc09.west);
+\draw[conn] (manager.east) -- (1.0, 2.6) -- (11.5, 2.6) -- (11.5, 4.8) -- (uc06.west);
+\draw[conn] (manager.east) -- (1.0, 2.4) -- (11, 2.4) -- (11, 3.2) -- (uc10.west);
+\draw[conn] (manager.east) -- (1.0, 3.5) -- (2.5, 3.5) -- (2.5, -0.6) -- (7.5, -0.6) -- (uc12.south);
+
+% --- Technicien M\'etrologue ---
+\draw[conn] (tech.east) -- (uc07.west);
+\draw[conn] (tech.east) -- (2.7, 2) -- (2.7, 2.2) -- (11, 2.2) -- (11, 1.6) -- (uc08.west);
+
+% --- Administrateur ---
+\draw[conn] (admin.east) -- (uc12.west);
 \end{tikzpicture}

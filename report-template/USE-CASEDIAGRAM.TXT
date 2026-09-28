@@ -1,0 +1,79 @@
+@startuml
+left to right direction
+
+actor Client
+actor Commercial
+actor Manager
+actor Metrologue
+actor Admin
+
+rectangle "Système de gestion des certificats" {
+  usecase "Se connecter" as UC0
+
+  usecase "Envoyer une demande" as UC1
+  usecase "Recevoir certificat" as UC2
+  usecase "Voir feuille de temps" as UC3
+  usecase "Voir archive" as UC4
+  usecase "Télécharger un contrat" as UC5
+  usecase "Voir historique" as UC6
+  usecase "Choisir la date d'intervention" as UC7
+
+  usecase "Voir la demande" as UC8
+  usecase "Transmettre la demande" as UC9
+  usecase "Gérer un contrat" as UC10
+  usecase "Scanner un certificat" as UC11
+  usecase "Archiver un certificat" as UC12
+
+  usecase "Créer un certificat" as UC13
+  usecase "Valider un certificat" as UC14
+  usecase "Recevoir rapport métrologie" as UC15
+  usecase "Recevoir la demande" as UC16
+  usecase "Affecter le travail" as UC17
+
+  usecase "Recevoir le travail affecté" as UC18
+  usecase "Proposer une date d'intervention" as UC19
+  usecase "Envoyer un rapport" as UC20
+
+  usecase "Gérer les comptes / accès" as UC21
+  usecase "Gérer les équipements" as UC22
+}
+
+Client --> UC0
+Commercial --> UC0
+Manager --> UC0
+Metrologue --> UC0
+Admin --> UC0
+
+Client --> UC1
+Client --> UC2
+Client --> UC3
+Client --> UC4
+Client --> UC5
+Client --> UC6
+Client --> UC7
+
+Commercial --> UC8
+Commercial --> UC9
+Commercial --> UC10
+Commercial --> UC11
+Commercial --> UC12
+
+Manager --> UC13
+Manager --> UC14
+Manager --> UC15
+Manager --> UC16
+Manager --> UC17
+
+Metrologue --> UC18
+Metrologue --> UC19
+Metrologue --> UC20
+
+Admin --> UC21
+Admin --> UC22
+
+UC9  ..> UC16 : <<transmet>>
+UC17 ..> UC18 : <<affecte>>
+UC20 ..> UC15 : <<transmet>>
+UC13 ..> UC10 : <<include>>
+UC19 ..> UC7  : <<propose>>
+@enduml

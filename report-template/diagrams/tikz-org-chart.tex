@@ -1,19 +1,20 @@
-\begin{tikzpicture}[>=stealth,
-    box/.style={draw=black!70, fill=gray!10, rounded corners=3pt, line width=0.8pt, minimum width=3.4cm, minimum height=0.9cm, align=center, font=\footnotesize},
-    mainbox/.style={draw=blue!80!black, fill=blue!15, rounded corners=4pt, line width=1.1pt, minimum width=4cm, minimum height=1cm, align=center, font=\small\bfseries},
-    arrow/.style={-, thick, color=gray!80}
+\begin{tikzpicture}[>=Stealth,
+    mainbox/.style={draw=blue!80!black, fill=blue!15, rounded corners=4pt, line width=1.1pt, minimum width=6cm, minimum height=1.0cm, align=center, font=\small\bfseries},
+    box/.style={draw=gray!70, fill=gray!10, rounded corners=3pt, line width=0.8pt, minimum width=3.6cm, minimum height=1.1cm, align=center, font=\footnotesize},
+    leaf/.style={draw=gray!70, fill=gray!5, rounded corners=3pt, line width=0.8pt, minimum width=3.2cm, minimum height=0.8cm, align=center, font=\scriptsize},
+    conn/.style={-, line width=0.8pt, color=gray!70}
 ]
-\node[mainbox] (dg) {Direction G\'en\'erale / LNEMI};
-\node[box, below=0.9cm of dg, xshift=-4.2cm] (qualite) {\textbf{D\'epartement Qualit\'e}\\[2pt]Norme ISO/IEC 17025};
-\node[box, below=0.9cm of dg, xshift=0cm] (technique) {\textbf{Laboratoire M\'etrologie}\\[2pt]Pression, T$^\circ$, \'Elec, Masse};
-\node[box, below=0.9cm of dg, xshift=4.2cm] (comm) {\textbf{Service Commercial}\\[2pt]Relation Client \& Devis};
+\node[mainbox] (dg) {Direction G\'en\'erale / ALICEF SPA};
+\node[box, below=1.2cm of dg] (technique) {\textbf{Laboratoire M\'etrologie}\\[2pt]Pression, T$^\circ$, \'Elec, Masse};
+\node[box, left=1.2cm of technique] (qualite) {\textbf{D\'epartement Qualit\'e}\\[2pt]Norme ISO/IEC 17025};
+\node[box, right=1.2cm of technique] (comm) {\textbf{Service Commercial}\\[2pt]Relation Client \& Devis};
 
-\node[box, below=0.8cm of technique, xshift=-1.8cm] (techniciens) {Techniciens d'\'Etalonnage};
-\node[box, below=0.8cm of technique, xshift=1.8cm] (etalons) {Gestionnaire des \'Etalons};
+\node[leaf, below=1.0cm of technique, xshift=-1.9cm] (techniciens) {Techniciens d'\'Etalonnage};
+\node[leaf, below=1.0cm of technique, xshift=1.9cm] (etalons) {Gestionnaire des \'Etalons};
 
-\draw[arrow] (dg.south) -- ++(0,-0.4) -| (qualite.north);
-\draw[arrow] (dg.south) -- ++(0,-0.4) -| (technique.north);
-\draw[arrow] (dg.south) -- ++(0,-0.4) -| (comm.north);
-\draw[arrow] (technique.south) -- ++(0,-0.3) -| (techniciens.north);
-\draw[arrow] (technique.south) -- ++(0,-0.3) -| (etalons.north);
+\draw[conn] (dg.south) -- ++(0,-0.5) -| (qualite.north);
+\draw[conn] (dg.south) -- ++(0,-0.5) -| (technique.north);
+\draw[conn] (dg.south) -- ++(0,-0.5) -| (comm.north);
+\draw[conn] (technique.south) -- ++(0,-0.4) -| (techniciens.north);
+\draw[conn] (technique.south) -- ++(0,-0.4) -| (etalons.north);
 \end{tikzpicture}

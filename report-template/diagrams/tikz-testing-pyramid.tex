@@ -1,11 +1,12 @@
-\begin{tikzpicture}[>=stealth,
-    layer1/.style={draw=blue!80!black, fill=blue!20, minimum width=2.4cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries},
-    layer2/.style={draw=green!80!black, fill=green!20, minimum width=4.8cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries},
-    layer3/.style={draw=orange!80!black, fill=orange!20, minimum width=7.2cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries}
+\begin{tikzpicture}[>=Stealth,
+    layer/.style={align=center, rounded corners=3pt, line width=0.8pt, minimum height=0.9cm, font=\footnotesize\bfseries},
+    e2e/.style={layer, draw=red!70!black, fill=red!10, text width=2.2cm, minimum width=2.4cm},
+    integ/.style={layer, draw=orange!80!black, fill=orange!10, text width=4.6cm, minimum width=4.8cm},
+    unit/.style={layer, draw=blue!70!black, fill=blue!10, text width=7.2cm, minimum width=7.2cm}
 ]
-\node[layer1] (e2e) at (0, 2) {Tests d'Acceptation \& E2E\\Authentification, Isolation Tenant};
-\node[layer2] (integ) at (0, 1) {Tests d'Int\'egration \& Workflow (Feature)\\67 tests pass\'es / 273 assertions};
-\node[layer3] (unit) at (0, 0) {Tests Unitaires (Models, Policies, Helpers)\\Validation Immutabilit\'e \& Piste d'Audit};
+\node[e2e] (e2e) at (0,3.2) {Tests d'Acceptation \& E2E\\[1pt]\scriptsize Authentification, Isolation Tenant};
+\node[integ] (integ) at (0,1.5) {Tests d'Int\'egration \& Workflow (Feature)\\[1pt]\scriptsize 67 tests pass\'es / 273 assertions};
+\node[unit] (unit) at (0,0) {Tests Unitaires (Models, Policies, Helpers)\\[1pt]\scriptsize Validation Immutabilit\'e \& Piste d'Audit};
 
-\draw[thick, color=gray!80] (-4,-0.5) -- (0, 2.7) -- (4,-0.5) -- cycle;
+\draw[thick, color=gray!70] (-5,-0.6) -- (0,5.65) -- (5,-0.6) -- cycle;
 \end{tikzpicture}

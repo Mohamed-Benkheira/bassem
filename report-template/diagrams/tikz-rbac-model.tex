@@ -1,24 +1,38 @@
-\begin{tikzpicture}[>=stealth,
-    role/.style={draw=blue!80!black, fill=blue!10, rounded corners=3pt, minimum width=3.2cm, minimum height=0.9cm, align=center, font=\footnotesize\bfseries},
-    perm/.style={draw=green!60!black, fill=green!5, rounded corners=2pt, minimum width=2.8cm, minimum height=0.7cm, align=center, font=\scriptsize},
-    arrow/.style={->, thick, >=stealth, color=darkgray}
+\begin{tikzpicture}[
+    >=Stealth,
+    line width=0.8pt,
+    role/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, minimum width=2.8cm, align=center, font=\footnotesize\bfseries},
+    perm/.style={draw=gray!60!black, fill=gray!10, rounded corners=3pt, text width=3.2cm, align=center, font=\scriptsize},
+    hier/.style={->, >=Stealth, line width=0.8pt},
+    permarr/.style={->, >=Stealth, line width=0.8pt, dashed}
 ]
-\node[role, fill=purple!15] (admin) {Administrateur IT};
-\node[role, fill=orange!15, below=0.7cm of admin] (manager) {Responsable M\'etrologie};
-\node[role, fill=blue!15, left=0.8cm of manager] (comm) {Commercial};
-\node[role, fill=yellow!20, right=0.8cm of manager] (tech) {Technicien M\'etrologue};
-\node[role, fill=gray!15, below=0.8cm of comm] (client) {Client Externe};
-\node[role, fill=teal!15, below=0.8cm of manager] (delegate) {M\'etrologue D\'el\'egu\'e};
+% --- r\^oles ---
+\node[role] (admin) at (0, 0) {Administrateur IT};
+\node[role] (manager) at (-4.5, -2.5) {Responsable M\'etrologie};
+\node[role] (comm) at (0, -2.5) {Commercial};
+\node[role] (tech) at (4.5, -2.5) {Technicien M\'etrologue};
+\node[role] (delegate) at (-4.5, -5) {M\'etrologue D\'el\'egu\'e};
+\node[role] (client) at (0, -5) {Client Externe};
 
-\node[perm, below=0.7cm of client] (p_client) {Cr\'eer Demandes\\T\'el\'echarger Certificats};
-\node[perm, below=0.7cm of delegate] (p_del) {Valider Certificats\\(Mode D\'el\'egation Trac\'e)};
-\node[perm, below=0.7cm of tech] (p_tech) {Prise en Charge\\Upload Rapports};
+% --- permissions ---
+\node[perm] (p_admin) at (4.5, 0) {G\'erer utilisateurs \textbullet{} R\^oles\\Audit \textbullet{} \'Etalons};
+\node[perm] (p_manager) at (-6.5, -7.5) {Affecter \textbullet{} Revue\\Valider certificat};
+\node[perm] (p_comm) at (2, -10) {Qualifier \textbullet{} \'Emettre devis\\Contrats};
+\node[perm] (p_tech) at (4.5, -7.5) {Prise en charge\\Upload rapports};
+\node[perm] (p_delegate) at (-6.5, -10) {Valider certificats\\(Mode d\'el\'egation trac\'e)};
+\node[perm] (p_client) at (0, -7.5) {Cr\'eer demandes\\T\'el\'echarger certificats};
 
-\draw[arrow] (admin) -- (manager);
-\draw[arrow] (admin) -| (comm);
-\draw[arrow] (admin) -| (tech);
-\draw[arrow] (manager) -- (delegate);
-\draw[arrow] (client) -- (p_client);
-\draw[arrow] (delegate) -- (p_del);
-\draw[arrow] (tech) -- (p_tech);
+% --- hi\'erarchie des r\^oles ---
+\draw[hier] (admin.south) |- (manager.north);
+\draw[hier] (admin.south) -- (comm.north);
+\draw[hier] (admin.south) |- (tech.north);
+\draw[hier] (manager.south) -- (delegate.north);
+
+% --- permissions par r\^ole ---
+\draw[permarr] (admin.east) -- (p_admin.west);
+\draw[permarr] (manager.west) -- (-6.5, -3) -- (p_manager.north);
+\draw[permarr] (delegate.south) |- (p_delegate.north);
+\draw[permarr] (comm.south) -- (2, -3) -- (p_comm.north);
+\draw[permarr] (client.south) -- (p_client.north);
+\draw[permarr] (tech.south) -- (p_tech.north);
 \end{tikzpicture}

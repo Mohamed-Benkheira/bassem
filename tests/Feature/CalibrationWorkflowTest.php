@@ -479,6 +479,39 @@ test('it allows manager to assign a metrology technician to the operation', func
     ]);
 });
 
+test('it allows a manager to browse an operation from the manager namespace', function () {
+    $service = CalibrationService::first();
+    $calibrationRequest = CalibrationRequest::create([
+        'request_number' => 'DEM-2026-TEST8B',
+        'client_id' => $this->client->id,
+        'created_by_id' => $this->clientUser->id,
+        'status' => CalibrationRequest::STATUS_SCHEDULED,
+    ]);
+
+    $item = $calibrationRequest->items()->create([
+        'calibration_service_id' => $service->id,
+        'equipment_name' => 'Comparateur d\'étalons',
+        'quantity' => 1,
+    ]);
+
+    $operation = CalibrationOperation::create([
+        'operation_number' => 'OP-2026-TEST8B',
+        'calibration_request_id' => $calibrationRequest->id,
+        'calibration_request_item_id' => $item->id,
+        'client_id' => $this->client->id,
+        'status' => CalibrationOperation::STATUS_SCHEDULED,
+    ]);
+
+    $this->actingAs($this->managerUser)
+        ->get(route('manager.operations.index'))
+        ->assertOk();
+
+    $this->actingAs($this->managerUser)
+        ->get(route('manager.operations.show', $operation))
+        ->assertOk()
+        ->assertInertia(fn ($page) => $page->component('metrology/operations/show'));
+});
+
 test('it allows assigned technician to start calibration and upload report', function () {
     $service = CalibrationService::first();
     $calibrationRequest = CalibrationRequest::create([

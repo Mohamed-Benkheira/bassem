@@ -1,15 +1,16 @@
-\begin{tikzpicture}[>=stealth, node distance=1.5cm and 2cm,
-    tier/.style={draw=blue!70!black, fill=blue!5, rounded corners=4pt, line width=1pt, minimum width=3.2cm, minimum height=1.6cm, align=center, font=\small},
-    db/.style={draw=orange!80!black, fill=orange!10, rounded corners=4pt, line width=1pt, minimum width=3.2cm, minimum height=1.6cm, align=center, font=\small},
-    arrow/.style={->, thick, >=stealth, color=darkgray}
+\begin{tikzpicture}[>=Stealth,
+    tier/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, line width=0.8pt, minimum width=4.2cm, minimum height=1.8cm, align=center, font=\footnotesize},
+    server/.style={draw=blue!70!black, fill=blue!20, rounded corners=3pt, line width=0.8pt, minimum width=4.2cm, minimum height=1.8cm, align=center, font=\footnotesize},
+    db/.style={draw=orange!80!black, fill=orange!10, rounded corners=3pt, line width=0.8pt, minimum width=4.2cm, minimum height=1.8cm, align=center, font=\footnotesize},
+    arrow/.style={->, line width=0.8pt, >=Stealth, color=darkgray}
 ]
 \node[tier] (client) {\textbf{Tier 1 : Client}\\[2pt]Navigateur Web / Client\\React 19 + TypeScript\\Tailwind CSS v4};
-\node[tier, right=2.2cm of client] (server) {\textbf{Tier 2 : Serveur}\\[2pt]Serveur Web \& API\\Laravel 12/13 (PHP 8.2+)\\Inertia.js + Auth RBAC};
-\node[db, right=2.2cm of server] (database) {\textbf{Tier 3 : Donn\'ees}\\[2pt]Syst\`eme SGBD\\MySQL 8.0+ / Eloquent\\Int\'egrit\'e ACID \& Audit};
+\node[server, right=3.3cm of client] (server) {\textbf{Tier 2 : Serveur}\\[2pt]Serveur Web \& API\\Laravel 12/13 (PHP 8.2+)\\Inertia.js + Auth RBAC};
+\node[db, right=3.3cm of server] (database) {\textbf{Tier 3 : Donn\'ees}\\[2pt]Syst\`eme SGBD\\MySQL 8.0+ / Eloquent\\Int\'egrit\'e ACID \& Audit};
 
-\draw[arrow] (client.north east) -- node[above, font=\footnotesize, align=center] {Requ\^etes HTTPS / JSON\\(Inertia Visits)} (server.north west);
-\draw[arrow] (server.south west) -- node[below, font=\footnotesize, align=center] {Props JSON \& Vues\\Rendu R\'eactif} (client.south east);
+\draw[arrow] ([yshift=0.55cm]client.east) -- node[above, font=\footnotesize, align=center] {Requ\^etes HTTPS / JSON\\(Inertia Visits)} ([yshift=0.55cm]server.west);
+\draw[arrow] ([yshift=-0.55cm]server.west) -- node[below, font=\footnotesize, align=center] {Props JSON \& Vues\\Rendu R\'eactif} ([yshift=-0.55cm]client.east);
 
-\draw[arrow] (server.north east) -- node[above, font=\footnotesize, align=center] {Requ\^etes SQL\\ORM Eloquent} (database.north west);
-\draw[arrow] (database.south west) -- node[below, font=\footnotesize, align=center] {R\'esultats \& Curseurs\\Transactions} (server.south east);
+\draw[arrow] ([yshift=0.55cm]server.east) -- node[above, font=\footnotesize, align=center] {Requ\^etes SQL\\ORM Eloquent} ([yshift=0.55cm]database.west);
+\draw[arrow] ([yshift=-0.55cm]database.west) -- node[below, font=\footnotesize, align=center] {R\'esultats \& Curseurs\\Transactions} ([yshift=-0.55cm]server.east);
 \end{tikzpicture}

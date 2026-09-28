@@ -1,19 +1,30 @@
-\begin{tikzpicture}[>=stealth,
-    line/.style={dashed, color=gray},
-    box/.style={draw=teal!70!black, fill=teal!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
-    msg/.style={->, thick, >=stealth, font=\scriptsize},
-    reply/.style={<-, dashed, thick, >=stealth, font=\scriptsize}
+\begin{tikzpicture}[>=Stealth,
+    line/.style={dashed, color=gray!60, line width=0.5pt},
+    actor/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    sys/.style={draw=orange!80!black, fill=orange!10, rounded corners=3pt, minimum width=2.4cm, minimum height=0.8cm, align=center, font=\scriptsize\bfseries},
+    actbar/.style={fill=blue!30, draw=blue!50!black, line width=0.3pt},
+    msg/.style={->, thick, >=Stealth, font=\scriptsize},
+    reply/.style={<-, dashed, thick, >=Stealth, font=\scriptsize},
+    mlabel/.style={above, fill=white, inner sep=1.5pt, font=\scriptsize},
+    selfboxsys/.style={draw=orange!80!black, fill=orange!10, rounded corners=2pt, minimum height=0.55cm, align=center, inner sep=2pt, font=\scriptsize}
 ]
-\node[box] (m) at (0,0) {Responsable / D\'el\'egu\'e};
-\node[box] (app) at (4.5,0) {Serveur / Certificat};
-\node[box] (cl) at (9,0) {Client};
+\node[actor] (m) at (0,0) {Responsable / D\'el\'egu\'e};
+\node[sys] (app) at (5.5,0) {Serveur / Certificat};
+\node[actor] (cl) at (11,0) {Client};
 
-\draw[line] (m) -- (0,-5.5);
-\draw[line] (app) -- (4.5,-5.5);
-\draw[line] (cl) -- (9,-5.5);
+\draw[line] (0,-0.4) -- (0,-4.5);
+\draw[line] (5.5,-0.4) -- (5.5,-4.5);
+\draw[line] (11,-0.4) -- (11,-4.5);
 
-\draw[msg] (0,-1) -- node[above] {1. G\'en\'eration Certificat Brouillon} (4.5,-1);
-\draw[msg] (0,-2.2) -- node[above] {2. Validation Officielle (is\_final = true)} (4.5,-2.2);
-\draw[msg] (4.5,-3.2) -- node[above] {3. Verrouillage Immuable \& Log Audit} (4.5,-3.2);
-\draw[reply] (9,-4.2) -- node[above] {4. T\'el\'echargement du Certificat Officiel} (4.5,-4.2);
+% Activation bars
+\draw[actbar] (-0.06,-1) rectangle (0.06,-1.9);
+\draw[actbar] (5.44,-1) rectangle (5.56,-3.7);
+\draw[actbar] (10.94,-3.7) rectangle (11.06,-4.1);
+
+% Messages
+\draw[msg] (0,-1) -- node[mlabel] {1. G\'en\'eration Certificat Brouillon} (5.5,-1);
+\draw[msg] (0,-1.9) -- node[mlabel] {2. Validation Officielle (is\_final = true)} (5.5,-1.9);
+\node[selfboxsys, anchor=west] (self3) at (5.9,-2.8) {3. Verrouillage Immuable \& Log Audit};
+\draw[msg] (5.5,-2.8) -- (self3.west);
+\draw[reply] (11,-3.7) -- node[mlabel] {4. T\'el\'echargement du Certificat Officiel} (5.5,-3.7);
 \end{tikzpicture}

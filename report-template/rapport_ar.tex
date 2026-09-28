@@ -3,12 +3,12 @@
 %% ============================================================
 %% إعدادات الميتاداتا ومعلومات المذكرة
 %% ============================================================
-\themeAr{تصميم وإنجاز تطبيق ويب لتسيير ومعايرة معدات القياس والمترولوجيا الصناعية}
-\themeFr{Conception et R\'ealisation d'une Application Web de Gestion de la Calibration des \'Equipements de Mesure et de M\'etrologie Industrielle}
-\hostorg{المخبر الوطني للمعايرة والمترولوجيا الصناعية (LNEMI)}
+\themeAr{تطوير تطبيق ويب لتسيير عملية معايرة المعدات}
+\themeFr{D\'eveloppement d'une Application Web pour la Gestion du Processus de Calibration des \'Equipements}
+\hostorg{ALICEF SPA}
 \supervisor{الأستاذة بن عياش سميرة}
-\promoter{السيد سمير محالبي}
-\students{خنشالي محمد باسيم (Khanchali Mohamed Bassem)}
+\promoter{بوشارب موراد}
+\students{خنشاالي محمد باسم}
 \promotion{2024 / 2026}
 
 \begin{document}
@@ -29,15 +29,29 @@
 %% شكر وعرفان
 %% ------------------------------------------------------------
 \begin{shokr}
-أود أن أتقدم أولاً بالشكر الجزيل لله سبحانه وتعالى على ما أنعم به علينا من توفيق وصحة وعزيمة لإتمام هذا العمل المتواضع والوصول إلى نهاية هذا المسار التكويني الواعد.
+بسم الله الرحمن الرحيم
 
-كما أعبر عن عميق امتناني وتقديري للأستاذة المشرفة \textbf{بن عياش سميرة} على دعمها المستمر وتوجيهاتها القيمة ونصائحها السديدة طوال فترة إنجاز هذا المشروع.
+الحمد لله سبحانه وتعالى، الذي أنعم علينا بنعمة الصحة والتوفيق والعزيمة، وأمدّنا بالقوة والصبر لإتمام هذا العمل المتواضع والوصول إلى نهاية هذا المسار التكويني.
 
-وأخص بالشكر المؤطر في المؤسسة المستقبلة \textbf{السيد سمير محالبي} على جهوده القيمة، وتعاونه البناء، وحرصه الدائم على تزويدنا بكل ما يفيد لإنجاح هذا العمل وربطه بالمعايير الصناعية المعتمدة.
+يسعدني أن أتقدم بخالص الشكر وعظيم الامتنان إلى كل من ساهم في إنجاز هذا العمل، سواء بالتوجيه أو الدعم أو التشجيع، وأخص بالذكر كل من كان له دور في مسيرتي التكوينية .
 
-كما أتوجه بالشكر والتقدير إلى السادة أعضاء لجنة المناقشة والتحكيم لتفضلهم بقبول تقييم هذه المذكرة، وإلى كافة الأساتذة وأعضاء هيئة التدريس والإدارة في \textbf{المعهد الوطني المتخصص في التكوين المهني (INSFP) رحمانية - سيدي عبد الله}، على ما بذلوه من جهد لتوفير أفضل الظروف لتكويننا طيلة فترة دراستنا.
+في البداية، أتقدم بجزيل الشكر والتقدير إلى الأستاذة المشرفة \textbf{بن عياش سميرة}، على توجيهاتها القيّمة، ونصائحها السديدة، ودعمها المستمر طوال فترة إنجاز هذا المشروع، وعلى ما قدمته من ملاحظات وإرشادات ساهمت في تحسين هذا العمل وإتمامه في أحسن الظروف.
 
-وأخيراً، أتقدم بالشكر إلى جميع الزملاء والأصدقاء وكل من ساهم من قريب أو من بعيد في إنجاز هذا المشروع.
+كما أتوجه بخالص الشكر والتقدير إلى السيد \textbf{بوشارب مراد}، المؤطر في المؤسسة المستخدمة \textbf{ALICEF SPA}، على حسن تأطيره، وتعاونه البنّاء، وتوجيهاته القيّمة، وحرصه الدائم على تقديم المساعدة والمعلومات اللازمة لإنجاح هذا المشروع، وربطه بالواقع المهني والمعايير المعتمدة في المؤسسة.
+
+ولا يسعني في هذه المناسبة أن أنسى فضل والديّ الكريمين، اللذين كانا ولا يزالان مصدر الدعم والمحبة والتشجيع في حياتي. فلهما مني أسمى عبارات الشكر والامتنان على صبرهما وثقتهما بي، وعلى كل ما قدماه لي طوال مسيرتي الدراسية، والذي كان له الأثر الكبير في وصولي إلى هذه المرحلة.
+
+كما أتقدم بخالص الشكر إلى إخوتي جميعًا، على دعمهم وتشجيعهم ووقوفهم إلى جانبي، وعلى كل ما قدموه لي من مساندة خلال هذه المسيرة.
+
+كما أتوجه بالشكر إلى جميع زملائي في الدراسة، الذين شاركوني سنوات التكوين والتجارب المختلفة، وساهموا في جعل هذه المرحلة أكثر ثراءً وذكرى.
+
+ولا يمكنني أن أنسى أصدقائي في \textbf{Team Valo}: \LR{ZafroX}، \LR{Goat Yi}، \LR{JJK Larper}، \LR{ZakShow} و\LR{HarounDZ}، على صداقتهم ودعمهم وتشجيعهم، وعلى اللحظات الجميلة التي تقاسمناها معًا، والتي جعلت هذه الفترة من حياتي أكثر متعة وتميّزًا.
+
+كما أتوجه بجزيل الشكر والتقدير إلى السادة أعضاء لجنة المناقشة والتحكيم، لتفضلهم بقبول مناقشة وتقييم هذه المذكرة، وإلى جميع الأساتذة وأعضاء هيئة التدريس والإدارة بالمعهد الوطني المتخصص في التكوين المهني (INSFP) الرحمانية - سيدي عبد الله، على ما بذلوه من جهود وتفانٍ في سبيل تكويننا وتأطيرنا وتوفير الظروف المناسبة طوال فترة دراستنا.
+
+وفي الختام، أتقدم بخالص الشكر والامتنان إلى كل من ساهم، من قريب أو بعيد، في إنجاز هذا المشروع وإتمام هذه المسيرة التكوينية، وكل من قدم لي كلمة طيبة، نصيحة، مساعدة أو تشجيعًا كان له أثر في الوصول إلى هذه المرحلة.
+
+لكل هؤلاء، أتقدم بجزيل الشكر وعظيم التقدير والامتنان.
 \end{shokr}
 
 %% ------------------------------------------------------------
@@ -51,7 +65,7 @@
 
 إلى الينبوع الذي لا ينضب من الحنان والعطاء، إلى من رعتني بصبرها ودعواتها المباركة، إلى أغلى ما أملك في الوجود : \textbf{أمي الغالية}.
 
-إلى من علمني الكفاح وعزة النفس وغرس في نفسي حب العلم والعمل، إلى قدوتي ومثلي الأعلى، إلى من غاب عن عيني وبقيت ذكراه حية في قلبي : \textbf{روحي والدي الطاهرة} (رحمه الله وأسكنه فسيح جناته).
+إلى من علمني الكفاح وعزة النفس، وغرس في نفسي حب العلم والعمل والعطاء، إلى قدوتي ومثلي الأعلى، إلى من أحب وأعتز به وقدوتي في الحياة : \textbf{أبي الغالي}.
 
 إلى إخوتي وأخواتي الأعزاء، على مساندتهم الدائمة وتشجيعهم المستمر لي في كافة مراحل دراستي.
 
@@ -102,28 +116,28 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 %% ------------------------------------------------------------
 %% قائمة الاختصارات
 %% ------------------------------------------------------------
-\chapter*{قائمة الاختصارات (Glossaire)}
+\chapter*{قائمة الاختصارات}
 \addcontentsline{toc}{chapter}{قائمة الاختصارات}
 
 \begin{abbrevtablear}
-  \ucfieldar{BTS}{شهادة تقني سامي (Brevet de Technicien Supérieur)}
+  \ucfieldar{BTS}{شهادة تقني سامي}
   \ucfieldar{INSFP}{المعهد الوطني المتخصص في التكوين المهني}
-  \ucfieldar{LNEMI}{المخبر الوطني للمعايرة والمترولوجيا الصناعية}
-  \ucfieldar{ISO}{المنظمة الدولية للتقييس (International Organization for Standardization)}
-  \ucfieldar{IEC}{اللجنة الكهروتقنية الدولية (International Electrotechnical Commission)}
-  \ucfieldar{UML}{لغة النمذجة الموحدة (Unified Modeling Language)}
-  \ucfieldar{UP}{المنهجية الموحدة للتطوير (Unified Process)}
-  \ucfieldar{MVC}{نمط المعمارية البرمجية: نموذج - واجهة - متحكم (Model - View - Controller)}
-  \ucfieldar{SPA}{تطبيق الصفحة الواحدة (Single Page Application)}
-  \ucfieldar{API}{واجهة برمجة التطبيقات (Application Programming Interface)}
-  \ucfieldar{RBAC}{التحكم في الوصول المعتمد على الأدوار (Role-Based Access Control)}
-  \ucfieldar{ORM}{رسم الخرائط العلائقية للكائنات (Object-Relational Mapping)}
+  \ucfieldar{ALICEF}{المؤسسة المستخدمة (المستقبلة) للتربص، الشركة الجزائرية المتخصصة في الميترولوجيا والمعايرة الصناعية}
+  \ucfieldar{ISO}{المنظمة الدولية للتقييس}
+  \ucfieldar{IEC}{اللجنة الكهروتقنية الدولية}
+  \ucfieldar{UML}{لغة النمذجة الموحدة}
+  \ucfieldar{UP}{المنهجية الموحدة للتطوير}
+  \ucfieldar{MVC}{نمط المعمارية البرمجية: نموذج - واجهة - متحكم}
+  \ucfieldar{SPA}{تطبيق الصفحة الواحدة}
+  \ucfieldar{API}{واجهة برمجة التطبيقات}
+  \ucfieldar{RBAC}{التحكم في الوصول المعتمد على الأدوار}
+  \ucfieldar{ORM}{رسم الخرائط العلائقية للكائنات}
   \ucfieldar{LEMP}{حزمة خادم الويب: Linux, Nginx, MySQL, PHP}
-  \ucfieldar{CSRF}{حماية ضد تزوير الطلبات عبر المواقع (Cross-Site Request Forgery)}
-  \ucfieldar{XSS}{حماية ضد البرمجة النصية عبر المواقع (Cross-Site Scripting)}
+  \ucfieldar{CSRF}{حماية ضد تزوير الطلبات عبر المواقع}
+  \ucfieldar{XSS}{حماية ضد البرمجة النصية عبر المواقع}
   \ucfieldar{ACID}{خصائص الموثوقية في قواعد البيانات: الذرية، التناسق، العزل، والديمومة}
-  \ucfieldar{HTTP/HTTPS}{بروتوكول نقل النص الفائق الآمن (HyperText Transfer Protocol Secure)}
-  \ucfieldar{TLS}{أمان طبقة النقل والتشفير (Transport Layer Security)}
+  \ucfieldar{HTTP/HTTPS}{بروتوكول نقل النص الفائق الآمن}
+  \ucfieldar{TLS}{أمان طبقة النقل والتشفير}
 \end{abbrevtablear}
 
 
@@ -136,7 +150,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 %% ============================================================
 %% المقدمة العامة
 %% ============================================================
-\chapter*{المقدمة العامة}
+\chapterdivider{المقدمة العامة}
 \addcontentsline{toc}{chapter}{المقدمة العامة}
 
 \section*{السياق العام}
@@ -146,7 +160,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 
 وتكتسي عمليات المعايرة والمترولوجيا الصناعية أهمية قصوى داخل المنشآت الإنتاجية، حيث أن دقة أدوات القياس (مثل مقاييس الضغط، مجسات الحرارة، أجهزة القياس الكهربائية، وأجهزة الوزن) تحدد بشكل مباشر جودة المنتجات وسلامة المنشآت ومطابقتها للمعايير الدولية الصارمة مثل معيار \textbf{ISO/IEC 17025}. 
 
-وانطلاقًا من هذا الواقع، جاءت فكرة مشروعنا المتمثلة في تصميم وإنجاز تطبيق ويب خاص بـ \textbf{تسيير ومعايرة معدات القياس والمترولوجيا الصناعية}، بهدف تقديم حل رقمي متكامل يساهم في تحسين عملية التسيير، وتتبع مسار المعدات، وإصدار شهادات المعايرة الرسمية بطريقة موثوقة وغير قابلة للتلاعب.
+وانطلاقًا من هذا الواقع، جاءت فكرة مشروعنا المتمثلة في تصميم وإنجاز تطبيق ويب خاص بـ \textbf{تسيير عملية معايرة المعدات}، بهدف تقديم حل رقمي متكامل يساهم في تحسين عملية التسيير، وتتبع مسار المعدات، وإصدار شهادات المعايرة الرسمية بطريقة موثوقة وغير قابلة للتلاعب.
 
 \section*{الإشكالية وفرضية العمل}
 رغم التطور التكنولوجي الكبير، إلا أن العديد من مخابر المعايرة والوحدات الصناعية ما تزال تعتمد على طرق تقليدية وشبه يدوية في تسيير بياناتها، مثل السجلات الورقية، وجداول البيانات المنفصلة (Excel)، والمراسلات عبر البريد الإلكتروني العادي. وهو ما يؤدي إلى عدة مشاكل جوهرية:
@@ -183,7 +197,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 تم تقسيم هذه المذكرة إلى أربعة فصول رئيسية بالإضافة إلى المقدمة العامة والخاتمة العامة، وذلك وفق ما يلي:
 \begin{itemize}
   \item \textbf{الفصل الأول: المفاهيم العامة والأسس النظرية :} يتناول المفاهيم الأساسية لشبكة الإنترنت والويب، معمارية العميل والخادم، ونظرة تفصيلية على التقنيات المستعملة في الواجهة الأمامية والخلفية والأمان.
-  \item \textbf{الفصل الثاني: الدراسة التمهيدية :} يختص بتقديم المؤسسة المستقبلة (المخبر الوطني للمعايرة)، وهيكلها التنظيمي، ونقد الوضع الحالي، وتحديد المتطلبات الوظيفية والتقنية والمنهجية المتبعة.
+  \item \textbf{الفصل الثاني: الدراسة التمهيدية :} يختص بتقديم المؤسسة المستقبلة (ALICEF SPA)، وهيكلها التنظيمي، ونقد الوضع الحالي، وتحديد المتطلبات الوظيفية والتقنية والمنهجية المتبعة.
   \item \textbf{الفصل الثالث: التحليل والتصميم :} يركز على نمذجة النظام بواسطة لغة UML، من خلال مخططات حالات الاستخدام، والبطاقات الوصفية، ومخططات التسلسل، ومخطط الحالات والانتقالات، ومخطط الفئات وقاموس المعطيات ومخطط النشر.
   \item \textbf{الفصل الرابع: الإنجاز والاختبارات :} يعرض بيئة التطوير، والهيكلة البرمجية، وواجهات التطبيق المنجزة، والنتائج الكاملة لحزمة الاختبارات الآلية المؤكدة لسلامة النظام.
 \end{itemize}
@@ -311,12 +325,19 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 
 \section{تقديم المؤسسة المستقبِلة}
 \subsection{تعريف المؤسسة ونشاطها}
-تعتبر المؤسسة المستقبِلة، \textbf{المخبر الوطني للمعايرة والمترولوجيا الصناعية (LNEMI)}، من المؤسسات المرجعية الرائدة في قطاع الصناعة والقياس في الجزائر. تسعى المؤسسة إلى تقديم خدمات المعايرة، والضبط، والتدقيق لمختلف أدوات وأجهزة القياس الصناعية المستعملة في قطاعات الطاقة، والبتروكيماويات، والصناعات الغذائية، ومصانع الأدوية.
+تعتبر المؤسسة المستقبِلة، \textbf{ALICEF SPA}، من المؤسسات الصناعية الرائدة في قطاع الصناعة والقياس في الجزائر، والتي تحتضن التربص التكويني الخاص بهذا المشروع. تسعى المؤسسة إلى تقديم خدمات المعايرة، والضبط، والتدقيق لمختلف أدوات وأجهزة القياس الصناعية المستعملة في قطاعات الطاقة، والبتروكيماويات، والصناعات الغذائية، ومصانع الأدوية.
 
 وتعمل المؤسسة وفق معايير الجودة الدولية المعتمدة لمخابر المعايرة والاختبار \textbf{ISO/IEC 17025}، مما يضمن الاعتراف بصلاحية وموثوقية الشهادات الممنوحة للمتعاملين الصناعيين.
 
-\subsection{المجالات المترولوجية المعتمدة في المخبر}
-يقدم المخبر خدمات المعايرة في ستة مجالات فيزيائية رئيسية:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\linewidth]{figures/alicef_logo.jpg}
+  \caption{شعار المؤسسة المستقبلة ALICEF SPA}
+  \label{fig:alicef-logo}
+\end{figure}
+
+\subsection{المجالات المترولوجية المعتمدة في المؤسسة}
+تقدم المؤسسة خدمات المعايرة في ستة مجالات فيزيائية رئيسية:
 \begin{enumerate}
   \item \textbf{مجال الضغط (Pression) :} معايرة مقاييس الضغط (Manomètres)، ومحولات الضغط التفاضلي، والمستشعرات الهيدروليكية من نطاق التفريغ حتى 1000 بار.
   \item \textbf{مجال الحرارة (Température) :} معايرة المجسات الحرارية (Pt100)، والمزدوجات الحرارية (Thermocouples)، ومقاييس الحرارة الرقمية في نطاق من -50 درجة مئوية إلى 1200 درجة مئوية.
@@ -334,14 +355,14 @@ Industrial metrology and periodic equipment calibration represent a vital founda
   \begin{LTR}
   \input{diagrams/tikz-org-chart.tex}
   \end{LTR}
-  \caption{الهيكل التنظيمي للمخبر الوطني للمعايرة (LNEMI)}
+  \caption{الهيكل التنظيمي لـ ALICEF SPA}
   \label{fig:org-chart}
 \end{figure}
 
 \begin{itemize}
   \item \textbf{الإدارة العامة :} مسؤولة عن التسيير الاستراتيجي وتوفير الموارد.
   \item \textbf{دائرة ضمان الجودة :} تسهر على تطبيق دليل الجودة الصارم ومطابقة المعيار ISO 17025.
-  \item \textbf{مخبر المترولوجيا الفني :} يضم المهندسين والتقنيين المترولوجيين ومسؤول صيانة الأدوات المرجعية.
+  \item \textbf{مصلحة المترولوجيا الفنية :} تضم المهندسين والتقنيين المترولوجيين ومسؤول صيانة الأدوات المرجعية.
   \item \textbf{المصلحة التجارية :} مكلفة باستقبال طلبات الزبائن وإصدار الفواتير التقديرية والعقود.
 \end{itemize}
 
@@ -429,7 +450,7 @@ Industrial metrology and periodic equipment calibration represent a vital founda
 \begin{figure}[H]
   \centering
   \begin{LTR}
-  \input{diagrams/tikz-uc-general.tex}
+  \includegraphics[width=0.85\linewidth]{figures/uc-general.jpg}
   \end{LTR}
   \caption{المخطط العام لحالات الاستخدام في المنصة}
   \label{fig:uc-general}
@@ -1395,11 +1416,11 @@ protected static function booted(): void
 %% ============================================================
 %% الخاتمة العامة والآفاق المستقبلية
 %% ============================================================
-\chapter*{الخاتمة العامة والآفاق المستقبلية}
+\chapterdivider{الخاتمة العامة والآفاق المستقبلية}
 \addcontentsline{toc}{chapter}{الخاتمة العامة والآفاق المستقبلية}
 
 \section*{حصيلة المشروع}
-تناول هذا العمل تصميم وإنجاز تطبيق ويب متكامل ومخصص لتسيير ومتابعة عمليات معايرة معدات القياس والمترولوجيا الصناعية وفق معايير الجودة الدولية (ISO/IEC 17025) لصالح المخبر الوطني للمعايرة (LNEMI).
+تناول هذا العمل تصميم وإنجاز تطبيق ويب متكامل ومخصص لتسيير ومتابعة عمليات معايرة معدات القياس والمترولوجيا الصناعية وفق معايير الجودة الدولية (ISO/IEC 17025) لصالح المؤسسة المستقبلة ALICEF SPA.
 
 وقد مكننا هذا المشروع من تطبيق المفاهيم الحديثة لهندسة البرمجيات بالاعتماد على المنهجية الموحدة ولغة UML، وبناء منصة متينة تجمع بين قوة إطار العمل \textbf{Laravel 12}، وسلاسة مكتبة \textbf{React 19} عبر تقنية \textbf{Inertia.js}.
 
@@ -1477,150 +1498,5 @@ protected static function booted(): void
 \textbf{PEST PHP COMMUNITY}. \textit{Pest -- An elegant PHP Testing Framework}. [en ligne]. \url{https://pestphp.com} [consult\'e le 15/09/2026].
 
 \end{thebibliography}
-
-%% ============================================================
-%% الملاحق
-%% ============================================================
-\appendix
-\chapter*{الملاحق (Annexes)}
-\addcontentsline{toc}{chapter}{الملاحق}
-
-\section*{الملحق أ : كود حماية وتثبيت الشهادات الرسمية (Laravel Model)}
-\begin{LTR}
-\begin{verbatim}
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
-use DomainException;
-
-class CalibrationCertificate extends Model
-{
-    protected $fillable = [
-        'certificate_number',
-        'calibration_operation_id',
-        'calibration_request_item_id',
-        'issue_date',
-        'expiry_date',
-        'is_draft',
-        'is_final',
-        'validated_by',
-        'validated_at',
-    ];
-
-    protected static function booted(): void
-    {
-        static::updating(function (CalibrationCertificate $certificate) {
-            if ($certificate->getOriginal('is_final')) {
-                throw new DomainException(
-                    "This certificate is official and locked. " .
-                    "Modification is forbidden."
-                );
-            }
-        });
-
-        static::deleting(function (CalibrationCertificate $certificate) {
-            if ($certificate->is_final) {
-                throw new DomainException(
-                    "Deleting any finalized calibration certificate " .
-                    "from the database is prohibited."
-                );
-            }
-        });
-    }
-}
-\end{verbatim}
-\end{LTR}
-
-\section*{الملحق ب : كود إنشاء جدول طلبات المعايرة والمعدات (Migration)}
-\begin{LTR}
-\begin{verbatim}
-Schema::create('calibration_requests', function (Blueprint $table) {
-    $table->id();
-    $table->string('reference', 50)->unique();
-    $table->foreignId('client_id')
-          ->constrained('clients')
-          ->cascadeOnDelete();
-    $table->string('status', 50)->default('DRAFT');
-    $table->date('scheduled_date')->nullable();
-    $table->string('location', 20)->default('LABORATOIRE');
-    $table->text('notes')->nullable();
-    $table->timestamps();
-});
-
-Schema::create('calibration_request_items', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('calibration_request_id')
-          ->constrained('calibration_requests')
-          ->cascadeOnDelete();
-    $table->foreignId('calibration_service_id')
-          ->nullable()
-          ->constrained('calibration_services');
-    $table->string('equipment_name');
-    $table->string('serial_number');
-    $table->string('brand')->nullable();
-    $table->string('model')->nullable();
-    $table->string('measurement_range')->nullable();
-    $table->string('tolerance')->nullable();
-    $table->integer('quantity')->default(1);
-    $table->timestamps();
-});
-\end{verbatim}
-\end{LTR}
-
-\section*{الملحق ج : وسيط التحكم في الوصول حسب الرتب (Middleware)}
-\subsection*{مبدأ العمل}
-وسيط \LR{\texttt{RoleMiddleware}} يستبقه كل مسار محمي، ويتحقق من أن رتبة المستخدم الحالل ضمن قائمة الرتب المرخص لها بالوصول، وإلا يعيده إلى لوحة التحكم الخاصة برتبته:
-\begin{LTR}
-\begin{verbatim}
-namespace App\Http\Middleware;
-
-use Closure;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Symfony\Component\HttpFoundation\Response;
-
-class RoleMiddleware
-{
-    public function handle(
-        Request $request,
-        Closure $next,
-        string ...$roles
-    ): Response {
-        $user = Auth::user();
-
-        if (!$user || !in_array($user->role, $roles, true)) {
-            abort(403, 'Non autoris\u00e9 pour ce r\u00f4le.');
-        }
-
-        return $next($request);
-    }
-}
-\end{verbatim}
-\end{LTR}
-
-\subsection*{التسجيل في النواة وتوظيفه في المسارات}
-يُسجل الوسيط في معالج الأقراص (\LR{\texttt{bootstrap/app.php}}) ثم يُستدعى على مستوى المسارات الحساسة لكل فضاء عملي:
-\begin{LTR}
-\begin{verbatim}
-// bootstrap/app.php
-->withMiddleware(function (Middleware $middleware) {
-    $middleware->alias([
-        'role' => \App\Http\Middleware\RoleMiddleware::class,
-    ]);
-})
-
-// routes/web.php (exemple)
-Route::middleware(['auth', 'role:client'])
-    ->prefix('client')->group(function () {
-        Route::get('/requests',
-            [ClientRequestController::class, 'index'])
-            ->name('requests.index');
-        // ...
-    });
-\end{verbatim}
-\end{LTR}
-
-\subsection*{ملاحظة توضيحية}
-استُمدت هذه الآلية من معايير الأمن الموثقة في مراجع إطار العمل ومراجع أمن التطبيقات \cite{laravel-docs, owasp}, وهي تطبيق عملي لنمط تفويض الصلاحيات المعتمد على الرتب (\textit{Role-Based Access Control}) مع الحفاظ على عزل المساحات الوظيفية لكل فاعل.
 
 \end{document}

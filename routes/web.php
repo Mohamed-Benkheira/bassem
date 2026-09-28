@@ -133,6 +133,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'manager'])->name('dashboard');
 
         Route::get('/operations', [MetrologyOperationController::class, 'index'])->name('operations.index');
+        Route::get('/operations/{calibrationOperation}', [MetrologyOperationController::class, 'show'])->name('operations.show');
 
         Route::get('/scheduling', [MetrologySchedulingController::class, 'index'])->name('scheduling.index');
         Route::post('/scheduling/{calibrationRequest}/propose', [MetrologySchedulingController::class, 'propose'])->name('scheduling.propose');

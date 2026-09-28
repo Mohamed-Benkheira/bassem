@@ -37,6 +37,36 @@
 \setmainfont{Amiri}[Script=Arabic]
 
 %% ============================================================
+%% CHAPTER HEADING — full-page centered divider for numbered chapters
+%% ============================================================
+\renewcommand{\@makechapterhead}[1]{%
+  \null\vfill
+  {\centering
+   {\Large\bfseries \chaptername{} \Roman{chapter}\par}%
+   \vspace{0.6cm}%
+   {\Huge\bfseries #1\par}%
+  }%
+  \vfill\null
+  \clearpage
+}
+%% Unnumbered chapter heading (شكر، إهداء، ملخصات، قوائم...) — compact
+\renewcommand{\@makeschapterhead}[1]{%
+  \vspace*{20\p@}%
+  {\centering\normalfont\huge\bfseries #1\par}%
+  \vskip 16\p@
+}
+
+%% Unnumbered full-page centered title divider (المقدمة، الخاتمة، ...)
+\newcommand{\chapterdivider}[1]{%
+  \clearpage
+  \thispagestyle{empty}%
+  \null\vfill
+  {\centering\Huge\bfseries #1\par}%
+  \vfill\null
+  \clearpage
+}
+
+%% ============================================================
 %% COLOR DEFINITIONS
 %% ============================================================
 \definecolor{chaptercolor}{RGB}{0,0,0}
@@ -51,7 +81,7 @@
   citecolor=linkcolor,
   urlcolor=linkcolor,
   pdftitle={مذكرة تخرج - تقني سامي},
-  pdfauthor={Bassem},
+  pdfauthor={خنشاالي محمد باسم},
 }
 
 %% ============================================================
@@ -133,21 +163,23 @@
         \includegraphics[width=0.85\linewidth]{figures/second-logo.png}
     \end{minipage}
 
-    \vspace{1.2cm}
-    {\Large\textbf{\bts@diploma}\par}
-    \vspace{0.2cm}
-    {\large \textbf{تخصص : }\bts@field\par}
     \vspace{0.8cm}
+    {\Large\textbf{\bts@diploma}\par}
+    \vspace{0.15cm}
+    {\large \textbf{تخصص : }\bts@field\par}
+    \vspace{0.6cm}
 
     {\LARGE\textbf{الموضوع :}\par}
-    \vspace{0.4cm}
+    \vspace{0.25cm}
     {\Large\bfseries \color{linkcolor} \bts@themeAr\par}
-    \vspace{0.3cm}
+    \vspace{0.2cm}
     {\normalsize\itshape \begin{LTR}\centering \bts@themeFr \end{LTR}\par}
-    \vspace{0.8cm}
+    \vspace{0.5cm}
 
-    {\large \textbf{المؤسسة المستخدمة (المستفيدة) : } \bts@hostorg\par}
-    \vspace{1.2cm}
+    {\large \textbf{المؤسسة المستخدمة (المستقبلة) : } \bts@hostorg\par}
+    \vspace{0.25cm}
+    \includegraphics[width=0.25\textwidth]{figures/alicef_logo.jpg}
+    \vspace{0.6cm}
 
     \noindent
     \begin{minipage}[t]{0.48\textwidth}
@@ -280,7 +312,7 @@
     \begin{tabularx}{\textwidth}{|>{\bfseries}p{3.5cm}|X|}
       \hline
       \rowcolor{tableheader}
-      \textcolor{white}{\textbf{الاختصار \LR{(Sigle)}}} & \textcolor{white}{\textbf{الدلالة والشرح}} \\
+      \textcolor{white}{\textbf{الاختصار}} & \textcolor{white}{\textbf{الدلالة والشرح}} \\
       \hline
       \BODY
       \hline

@@ -1,13 +1,14 @@
-\begin{tikzpicture}[>=stealth,
-    block/.style={draw=gray!70, fill=white, rounded corners=3pt, line width=0.8pt, minimum width=2.8cm, minimum height=1.2cm, align=center, font=\footnotesize},
-    bridge/.style={draw=blue!80!black, fill=blue!10, rounded corners=4pt, line width=1.2pt, minimum width=3.2cm, minimum height=1.4cm, align=center, font=\small\bfseries},
-    arrow/.style={->, thick, >=stealth}
+\begin{tikzpicture}[>=Stealth,
+    block/.style={draw=blue!70!black, fill=blue!15, rounded corners=3pt, line width=0.8pt, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\footnotesize},
+    bridge/.style={draw=orange!80!black, fill=orange!10, rounded corners=3pt, line width=0.8pt, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\footnotesize},
+    backend/.style={draw=blue!70!black, fill=blue!5, rounded corners=3pt, line width=0.8pt, minimum width=4.0cm, minimum height=1.6cm, align=center, font=\footnotesize},
+    arrow/.style={->, line width=0.8pt, >=Stealth, color=darkgray}
 ]
-\node[block, fill=cyan!10] (react) {\textbf{Frontend React 19}\\[2pt]Composants UI / Pages\\State Management};
-\node[bridge, right=1.8cm of react] (inertia) {Passerelle Inertia.js\\[2pt]\footnotesize Protocole X-Inertia\\Routage Hybride Monolithique};
-\node[block, fill=red!10, right=1.8cm of inertia] (laravel) {\textbf{Backend Laravel 12}\\[2pt]Contr\^oleurs / Middleware\\Mod\`eles Eloquent};
+\node[block] (react) {\textbf{Frontend React 19}\\[2pt]Composants UI / Pages\\State Management};
+\node[bridge, right=2.6cm of react] (inertia) {\textbf{Passerelle Inertia.js}\\[2pt]Protocole X-Inertia\\Routage Hybride Monolithique};
+\node[backend, right=2.6cm of inertia] (laravel) {\textbf{Backend Laravel 12}\\[2pt]Contr\^oleurs / Middleware\\Mod\`eles Eloquent};
 
-\draw[arrow] (react.east) -- node[above, font=\scriptsize] {Inertia.visit()} (inertia.west);
-\draw[arrow] (inertia.east) -- node[above, font=\scriptsize] {Route / Action} (laravel.west);
-\draw[arrow] (laravel.south west) to[bend left=25] node[below, font=\scriptsize] {Inertia::render('Page', \$props)} (react.south east);
+\draw[arrow] (react.east) -- node[above, font=\footnotesize] {Inertia.visit()} (inertia.west);
+\draw[arrow] (inertia.east) -- node[above, font=\footnotesize] {Route / Action} (laravel.west);
+\draw[arrow] ([yshift=-0.35cm]laravel.south west) to[bend left=35] node[below, font=\footnotesize] {Inertia::render('Page', \$props)} ([yshift=-0.35cm]react.south east);
 \end{tikzpicture}

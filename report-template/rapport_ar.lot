@@ -1,35 +1,35 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces بطاقة وصف حالة الاستخدام - تسجيل الدخول وإدارة الجلسة (UC01)\relax }}{17}{table.caption.27}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces بطاقة وصف حالة الاستخدام - تصفح دليل المعايرة (UC02)\relax }}{18}{table.caption.29}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces بطاقة وصف حالة الاستخدام - تقديم طلب معايرة متعدد المعدات (UC03)\relax }}{19}{table.caption.31}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces بطاقة وصف حالة الاستخدام - التأهيل التجاري وإصدار الفاتورة الشكلية (UC04)\relax }}{20}{table.caption.33}%
-\contentsline {table}{\numberline {3.5}{\ignorespaces بطاقة وصف حالة الاستخدام - جدولة والاتفاق على موعد المعايرة (UC05)\relax }}{21}{table.caption.35}%
-\contentsline {table}{\numberline {3.6}{\ignorespaces بطاقة وصف حالة الاستخدام - تعيين العملية للتقني المختص (UC06)\relax }}{22}{table.caption.37}%
-\contentsline {table}{\numberline {3.7}{\ignorespaces بطاقة وصف حالة الاستخدام - تنفيذ المعايرة المخبرية (UC07)\relax }}{23}{table.caption.39}%
-\contentsline {table}{\numberline {3.8}{\ignorespaces بطاقة وصف حالة الاستخدام - رفع تقرير المعايرة (UC08)\relax }}{24}{table.caption.41}%
-\contentsline {table}{\numberline {3.9}{\ignorespaces بطاقة وصف حالة الاستخدام - المراجعة النوعية وقبول التقرير أو طلب تصحيحه (UC09)\relax }}{25}{table.caption.43}%
-\contentsline {table}{\numberline {3.10}{\ignorespaces بطاقة وصف حالة الاستخدام - إنشاء وتثبيت شهادة المعايرة الرسمية (UC10)\relax }}{26}{table.caption.45}%
-\contentsline {table}{\numberline {3.11}{\ignorespaces بطاقة وصف حالة الاستخدام - تحميل الشهادة المعتمدة (UC11)\relax }}{28}{table.caption.47}%
-\contentsline {table}{\numberline {3.12}{\ignorespaces بطاقة وصف حالة الاستخدام - متابعة صلاحية العتاد المرجعي (UC12)\relax }}{29}{table.caption.49}%
-\contentsline {table}{\numberline {3.13}{\ignorespaces بطاقة وصف حالة الاستخدام - سجل التدقيق الأمني الشامل (UC13)\relax }}{30}{table.caption.51}%
-\contentsline {table}{\numberline {3.14}{\ignorespaces ترميز المراجع الرسمية للوثائق\relax }}{33}{table.caption.58}%
-\contentsline {table}{\numberline {3.15}{\ignorespaces الجدول التركيبي للفئات الأساسية (Class Summary)\relax }}{35}{table.caption.60}%
-\contentsline {table}{\numberline {3.16}{\ignorespaces قاموس معطيات جدول المستخدمين (users)\relax }}{36}{table.caption.61}%
-\contentsline {table}{\numberline {3.17}{\ignorespaces قاموس معطيات جدول المؤسسات والزبائن (clients)\relax }}{36}{table.caption.62}%
-\contentsline {table}{\numberline {3.18}{\ignorespaces قاموس معطيات جدول طلبات المعايرة (calibration\_requests)\relax }}{36}{table.caption.63}%
-\contentsline {table}{\numberline {3.19}{\ignorespaces قاموس معطيات جدول الشهادات الرسمية (calibration\_certificates)\relax }}{37}{table.caption.64}%
-\contentsline {table}{\numberline {3.20}{\ignorespaces قاموس معطيات جدول خدمات المعايرة (calibration\_services)\relax }}{37}{table.caption.65}%
-\contentsline {table}{\numberline {3.21}{\ignorespaces قاموس معطيات جدول عناصر الطلب والعتاد (calibration\_request\_items)\relax }}{38}{table.caption.66}%
-\contentsline {table}{\numberline {3.22}{\ignorespaces قاموس معطيات جدول الفواتير التقديرية (quotations)\relax }}{38}{table.caption.67}%
-\contentsline {table}{\numberline {3.23}{\ignorespaces قاموس معطيات جدول العقود (contracts)\relax }}{38}{table.caption.68}%
-\contentsline {table}{\numberline {3.24}{\ignorespaces قاموس معطيات جدول عمليات المعايرة (calibration\_operations)\relax }}{39}{table.caption.69}%
-\contentsline {table}{\numberline {3.25}{\ignorespaces قاموس معطيات جدول التقارير الفنية (calibration\_reports)\relax }}{39}{table.caption.70}%
-\contentsline {table}{\numberline {3.26}{\ignorespaces قاموس معطيات جدول العتاد المرجعي (metrology\_materials)\relax }}{39}{table.caption.71}%
-\contentsline {table}{\numberline {3.27}{\ignorespaces قاموس معطيات جدول سجل التدقيق الأمني (audit\_logs)\relax }}{40}{table.caption.72}%
-\contentsline {table}{\numberline {3.28}{\ignorespaces جدول تحويل فئات UML إلى جداول SQL\relax }}{42}{table.caption.74}%
-\contentsline {table}{\numberline {3.29}{\ignorespaces جداول الربط في قاعدة البيانات\relax }}{43}{table.caption.75}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces بطاقة وصف حالة الاستخدام - تسجيل الدخول وإدارة الجلسة (UC01)\relax }}{20}{table.caption.27}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces بطاقة وصف حالة الاستخدام - تصفح دليل المعايرة (UC02)\relax }}{21}{table.caption.29}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces بطاقة وصف حالة الاستخدام - تقديم طلب معايرة متعدد المعدات (UC03)\relax }}{22}{table.caption.31}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces بطاقة وصف حالة الاستخدام - التأهيل التجاري وإصدار الفاتورة الشكلية (UC04)\relax }}{23}{table.caption.33}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces بطاقة وصف حالة الاستخدام - جدولة والاتفاق على موعد المعايرة (UC05)\relax }}{24}{table.caption.35}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces بطاقة وصف حالة الاستخدام - تعيين العملية للتقني المختص (UC06)\relax }}{25}{table.caption.37}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces بطاقة وصف حالة الاستخدام - تنفيذ المعايرة المخبرية (UC07)\relax }}{26}{table.caption.39}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces بطاقة وصف حالة الاستخدام - رفع تقرير المعايرة (UC08)\relax }}{27}{table.caption.41}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces بطاقة وصف حالة الاستخدام - المراجعة النوعية وقبول التقرير أو طلب تصحيحه (UC09)\relax }}{28}{table.caption.43}%
+\contentsline {table}{\numberline {3.10}{\ignorespaces بطاقة وصف حالة الاستخدام - إنشاء وتثبيت شهادة المعايرة الرسمية (UC10)\relax }}{29}{table.caption.45}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces بطاقة وصف حالة الاستخدام - تحميل الشهادة المعتمدة (UC11)\relax }}{30}{table.caption.47}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces بطاقة وصف حالة الاستخدام - متابعة صلاحية العتاد المرجعي (UC12)\relax }}{31}{table.caption.49}%
+\contentsline {table}{\numberline {3.13}{\ignorespaces بطاقة وصف حالة الاستخدام - سجل التدقيق الأمني الشامل (UC13)\relax }}{32}{table.caption.51}%
+\contentsline {table}{\numberline {3.14}{\ignorespaces ترميز المراجع الرسمية للوثائق\relax }}{37}{table.caption.58}%
+\contentsline {table}{\numberline {3.15}{\ignorespaces الجدول التركيبي للفئات الأساسية (Class Summary)\relax }}{39}{table.caption.60}%
+\contentsline {table}{\numberline {3.16}{\ignorespaces قاموس معطيات جدول المستخدمين (users)\relax }}{40}{table.caption.61}%
+\contentsline {table}{\numberline {3.17}{\ignorespaces قاموس معطيات جدول المؤسسات والزبائن (clients)\relax }}{40}{table.caption.62}%
+\contentsline {table}{\numberline {3.18}{\ignorespaces قاموس معطيات جدول طلبات المعايرة (calibration\_requests)\relax }}{40}{table.caption.63}%
+\contentsline {table}{\numberline {3.19}{\ignorespaces قاموس معطيات جدول الشهادات الرسمية (calibration\_certificates)\relax }}{41}{table.caption.64}%
+\contentsline {table}{\numberline {3.20}{\ignorespaces قاموس معطيات جدول خدمات المعايرة (calibration\_services)\relax }}{41}{table.caption.65}%
+\contentsline {table}{\numberline {3.21}{\ignorespaces قاموس معطيات جدول عناصر الطلب والعتاد (calibration\_request\_items)\relax }}{42}{table.caption.66}%
+\contentsline {table}{\numberline {3.22}{\ignorespaces قاموس معطيات جدول الفواتير التقديرية (quotations)\relax }}{42}{table.caption.67}%
+\contentsline {table}{\numberline {3.23}{\ignorespaces قاموس معطيات جدول العقود (contracts)\relax }}{42}{table.caption.68}%
+\contentsline {table}{\numberline {3.24}{\ignorespaces قاموس معطيات جدول عمليات المعايرة (calibration\_operations)\relax }}{43}{table.caption.69}%
+\contentsline {table}{\numberline {3.25}{\ignorespaces قاموس معطيات جدول التقارير الفنية (calibration\_reports)\relax }}{43}{table.caption.70}%
+\contentsline {table}{\numberline {3.26}{\ignorespaces قاموس معطيات جدول العتاد المرجعي (metrology\_materials)\relax }}{43}{table.caption.71}%
+\contentsline {table}{\numberline {3.27}{\ignorespaces قاموس معطيات جدول سجل التدقيق الأمني (audit\_logs)\relax }}{44}{table.caption.72}%
+\contentsline {table}{\numberline {3.28}{\ignorespaces جدول تحويل فئات UML إلى جداول SQL\relax }}{46}{table.caption.74}%
+\contentsline {table}{\numberline {3.29}{\ignorespaces جداول الربط في قاعدة البيانات\relax }}{47}{table.caption.75}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces نتائج حزمة الاختبارات الآلية المؤتمتة (Pest PHP / PHPUnit)\relax }}{58}{table.caption.96}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces مصفوفة سيناريوهات التحقق الوظيفي الحرجة\relax }}{59}{table.caption.97}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces نتائج حزمة الاختبارات الآلية المؤتمتة (Pest PHP / PHPUnit)\relax }}{63}{table.caption.96}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces مصفوفة سيناريوهات التحقق الوظيفي الحرجة\relax }}{64}{table.caption.97}%

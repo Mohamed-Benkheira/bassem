@@ -1,23 +1,16 @@
-\begin{tikzpicture}[>=stealth,
-    nodebox/.style={draw=black!70, fill=gray!5, rounded corners=4pt, line width=1pt, minimum width=4.5cm, minimum height=2.8cm, align=center, font=\footnotesize},
-    inside/.style={draw=blue!70!black, fill=white, rounded corners=2pt, minimum width=3.8cm, minimum height=0.7cm, align=center, font=\scriptsize},
-    arr/.style={<->, thick, >=stealth}
+\begin{tikzpicture}[>=Stealth,
+    client/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, line width=0.8pt, minimum width=3.6cm, minimum height=2.8cm, align=center, font=\footnotesize},
+    server/.style={draw=gray!70, fill=gray!5, rounded corners=3pt, line width=0.8pt, minimum width=9.2cm, minimum height=4.8cm},
+    header/.style={draw=gray!70, fill=gray!70, text=white, font=\small\bfseries, minimum width=9.2cm, minimum height=0.8cm, align=center},
+    inner/.style={draw=blue!70!black, fill=blue!10, rounded corners=3pt, line width=0.8pt, minimum width=7.2cm, minimum height=0.8cm, align=center, font=\scriptsize},
+    innerdb/.style={draw=orange!80!black, fill=orange!10, rounded corners=3pt, line width=0.8pt, minimum width=7.2cm, minimum height=0.8cm, align=center, font=\scriptsize},
+    arr/.style={<->, line width=0.8pt, >=Stealth, color=darkgray}
 ]
-\node[nodebox] (client) at (0,0) {
-\textbf{Poste Client}\\[4pt]
-\begin{tikzpicture}
-\node[inside, fill=cyan!10] {Navigateur Web moderne\\Chrome / Firefox / Edge};
-\end{tikzpicture}
-};
-
-\node[nodebox, minimum width=5.5cm, minimum height=4cm] (server) at (6.5,0) {
-\textbf{Serveur d'Application (LEMP)}\\[2pt]
-\begin{tikzpicture}
-\node[inside, fill=green!10] (nginx) {Nginx Web Server / SSL};
-\node[inside, fill=red!10, below=0.3cm of nginx] (php) {PHP 8.2-FPM / Laravel 12/13};
-\node[inside, fill=yellow!15, below=0.3cm of php] (mysql) {SGBD MySQL 8.0+};
-\end{tikzpicture}
-};
-
-\draw[arr] (client) -- node[above, font=\scriptsize] {HTTPS (Port 443)} node[below, font=\scriptsize] {Protocole TLS 1.3} (server);
+\node[client] (client) at (0,0) {\textbf{Poste Client}\\[4pt]Navigateur Web moderne\\Chrome / Firefox / Edge};
+\node[server] (server) at (9.2,0) {};
+\node[header, anchor=north] (srvhead) at (server.north) {Serveur d'Application (LEMP)};
+\node[inner] (nginx) at (9.2, 0.9) {Nginx Web Server / SSL};
+\node[inner] (php) at (9.2, -0.2) {PHP 8.2-FPM / Laravel 12/13};
+\node[innerdb] (mysql) at (9.2, -1.3) {SGBD MySQL 8.0+};
+\draw[arr] (client.east) -- node[above, font=\scriptsize] {HTTPS (Port 443)} node[below, font=\scriptsize] {Protocole TLS 1.3} (server.west);
 \end{tikzpicture}

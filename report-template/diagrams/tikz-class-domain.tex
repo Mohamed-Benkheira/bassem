@@ -1,82 +1,132 @@
-\begin{tikzpicture}[>=stealth, scale=0.82, every node/.style={transform shape},
-    classbox/.style={draw=black!80, fill=yellow!5, rectangle, rounded corners=2pt, minimum width=3.8cm, align=left, font=\scriptsize}
+\begin{tikzpicture}[>=Stealth, line width=0.8pt,
+    classbox/.style={draw=blue!70!black, fill=blue!10, rectangle, rounded corners=2pt,
+        minimum width=3.6cm, align=left, font=\scriptsize, inner sep=3pt},
+    assoc/.style={->, draw=blue!70!black, line width=0.8pt},
+    mult/.style={font=\scriptsize}
 ]
-\node[classbox] (client) at (0,4.5) {
-\textbf{Client}\\
-\rule{3.6cm}{0.4pt}\\
+% --- Row 1 : y = 9.5 ---
+\node[classbox] (client) at (2, 9.5) {
+\makebox[3.4cm][c]{\textbf{Client}}\\
+\rule{3.4cm}{0.4pt}\\
 + id: int\\
 + company\_name: string\\
++ contact\_name: string\\
 + email: string\\
 + phone: string\\
-\rule{3.6cm}{0.4pt}\\
-+ requests(): HasMany\\
-+ contracts(): HasMany
++ tax\_id: string\\
+\rule{3.4cm}{0.4pt}\\
++ createRequest()\\
++ manageContracts()
 };
 
-\node[classbox] (req) at (5.5,4.5) {
-\textbf{CalibrationRequest}\\
-\rule{3.6cm}{0.4pt}\\
+\node[classbox] (req) at (8, 9.5) {
+\makebox[3.4cm][c]{\textbf{CalibrationRequest}}\\
+\rule{3.4cm}{0.4pt}\\
 + id: int\\
-+ reference: string\\
++ request\_number: string\\
++ client\_id: int\\
 + status: string\\
 + scheduled\_date: date\\
-\rule{3.6cm}{0.4pt}\\
-+ items(): HasMany\\
-+ operations(): HasMany\\
-+ quotation(): HasOne
++ location: string\\
+\rule{3.4cm}{0.4pt}\\
++ items()\\
++ operations()\\
++ quotations()\\
++ schedule()
 };
 
-\node[classbox] (item) at (11,4.5) {
-\textbf{CalibrationRequestItem}\\
-\rule{3.6cm}{0.4pt}\\
+\node[classbox] (item) at (14, 9.5) {
+\makebox[3.4cm][c]{\textbf{CalibrationRequestItem}}\\
+\rule{3.4cm}{0.4pt}\\
 + id: int\\
 + equipment\_name: string\\
 + serial\_number: string\\
 + tolerance: string\\
-\rule{3.6cm}{0.4pt}\\
-+ service(): BelongsTo\\
-+ certificate(): HasOne
++ quantity: int\\
+\rule{3.4cm}{0.4pt}\\
++ validateTolerance()
 };
 
-\node[classbox] (op) at (5.5,0) {
-\textbf{CalibrationOperation}\\
-\rule{3.6cm}{0.4pt}\\
+% --- Row 2 : y = 4.5 ---
+\node[classbox] (rep) at (2, 4.5) {
+\makebox[3.4cm][c]{\textbf{CalibrationReport}}\\
+\rule{3.4cm}{0.4pt}\\
 + id: int\\
-+ status: string\\
-+ scheduled\_date: date\\
-\rule{3.6cm}{0.4pt}\\
-+ technician(): BelongsTo\\
-+ reports(): HasMany\\
-+ certificate(): HasOne
-};
-
-\node[classbox] (rep) at (0,0) {
-\textbf{CalibrationReport}\\
-\rule{3.6cm}{0.4pt}\\
-+ id: int\\
++ report\_number: string\\
++ calibration\_operation\_id: int\\
 + file\_path: string\\
 + status: string\\
-+ rejection\_reason: text\\
-\rule{3.6cm}{0.4pt}\\
-+ reviewer(): BelongsTo
++ review\_notes: text\\
+\rule{3.4cm}{0.4pt}\\
++ submit()\\
++ approve()\\
++ requestRework()
 };
 
-\node[classbox] (cert) at (11,0) {
-\textbf{CalibrationCertificate}\\
-\rule{3.6cm}{0.4pt}\\
+\node[classbox] (op) at (8, 4.5) {
+\makebox[3.4cm][c]{\textbf{CalibrationOperation}}\\
+\rule{3.4cm}{0.4pt}\\
++ id: int\\
++ operation\_number: string\\
++ calibration\_request\_id: int\\
++ technician\_id: int\\
++ status: string\\
+\rule{3.4cm}{0.4pt}\\
++ assign()\\
++ start()\\
++ complete()
+};
+
+\node[classbox] (service) at (14, 4.5) {
+\makebox[3.4cm][c]{\textbf{CalibrationService}}\\
+\rule{3.4cm}{0.4pt}\\
++ id: int\\
++ code: string\\
++ name: string\\
++ measurement\_category: string\\
++ unit\_price: decimal\\
+\rule{3.4cm}{0.4pt}\\
++ listByDomain()\\
++ updatePrice()
+};
+
+% --- Row 3 : y = -0.5 ---
+\node[classbox] (user) at (2, -0.5) {
+\makebox[3.4cm][c]{\textbf{User}}\\
+\rule{3.4cm}{0.4pt}\\
++ id: int\\
++ name: string\\
++ email: string\\
++ role: string\\
++ is\_delegated\_manager: bool\\
++ client\_id: int\\
+\rule{3.4cm}{0.4pt}\\
++ hasRole()\\
++ can()
+};
+
+\node[classbox] (cert) at (8, -0.5) {
+\makebox[3.4cm][c]{\textbf{CalibrationCertificate}}\\
+\rule{3.4cm}{0.4pt}\\
 + id: int\\
 + certificate\_number: string\\
-+ is\_draft: bool\\
++ calibration\_operation\_id: int\\
 + is\_final: bool\\
-\rule{3.6cm}{0.4pt}\\
-+ validator(): BelongsTo\\
-+ isImmutable(): bool
++ validated\_by: int\\
+\rule{3.4cm}{0.4pt}\\
++ generate()\\
++ validate()\\
++ lock()
 };
 
-\draw[->, thick] (client) -- node[above, font=\tiny] {1 \dots *} (req);
-\draw[->, thick] (req) -- node[above, font=\tiny] {1 \dots *} (item);
-\draw[->, thick] (req) -- node[right, font=\tiny] {1 \dots *} (op);
-\draw[->, thick] (op) -- node[above, font=\tiny] {1 \dots *} (rep);
-\draw[->, thick] (op) -- node[above, font=\tiny] {1 \dots 1} (cert);
-\draw[->, dashed] (item) -- (cert);
+% --- Associations ---
+\draw[assoc] (client.east) -- node[above, mult] {1} node[above, mult, pos=0.85] {0..*} (req.west);
+\draw[assoc] (req.east) -- node[above, mult] {1} node[above, mult, pos=0.85] {1..*} (item.west);
+\draw[assoc] (item.south) -- node[left, mult, pos=0.25] {1..*} node[left, mult, pos=0.75] {1} (service.north);
+\draw[assoc] (req.south) -- node[right, mult, pos=0.25] {1} node[right, mult, pos=0.75] {0..*} (op.north);
+\draw[assoc] (op.west) -- node[above, mult] {1} node[above, mult, pos=0.85] {0..1} (rep.east);
+\draw[assoc] (op.south) -- node[right, mult, pos=0.25] {1} node[right, mult, pos=0.75] {0..1} (cert.north);
+\draw[assoc] (item.south) -- (14, 6.9) -- (11, 6.9) -- (11, -0.5) -- node[above, mult, pos=0.9] {0..*} (cert.east);
+\draw[assoc] (user.north) -- node[right, mult, pos=0.25] {1} node[right, mult, pos=0.75] {0..*} (rep.south);
+\draw[assoc] (user.north) -- node[below, mult, pos=0.3] {1} node[below, mult, pos=0.85] {0..*} (op.south);
 \end{tikzpicture}

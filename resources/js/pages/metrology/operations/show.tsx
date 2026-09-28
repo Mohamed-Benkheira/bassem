@@ -26,6 +26,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useNamespace } from '@/hooks/use-namespace';
 import { useTranslation } from '@/hooks/use-translation';
 import AppLayout from '@/layouts/app-layout';
 import type { BreadcrumbItem, CalibrationOperation } from '@/types';
@@ -36,10 +37,12 @@ interface Props {
 
 export default function MetrologyOperationsShow({ operation }: Props) {
     const { t, tr, formatDate, isEnglish } = useTranslation();
+    const basePath = `/${useNamespace()}`;
+    const isManagerSection = basePath === '/manager';
 
     const breadcrumbs: BreadcrumbItem[] = [
-        { title: tr('Opérations', 'Operations'), href: '/metrology/operations' },
-        { title: operation.operation_number, href: `/metrology/operations/${operation.id}` },
+        { title: tr('Opérations', 'Operations'), href: `${basePath}/operations` },
+        { title: operation.operation_number, href: `${basePath}/operations/${operation.id}` },
     ];
 
     const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
@@ -51,12 +54,12 @@ export default function MetrologyOperationsShow({ operation }: Props) {
     });
 
     const handleStart = () => {
-        startForm.post(`/metrology/operations/${operation.id}/start`);
+        startForm.post(`${basePath}/operations/${operation.id}/start`);
     };
 
     const handleUploadReport = (e: React.FormEvent) => {
         e.preventDefault();
-        uploadForm.post(`/metrology/operations/${operation.id}/report`, {
+        uploadForm.post(`${basePath}/operations/${operation.id}/report`, {
             onSuccess: () => {
                 setIsUploadModalOpen(false);
                 uploadForm.reset();
@@ -64,8 +67,8 @@ export default function MetrologyOperationsShow({ operation }: Props) {
         });
     };
 
-    const canStart = ['SCHEDULED', 'ASSIGNED'].includes(operation.status);
-    const canUploadReport = ['IN_PROGRESS', 'REPORT_REJECTED', 'ASSIGNED'].includes(operation.status);
+    const canStart = !isManagerSection && ['SCHEDULED', 'ASSIGNED'].includes(operation.status);
+    const canUploadReport = !isManagerSection && ['IN_PROGRESS', 'REPORT_REJECTED', 'ASSIGNED'].includes(operation.status);
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
@@ -76,7 +79,7 @@ export default function MetrologyOperationsShow({ operation }: Props) {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                         <Button variant="ghost" size="sm" asChild className="mb-2 -ml-3 text-muted-foreground">
-                            <Link href="/metrology/operations">
+                            <Link href={`${basePath}/operations`}>
                                 <ArrowLeft className="mr-2 h-4 w-4" />
                                 {tr('Retour aux opérations', 'Back to operations')}
                             </Link>
